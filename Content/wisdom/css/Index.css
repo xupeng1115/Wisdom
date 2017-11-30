@@ -6,7 +6,7 @@
 }
 html,
 body{
-	min-width:1210px;
+	min-width:1220px;
 	margin:0;
 	padding:0;
 	border: 0;
@@ -106,7 +106,7 @@ header{
 }
 
 header .top-width{
-	width:1220px;
+	width:1200px;
 	margin:0 auto;
 }
 
@@ -150,7 +150,7 @@ header .top-box{
 
 .top-box .top-nav .login-register{
 	padding:0 30px;
-	border:1px solid#fff;
+	border:1px solid #fff;
 	border-radius:23px;
 }
 
@@ -198,7 +198,7 @@ header .top-msg{
 header .top-search{
 	height:45px;
 	margin-top:45px;
-	padding-right:678px;
+	padding-right:658px;
 	line-height:45px;
 }
 
@@ -309,6 +309,7 @@ header .top-evaluation .top-evaluation-btn .evaluation-arrow::after{
 	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
 	-o-transform:rotate(-45deg); 	/* Opera */
 }
+
 
 /***************************中间内容区content***********************/
 section{
@@ -508,13 +509,13 @@ section .flow-standard{
 }
 
 .flow-standard .flow-content{
-	display:none;
+	display:block;
 	position:relative;
 	width:100%;
 }
 
 .flow-standard .standard-content{
-	display:block;
+	display:none;
 	position:relative;
 	width:100%;
 }
@@ -1503,6 +1504,7 @@ footer{
 }
 
 footer .back-top{
+	display:block;
 	position:absolute;
 	top:-32px;
 	right:50%;

@@ -203,47 +203,24 @@ header .top-search{
 }
 
 header .top-search .search-box{
+	display:block;
+	float:left;
+	padding:12px 15px;
 	width:450px;
-	float:left;
-}
-
-header .top-search .search-box .search-item{
-	width:150px;
-	height:45px;
-	position:relative;
-	float:left;
-	padding-left:15px;
-	line-height:45px;
-	background-color: #fff;
-  	box-shadow: 0 0 1px 0 rgba(168, 168, 168, 0.5);
+	height:100%;
+	line-height:23px;
 	font-family: NotoSansCJKsc;
+	border:none;
   	font-size: 14px;
   	text-align: left;
-  	color: #8896a7;
-  	cursor:pointer;
-}
-
-header .top-search .search-box .search-item::after{
-	content:"";
-	width:7px;
-	height:7px;
-	border-left:1px solid #8896a7;
-	border-bottom:1px solid #8896a7;
-	position:absolute;
-	top:18px;
-	right:15px;
-	
-	transform:rotate(-45deg);
-	-ms-transform:rotate(-45deg); 	/* IE 9 */
-	-moz-transform:rotate(-45deg); 	/* Firefox */
-	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
-	-o-transform:rotate(-45deg); 	/* Opera */
+  	color: #333;
+	outline:none;
 }
 
 header .search-btn{
 	width: 92px;
   	height: 45px;
-  	float:right;
+  	float:left;
   	line-height:45px;
   	background-color: #ffbf00;
   	box-shadow: 2px 2px 15px 0 #989898;
@@ -1120,7 +1097,13 @@ section .team{
 	background-size:cover;
 }
 
-.team .team-title{
+section .team .team-box{
+	position:relative;
+	margin:0 auto;
+	width:1200px;
+}
+
+.team-box .team-title{
 	padding:80px 0 50px 0;
 	font-family: NotoSansCJKsc;
   	font-size: 34px;
@@ -1128,30 +1111,30 @@ section .team{
   	color: #666666;
 }
 
-.team .team-dec-box{
+.team-box .team-dec-box{
 	margin:0 auto;
 	width:960px;
 }
 
-.team .team-dec-box .team-dec-item{
+.team-box .team-dec-box .team-dec-item{
 	position:relative;
 	float:left;
 	padding:0 20px 40px 35px;
 	width:320px;
 }
 
-.team .team-dec-box .team-dec-item img{
+.team-box .team-dec-box .team-dec-item img{
 	display:inline-block;
 	float:left;
 }
 
-.team .team-dec-box .team-dec-item .item-content{
+.team-box .team-dec-box .team-dec-item .item-content{
 	float:left;
 	padding-left:20px;
 	width:200px;
 }
 
-.team .team-dec-box .team-dec-item .item-content .item-title{
+.team-box .team-dec-box .team-dec-item .item-content .item-title{
 	line-height:28px;
 	font-family: PingFangSC;
   	font-size: 20px;
@@ -1159,7 +1142,7 @@ section .team{
   	color: #333;
 }
 
-.team .team-dec-box .team-dec-item .item-content .item-dec{
+.team-box .team-dec-box .team-dec-item .item-content .item-dec{
 	margin-top:8px;
 	line-height:20px;
 	font-family: PingFangSC;
@@ -1168,9 +1151,9 @@ section .team{
   	color: #6d6d6d;
 }
 
-.team .member-box{
+.team-box .member-box{
 	position:relative;
-	top:120px;
+	top:20px;
 	left:50%;
 	margin-left:-500px;
 	width:1000px;
@@ -1178,8 +1161,9 @@ section .team{
   	border-radius: 13px;
   	background-color: #fff;
   	box-shadow: 0 7px 13px 0 #e1e1e1;
+  	overflow:hidden;
 }
-.team .member-box .member-btn{
+.team-box .member-box .member-btn{
 	position:absolute;
 	top:50%;
 	margin-top:-25px;
@@ -1189,26 +1173,26 @@ section .team{
 	cursor:pointer;
 }
 
-.team .member-box .prev-btn{
+.team-box .member-box .prev-btn{
 	left:-50px;
 }
 
-.team .member-box .next-btn{
+.team-box .member-box .next-btn{
 	right:-50px;
 }
 
-.team .member-box .member-btn i{
+.team-box .member-box .member-btn i{
 	font-size:50px;
 	color:#333;
 }
 
-.team .member-box .member-list{
+.team-box .member-box .member-list{
 	width:100%;
 	height:100%;
 	background-color:#fff;
 }
 
-.team .member-box .member-list .member-item{
+.team-box .member-box .member-list .member-item{
 	padding:45px 60px 40px 60px;
 	width:100%;
 	height:100%;
@@ -1318,7 +1302,7 @@ section .case{
 }
 
 .case .case-list-box .case-list-content .case-list::after{
-	display:inline-block;
+	display:block;
 	content:"";
 	clear:both;
 }
@@ -1353,18 +1337,27 @@ section .case{
 
 
 .case .case-list-box .case-list-content .case-list .case-item{
-	position:relative;
 	margin:30px 30px 0 0;
-	padding:30px;
 	float:left;
 	width:350px;
-	border-radius: 4px;
-  	background-color: #ffffff;
-  	box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
 }
 
 .case .case-list-box .case-list-content .case-list .case-item:nth-of-type(3n+0){
 	margin-right:0;
+}
+
+.case .case-list-box .case-list-content .case-list .case-item ul{
+	background-color:transparent;
+}
+
+.case .case-list-box .case-list-content .case-list .case-item ul li{
+	position:relative;
+  	padding:30px;
+  	width:100%;
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0 12px 42px 12px rgba(0, 0, 0, 0.08);
+	margin-bottom:30px;
 }
 
 .case .case-list-box .case-list-content .case-list .case-item .item-top{
@@ -1443,6 +1436,7 @@ section .cooperation{
 	margin:0 auto;
 	width:898px;
 	height:255px;
+	overflow:hidden;
 }
 
 .cooperation-box .company-list{
@@ -1495,7 +1489,40 @@ section .cooperation{
     height:25px;
 }
 
+/*********************************swiper轮播部分************************************/
+.swiper-button-prev {
+	width:20px;
+	height:30px;
+	background-image:url(../img/left.png);
+	background-size:100%;
+	top: 75%;
+    left: 40px;
+}
 
+.swiper-button-next {
+	width:20px;
+	height:30px;
+	background-image:url(../img/right.png);
+	background-size:100%;
+	top: 75%;
+    right: 40px;
+}
+
+.swiper-pagination2{
+	text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.swiper-pagination-bullet {
+    margin: 6px;
+}
+
+/*********************************底部footer部分************************************/
 footer{
 	position:relative;
 	width:100%;

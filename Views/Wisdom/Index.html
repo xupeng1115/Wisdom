@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
 		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/swiper-3.4.2.min.css" />
 		<link rel="stylesheet" href="../../Content/wisdom/css/Index.css?v=20171127"/>
 		
 		<!--[if lt IE 9]>
@@ -33,11 +34,7 @@
 			<div class="row top-width top-title">Success Career</div>
 			<div class="row top-width top-msg">我们是您的专属求职顾问，量身打造个人求职方案假文字假文字，业内专家1对1辅导，全程一站式贴心专业服务。</div>
 			<div class="row top-width top-search">
-				<ul class="search-box">
-					<li class="search-item">行业</li>
-					<li class="search-item">职位</li>
-					<li class="search-item">城市</li>
-				</ul>
+				<input type="text" class="search-box" placeholder="请输入您意向工作的城市"/>
 				<div class="search-btn">搜索</div>
 			</div>
 			<div class="row top-width top-evaluation">
@@ -402,53 +399,76 @@
 				</div>
 			</div>
 			<div class="row team">
-				<div class="team-title">我们的专家团队</div>
-				<ul class="team-dec-box">
-					<li class="team-dec-item">
-						<img src="../../Content/wisdom/img/team_icon01.png" alt="描述一" />
-						<div class="item-content">
-							<div class="item-title">团队宣传语1</div>
-							<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
-						</div>
-					</li>
-					<li class="team-dec-item">
-						<img src="../../Content/wisdom/img/team_icon02.png" alt="描述一" />
-						<div class="item-content">
-							<div class="item-title">团队宣传语1</div>
-							<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
-						</div>
-					</li>
-					<li class="team-dec-item">
-						<img src="../../Content/wisdom/img/team_icon03.png" alt="描述一" />
-						<div class="item-content">
-							<div class="item-title">团队宣传语1</div>
-							<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
-						</div>
-					</li>
-				</ul>
-				<div class="member-box">
-					<ul class="member-list">
-						<li class="member-item">
-							<div class="item-left">
-								<img src="../../Content/wisdom/img/head01.png" alt="团队" />
-								<div class="view-all-btn">查看所有专家</div>
+				<div class="team-box">
+					<div class="team-title">我们的专家团队</div>
+					<ul class="team-dec-box">
+						<li class="team-dec-item">
+							<img src="../../Content/wisdom/img/team_icon01.png" alt="描述一" />
+							<div class="item-content">
+								<div class="item-title">团队宣传语1</div>
+								<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
 							</div>
-							<div class="item-right">
-								<div class="item-title">肯耐珂萨董事常务副总裁兼合伙人</div>
-								<div class="item-name">Ellen Sun</div>
-								<ul class="item-msg">
-									<li class="msg-item">现任肯耐珂萨董事常务副总裁兼合伙人，全权负责中国招聘事业部，包括招聘流程外部业务和高端猎头服务。1998年开始从事高端猎头行业。</li>
-									<li class="msg-item">服务客户：欧莱雅、联合利华、花旗银行、通用汽车、法国巴黎银行、平安集团等国内外知名企业。</li>
-									<li class="msg-item">擅长领域：金融和消费品行业。为客户成功的在中国，香港，新加坡，美国，德国等地引进1000多位高端候选人。</li>
-									<li class="msg-item">近20年高端猎头从业经验，服务客户有欧莱雅、联合利华、花旗银行、通用汽车、平安集团等。</li>
-								</ul>
+						</li>
+						<li class="team-dec-item">
+							<img src="../../Content/wisdom/img/team_icon02.png" alt="描述一" />
+							<div class="item-content">
+								<div class="item-title">团队宣传语1</div>
+								<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
+							</div>
+						</li>
+						<li class="team-dec-item">
+							<img src="../../Content/wisdom/img/team_icon03.png" alt="描述一" />
+							<div class="item-content">
+								<div class="item-title">团队宣传语1</div>
+								<div class="item-dec">假文字假文字假文字假文字假文字假文字</div>
 							</div>
 						</li>
 					</ul>
-					<div class="prev-btn member-btn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-					<div class="next-btn member-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+					<div class="member-box swiper-container1">
+						<ul class="member-list swiper-wrapper">
+							<li class="member-item swiper-slide">
+								<div class="item-left">
+									<img src="../../Content/wisdom/img/head01.png" alt="团队" />
+									<div class="view-all-btn">查看所有专家</div>
+								</div>
+								<div class="item-right">
+									<div class="item-title">肯耐珂萨董事常务副总裁兼合伙人</div>
+									<div class="item-name">Ellen Sun</div>
+									<ul class="item-msg">
+										<li class="msg-item">现任肯耐珂萨董事常务副总裁兼合伙人，全权负责中国招聘事业部，包括招聘流程外部业务和高端猎头服务。1998年开始从事高端猎头行业。</li>
+										<li class="msg-item">服务客户：欧莱雅、联合利华、花旗银行、通用汽车、法国巴黎银行、平安集团等国内外知名企业。</li>
+										<li class="msg-item">擅长领域：金融和消费品行业。为客户成功的在中国，香港，新加坡，美国，德国等地引进1000多位高端候选人。</li>
+										<li class="msg-item">近20年高端猎头从业经验，服务客户有欧莱雅、联合利华、花旗银行、通用汽车、平安集团等。</li>
+									</ul>
+								</div>
+							</li>
+							<li class="member-item swiper-slide">
+								<div class="item-left">
+									<img src="../../Content/wisdom/img/head01.png" alt="团队" />
+									<div class="view-all-btn">查看所有专家</div>
+								</div>
+								<div class="item-right">
+									<div class="item-title">肯耐珂萨董事常务副总裁兼合伙人</div>
+									<div class="item-name">Ellen Sun</div>
+									<ul class="item-msg">
+										<li class="msg-item">现任肯耐珂萨董事常务副总裁兼合伙人，全权负责中国招聘事业部，包括招聘流程外部业务和高端猎头服务。1998年开始从事高端猎头行业。</li>
+										<li class="msg-item">服务客户：欧莱雅、联合利华、花旗银行、通用汽车、法国巴黎银行、平安集团等国内外知名企业。</li>
+										<li class="msg-item">擅长领域：金融和消费品行业。为客户成功的在中国，香港，新加坡，美国，德国等地引进1000多位高端候选人。</li>
+										<li class="msg-item">近20年高端猎头从业经验，服务客户有欧莱雅、联合利华、花旗银行、通用汽车、平安集团等。</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!--<div class="prev-btn member-btn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+						<div class="next-btn member-btn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>-->
+					</div>
+					<!-- 导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
 				</div>
 			</div>
+			
+			
 			<div class="row case">
 				<div class="case-title module-title">我们的成功案例</div>
 				<div class="case-msg module-msg">成就学员是我们的使命，学员的认可是我的前进动力</div>
@@ -457,82 +477,94 @@
 						<div class="add-more-case">查看更多</div>
 						<ul class="case-list">
 							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case01.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
-								</div>
+								<ul>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case01.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+										</div>
+									</li>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case02.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											悉尼大学Accounting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基本处于懵逼状态。特别感谢CareerSuccess导师帮助我走过这段痛并快乐的求职过程。他们不厌其烦的帮我分析测评能力模型、测评报告解读、线上微课程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+										</div>
+									</li>
+								</ul>
 							</li>
 							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case02.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									悉尼大学Accounting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基本处于懵逼状态。特别感谢CareerSuccess导师帮助我走过这段痛并快乐的求职过程。他们不厌其烦的帮我分析测评能力模型、测评报告解读、线上微课程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
-								</div>
+								<ul>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case01.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											伦敦大学市场营销毕业，作沟通表达的细销毕业，作沟通表达的细销毕业，作沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+										</div>
+									</li>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case02.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											悉尼大学Accounting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+										</div>
+									</li>
+								</ul>
 							</li>
 							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case01.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
-								</div>
-							</li>
-							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case02.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
-								</div>
-							</li>
-							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case01.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									16年美国毕业回国进携程做产品经理。我很喜欢目前这份工作，研究和开发人才测评产品，项目支持，实施在线测评，培训测试使用者及商业客户专业实用心理测量产品，与运营研发高管们讨论项目产出。虽然很辛劳，但成长飞速。感谢CareerSuccess，让我从一个海归小白从零开始，帮助我分析职业规划，一步步协助准备探索自我、打造自我、解读自我、sell自我，提升我的普遍性就业技能, 商务报告技能, 独立研究技能, 谈判技能, 项目管理技能, 职场沟通技能等等，不厌其烦的多伦模拟面试，最终获得了携程的Offer。
-								</div>
-							</li>
-							<li class="case-item">
-								<div class="item-top">
-									<img src="../../Content/wisdom/img/case02.png" alt="案例" />
-									<div class="item-top-msg">
-										<div class="msg-name">Lee Li</div>
-										<div class="msg-address">University of London</div>
-										<div class="msg-position blue">3M | 销售经理助理</div>
-									</div>
-								</div>
-								<div class="item-dec">
-									伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
-								</div>
+								<ul>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case01.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+										</div>
+									</li>
+									<li>
+										<div class="item-top">
+											<img src="../../Content/wisdom/img/case02.png" alt="案例" />
+											<div class="item-top-msg">
+												<div class="msg-name">Lee Li</div>
+												<div class="msg-address">University of London</div>
+												<div class="msg-position blue">3M | 销售经理助理</div>
+											</div>
+										</div>
+										<div class="item-dec">
+											悉尼大学A慢意识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基本处于懵逼状态。特别感谢CareerSuccess导师帮助我走过这段痛并快乐的求职过程。他们不厌其烦的帮我分析测评能力模型、测评报告解读、线上微课程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+										</div>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -541,9 +573,9 @@
 			<div class="row cooperation">
 				<div class="cooperation-title module-title">我们的合作企业</div>
 				<div class="cooperation-msg module-msg">假文字假文字假文字假文字假文字假MJLQ2CH/A文字假文字假文字假文字假文字</div>
-				<div class="cooperation-box">
-					<ul class="company-list">
-						<li class="company-list-item">
+				<div class="cooperation-box swiper-container2">
+					<ul class="company-list swiper-wrapper">
+						<li class="company-list-item swiper-slide">
 							<ul class="list-content">
 								<li class="company-item">
 									<div class="company-item-box">
@@ -607,8 +639,39 @@
 								</li>
 							</ul>
 						</li>
+						<li class="company-list-item swiper-slide">
+							<ul class="list-content">
+								<li class="company-item">
+									<div class="company-item-box">
+										<img src="../../Content/wisdom/img/tengmen_logo.png" alt="dazhong" />
+									</div>
+								</li>
+								<li class="company-item">
+									<div class="company-item-box">
+										<img src="../../Content/wisdom/img/kws_logo.png" alt="dazhong" />
+									</div>
+								</li>
+								<li class="company-item">
+									<div class="company-item-box">
+										<img src="../../Content/wisdom/img/lijinji_logo.png" alt="dazhong" />
+									</div>
+								</li>
+								<li class="company-item">
+									<div class="company-item-box little">
+										<img src="../../Content/wisdom/img/dun_logo.png" alt="dazhong" />
+									</div>
+								</li>
+								<li class="company-item">
+									<div class="company-item-box">
+										<img src="../../Content/wisdom/img/dazhong_logo.png" alt="dazhong" />
+									</div>
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
+				<!-- 分页器 -->
+				<div class="swiper-pagination2"></div>
 			</div>
 		</section>
 	</div>
@@ -643,8 +706,32 @@
 	</footer>
 	<script src="../../Scripts/wisdom/lib/jquery-1.11.3.min.js"></script>
 	<script src="../../Scripts/wisdom/lib/vue.min.js"></script>
+	<script src="../../Scripts/wisdom/lib/swiper-3.4.2.jquery.min.js"></script>
 	<script>
 		$(function(){
+			
+			var mySwiper1 = new Swiper ('.swiper-container1', {
+    			autoplay:2000,
+			    loop: true,
+			    
+			    // 如果需要前进后退按钮
+			    nextButton: '.swiper-button-next',
+			    prevButton: '.swiper-button-prev',
+			    
+			})
+			
+    		var mySwiper2 = new Swiper ('.swiper-container2', {
+    			autoplay:2000,
+			    loop: true,
+			    
+			    // 如果需要分页器
+			    pagination: '.swiper-pagination2',
+				paginationClickable :true,
+			    
+			})
+    		
+    		
+		
 			$("body").on("click",".flow-btn",function(event){
 				$(this).css("background","#fff");
 				$(".flow-content").show();

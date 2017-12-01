@@ -23,9 +23,9 @@
 			<div class="row top-box top-width">
 				<div class="top-logo"></div>
 				<ul class="top-nav">
-					<li class="top-nav-item"><a href="#">首页</a></li>
-					<li class="top-nav-item"><a href="#">专家团队</a></li>
-					<li class="top-nav-item"><a href="#">评引导测</a></li>
+					<li class="top-nav-item"><a href="Index.html">首页</a></li>
+					<li class="top-nav-item"><a href="PositionList.html">职位</a></li>
+					<li class="top-nav-item"><a href="#">产品</a></li>
 					<li class="top-nav-item"><a href="#">关于我们</a></li>
 					<li class="top-nav-item login-register"><a href="#">注册/登录</a></li>
 				</ul>
@@ -651,12 +651,22 @@
 				$(".standard-btn").css("background","#f1f5f9");
 				$(".standard-content").hide();
 			})
+			
 			$("body").on("click",".standard-btn",function(event){
 				$(this).css("background","#fff");
 				$(".flow-content").hide();
 				$(".flow-btn").css("background","#f1f5f9");
 				$(".standard-content").show();
 			})
+			
+			$("body").on("click",".search-btn",function(){
+				window.location.href="PositionList.html";
+			})
+			
+			$("body").on("click",".position-item",function(){
+				window.location.href="PositionDetail.html";
+			})
+			
 		})
 	</script>
 </body>

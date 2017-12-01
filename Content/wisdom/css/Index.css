@@ -594,9 +594,8 @@ section .flow-standard{
 	margin-top:135px;
 	width:990px;
 	height:128px;
-	/*background:url(../img/meal_1.png)no-repeat center center;
-	background-size:100% 100%;*/
-	/*background:#f40;*/
+	background:url(../img/line.png)no-repeat center center;
+	background-size:100% 100%;
 }
 
 .flow-standard .standard-content .standard-box .standard-item{
@@ -622,7 +621,7 @@ section .flow-standard{
 	left:50%;
 	margin-left:-142px;
 	width:284px;
-	background:url(../img/standard_04_bg.png)no-repeat center center;
+	background:url(../img/standard_item_bg.png)no-repeat center center;
 	background-size:100% 100%;
 	border-radius: 4px;
 	z-index:10;
@@ -669,7 +668,7 @@ section .flow-standard{
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(4) .item-bg{
-	background:url(../img/standard_02.png)no-repeat center center;
+	background:url(../img/standard_04.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
@@ -702,27 +701,27 @@ section .flow-standard{
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(1):hover .item-bg{
-	background:url(../img/standard_04.png)no-repeat center center;
+	background:url(../img/standard_01_bg.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(2):hover .item-bg{
-	background:url(../img/standard_04.png)no-repeat center center;
+	background:url(../img/standard_02_bg.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(3):hover .item-bg{
-	background:url(../img/standard_04.png)no-repeat center center;
+	background:url(../img/standard_03_bg.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(4):hover .item-bg{
-	background:url(../img/standard_04.png)no-repeat center center;
+	background:url(../img/standard_04_bg.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
 .flow-standard .standard-content .standard-box .standard-item:nth-child(5):hover .item-bg{
-	background:url(../img/standard_04.png)no-repeat center center;
+	background:url(../img/standard_05_bg.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
@@ -799,7 +798,7 @@ section .recommend-position{
 	position:relative;
 	padding:30px 30px 15px 25px;
 	width:100%;
-	cursor:default;
+	cursor:pointer;
 	border-bottom:1px solid #e4e4e4;
 }
 
@@ -962,6 +961,7 @@ section .recommend-position{
 .position-list .position-item .commend-list{
 	display:block;
 	margin-top:15px;
+	cursor:default;
 }
 
 .position-list .position-item .commend-list .commend-item{
@@ -1116,7 +1116,8 @@ section .team{
 	margin:0 auto;
 	margin-bottom:80px;
 	height:610px;
-	background:#ffdd7b;
+	background:url(../img/team_bg.png)no-repeat center center;
+	background-size:cover;
 }
 
 .team .team-title{

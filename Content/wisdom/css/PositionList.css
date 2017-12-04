@@ -365,6 +365,7 @@ section{
 
 .recommend-item .industry-list .industry-item:hover{
 	color:#ffbf00;
+	border-bottom:1px solid #ffbf00
 }
 
 .recommend-item .add-more-position{
@@ -494,7 +495,6 @@ section .position{
   	height: 150px;
   	background-color: #ffffff;
   	border: solid 1px #e5e5e5;
-  	cursor:pointer;
 }
 
 .position-list .position-item:hover {
@@ -528,6 +528,11 @@ section .position{
   	letter-spacing: 1.3px;
   	text-align: left;
   	color: #333333;
+  	cursor:pointer;
+}
+
+.position-item .position-name-box .position-name:hover{
+	color:#ffbf00;
 }
 
 .position-item .position-name-box .position-company{
@@ -597,6 +602,7 @@ section .position{
   	font-size: 14px;
   	text-align: center;
   	color: #b5b5b5;
+  	cursor:pointer;
 }
 
 .position-item .position-like .like-icon{
@@ -608,6 +614,10 @@ section .position{
 	color:#dedede;
 }
 
+.position-item .position-like .like-icon .red{
+	color:#ee5c54;
+}
+
 .position-item .position-like .like-num{
 	display:block;
 	font-family: NotoSansCJKsc;
@@ -615,9 +625,13 @@ section .position{
   	color: #a1a1a1;
 }
 
+.position-item .position-like:hover .like-icon .fa-heart-o{
+	color:#ee5c54;
+}
 
-
-
+.position-item .position-like .like-icon .fa-heart{
+	display:none;
+}
 
 /***************************分页**************************/
 .tcdPageCode{
@@ -800,6 +814,22 @@ footer .about-us::after{
 }
 
 .about-left .about-phone i{
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:16px;
+	color:#fff;
+}
+
+.about-left .about-email{
+	position:absolute;
+	bottom:130px;
+	left:340px;
+	padding-bottom:2px;
+	padding-left:25px;
+}
+
+.about-left .about-email i{
 	position:absolute;
 	top:0;
 	left:0;

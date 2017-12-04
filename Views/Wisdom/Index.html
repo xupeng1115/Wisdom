@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
 		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="../../Content/wisdom/css/swiper-3.4.2.min.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/css/Index.css?v=20171127"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/Index.css?v=20171204"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
@@ -676,7 +676,7 @@
 		</section>
 	</div>
 	<footer>
-		<a href="#page-top" class="back-top"></a>
+		<a href="#" class="back-top"></a>
 		<div class="about-us">
 			<div class="about-left">
 				<div class="about-title">
@@ -752,6 +752,11 @@
 			
 			$("body").on("click",".position-item",function(){
 				window.location.href="PositionDetail.html";
+			})
+			
+			
+			$("body").on("click",".back-top",function(event){
+				$('body,html').animate({scrollTop:0},500);
 			})
 			
 		})

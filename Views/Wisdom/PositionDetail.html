@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
 		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/PositionDetail.css?v=20171127"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/PositionDetail.css?v=20171204"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
@@ -218,7 +218,7 @@
 		
 	</div>
 	<footer>
-		<a href="#page-top" class="back-top"></a>
+		<a href="#" class="back-top"></a>
 		<div class="about-us">
 			<div class="about-left">
 				<div class="about-title">
@@ -250,11 +250,13 @@
 	<script src="../../Scripts/wisdom/lib/vue.min.js"></script>
 	<script src="../../Scripts/wisdom/lib/radialIndicator.js"></script>
 	<script>
+		
 		$(function(){
+			//圆形进度条
 			$('#indicatorContainer').radialIndicator({
 		        barColor: '#ffbf00',
 		        barWidth: 8,
-		        initValue: 68,
+		        initValue: 0,
 		        fontFamily:"NotoSansCJKsc",
 		        fontSize:20,
 		        fontWeight:"normal",
@@ -262,6 +264,16 @@
 		        roundCorner : true,
 		        percentage: true
 		    });
+		    
+		    //进度从零运动到指定位置
+		    var radObj = $('#indicatorContainer').data('radialIndicator');
+			radObj.animate(68);
+			
+			
+			$("body").on("click",".back-top",function(event){
+				$('body,html').animate({scrollTop:0},300);
+			})
+			
 		})
 	</script>
 </body>

@@ -42,6 +42,21 @@ a:hover{
 	text-decoration:none;
 }
 
+input:-moz-placeholder,   
+textarea:-moz-placeholder {   
+    color: #999999;   
+}   
+  
+input:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+    color: #999999;   
+}   
+  
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #999999;   
+}  
+
 .container-fluid {
   	padding:0;
 }
@@ -244,6 +259,11 @@ header .top-banner .banner-search{
   	cursor:pointer;
 }
 
+
+.banner-search .search-btn:hover{
+	background:#ffb400;
+}
+
 .banner-search .hot-search{
 	position:relative;
 	margin-top:6px;
@@ -340,6 +360,11 @@ section{
   	letter-spacing: 0.9px;
   	text-align: left;
   	color: #6d6d6d;
+  	cursor:pointer;
+}
+
+.recommend-item .industry-list .industry-item:hover{
+	color:#ffbf00;
 }
 
 .recommend-item .add-more-position{
@@ -422,12 +447,12 @@ section .position{
   	cursor:pointer;
 }
 
-.position-box .position-top .sort-item:first-child{
+.position-box .position-top .sort-item-change{
 	color:#ffbf00;
 }
 
-.position-box .position-top .sort-item::after{
-	display:none;
+.position-box .position-top .sort-item-change::after{
+	display:block;
 	position:absolute;
 	bottom:-20px;
 	left:0;
@@ -435,10 +460,6 @@ section .position{
 	width:100%;
 	height:2px;
 	background:#ffbf00;
-}
-
-.position-box .position-top .sort-item:first-child::after{
-	display:block;
 }
 
 .position-box .position-top .position-num{
@@ -474,6 +495,12 @@ section .position{
   	background-color: #ffffff;
   	border: solid 1px #e5e5e5;
   	cursor:pointer;
+}
+
+.position-list .position-item:hover {
+    -webkit-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    -moz-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    box-shadow: 0 0 10px 0 rgba(56,81,76,.12)
 }
 
 .position-list .position-item:nth-of-type(2n+0){
@@ -677,6 +704,10 @@ footer .back-top{
 	background-color: #64d3de;
   	box-shadow: 0 3px 6px 0 rgba(154, 154, 154, 0.5);
 	cursor:pointer;
+}
+
+footer .back-top:hover{
+	background:#2ecbdb;
 }
 
 .back-top::before{

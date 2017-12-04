@@ -42,6 +42,21 @@ a:hover{
 	text-decoration:none;
 }
 
+input:-moz-placeholder,   
+textarea:-moz-placeholder {   
+    color: #999999;   
+}   
+  
+input:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+    color: #999999;   
+}   
+  
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #999999;   
+}  
+
 .container-fluid {
   	padding:0;
 }
@@ -189,6 +204,11 @@ header .top-banner {
   	color: #ffffff;
   	cursor:pointer;
 }
+
+.banner-content .send-resume-btn:hover{
+	background-color:#0099ff;
+}
+
 
 .banner-content .company-name{
 	padding-top:60px;
@@ -389,6 +409,11 @@ section .content-box .position-box::after{
   	cursor:pointer;
 }
 
+.position-right .evaluation-btn .evaluation-text:hover{
+	color:#ffbf00;
+}
+
+
 .position-right .evaluation-btn .evaluation-text::before{
 	content: "";
     position: absolute;
@@ -533,6 +558,10 @@ section .reply-box{
   	text-align: center;
   	color: #fff;
   	cursor:pointer;
+}
+
+.reply-area .reply-btn:hover{
+	background-color:#ffb400;
 }
 
 .reply-content .commend-list{
@@ -748,6 +777,10 @@ footer .back-top{
 	background-color: #64d3de;
   	box-shadow: 0 3px 6px 0 rgba(154, 154, 154, 0.5);
 	cursor:pointer;
+}
+
+footer .back-top:hover{
+	background:#2ecbdb;
 }
 
 .back-top::before{

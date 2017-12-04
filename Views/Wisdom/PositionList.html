@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
 		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/PositionList.css?v=20171127"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/PositionList.css?v=20171204"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
@@ -104,7 +104,7 @@
 			<div class="row position">
 				<div class="position-box">
 					<div class="position-top">
-						<span class="sort-item">综合排序</span>
+						<span class="sort-item sort-item-change">综合排序</span>
 						<span class="sort-item">发布时间</span>
 						<span class="sort-item">职位热度</span>
 						<span class="position-num">共找到 <span class="block">1993 </span>条</span>
@@ -318,7 +318,7 @@
 		
 	</div>
 	<footer>
-		<a href="#page-top" class="back-top"></a>
+		<a href="#" class="back-top"></a>
 		<div class="about-us">
 			<div class="about-left">
 				<div class="about-title">
@@ -364,6 +364,23 @@
 			
 			$("body").on("click",".position-item",function(){
 				window.location.href="PositionDetail.html";
+			})
+			
+			$("body").on("click",".back-top",function(event){
+				$('body,html').animate({scrollTop:0},300);
+			})
+			
+			$("body").on("click",".sort-item",function(){
+				var _self=this;
+				if(!$(_self).hasClass(".sort-item-change")){
+					$(".sort-item").each(function(i,obj){
+						$(obj).removeClass("sort-item-change");
+					})
+					$(_self).addClass("sort-item-change");
+				}else{
+					
+				}
+				
 			})
 			
 		})

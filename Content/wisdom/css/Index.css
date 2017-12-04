@@ -42,6 +42,21 @@ a:hover{
 	text-decoration:none;
 }
 
+input:-moz-placeholder,   
+textarea:-moz-placeholder {   
+    color: #999999;   
+}   
+  
+input:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+    color: #999999;   
+}   
+  
+input::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+    color: #999999;   
+}  
+
 .container-fluid {
   	padding:0;
 }
@@ -208,19 +223,24 @@ header .top-search .search-box{
 	padding:12px 15px;
 	width:450px;
 	height:100%;
-	line-height:23px;
+	line-height:22px;
 	font-family: NotoSansCJKsc;
-	border:none;
+	border:1px solid transparent;
+	border-right:none;
   	font-size: 14px;
   	text-align: left;
   	color: #333;
 	outline:none;
 }
 
-header .search-btn{
+header .top-search .search-box:focus{
+	border-color:#ffbf00;
+}
+
+header .top-search .search-btn{
+	float:left;
 	width: 92px;
   	height: 45px;
-  	float:left;
   	line-height:45px;
   	background-color: #ffbf00;
   	box-shadow: 2px 2px 15px 0 #989898;
@@ -229,6 +249,10 @@ header .search-btn{
   	text-align: center;
   	color: #fff;
   	cursor:pointer;
+}
+
+header .top-search .search-btn:hover{
+	background:#ffb400;
 }
 
 header .top-evaluation{
@@ -777,6 +801,13 @@ section .recommend-position{
 	width:100%;
 	cursor:pointer;
 	border-bottom:1px solid #e4e4e4;
+}
+
+
+.recommend-position .position-box .position-list .position-item:hover {
+    -webkit-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    -moz-box-shadow: 0 0 10px 0 rgba(56,81,76,.12);
+    box-shadow: 0 0 10px 0 rgba(56,81,76,.12)
 }
 
 .recommend-position .position-box .position-list .position-item .position-company-img{
@@ -1543,6 +1574,10 @@ footer .back-top{
 	background-color: #64d3de;
   	box-shadow: 0 3px 6px 0 rgba(154, 154, 154, 0.5);
 	cursor:pointer;
+}
+
+footer .back-top:hover{
+	background:#2ecbdb;
 }
 
 .back-top::before{

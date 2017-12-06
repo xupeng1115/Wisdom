@@ -54,6 +54,7 @@
 				<span class="introduce-btn">介绍</span>
 				<span class="detail-btn">详情</span>
 			</div>
+			
 			<div class="row introduce-box">
 				<div class="row introduce-title-box">
 					<div class="introduce-title">
@@ -228,6 +229,83 @@
 				</div>
 			
 			</div>
+			
+			<div class="row detail-box">
+				<div class="detail-evaluation-box">
+					<div class="evaluation-title">探索自我-专业测评</div>
+					<div class="evaluation-msg">通过完整系统的测评工具建立对自己客观公正的认知</div>
+					<div class="evaluation-content-title">您可从6个覆盖绝大多数名企使用的测评类型中选取并完成3个在线测评</div>
+					<div class="evaluation-content">
+						<div class="content-msg">温馨提示：请您以最真实的状态完成答题。</div>
+						<ul class="evaluation-list clearbox">
+							<li class="evaluation-item">
+								<div class="item-title">EQ情商测评</div>
+								<div class="item-msg">如何在职场中如鱼得水 如何发挥自己的性格优势赢得职场战争。</div>
+							</li>
+							<li class="evaluation-item">
+								<div class="item-title">EPA职业性格全画像测评</div>
+								<div class="item-msg">全面了解职业性格，找到性格亮点，区别对待，客观评价。（当日出测评报告）</div>
+							</li>
+							<li class="evaluation-item">
+								<div class="item-title">AT智力测评</div>
+								<div class="item-msg">外企名企校招必备，在线能力测评，提前预知能力水平，稳抓胜率。</div>
+							</li>
+							<li class="evaluation-item">
+								<div class="item-title">ES就业竞争力测评</div>
+								<div class="item-msg">对照就业能力标准，识别短板及时提升。</div>
+							</li>
+							<li class="evaluation-item">
+								<div class="item-title">创业成功率测试</div>
+								<div class="item-msg">在小型互联网公司拼搏到底适不适合 如何才能与初创公司共同进步。</div>
+							</li>
+							<li class="evaluation-item">
+								<div class="item-title">Harrison最佳优势测试</div>
+								<div class="item-msg">重点关注性格优势，在不同职业和工作任务中的具体表现，建立自信，赢得就业机会。</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="detail-read-box">
+					<div class="read-title">解读自我-专业解读</div>
+					<div class="read-msg">参照行业内专家和职业规划师的建议，形成完整的个人发展计划，当您完成3个在线测评后，请耐心等待专业测评报告解读。</div>
+					<div class="read-box clearbox">
+						<div class="read-img"></div>
+						<div class="read-content">
+							<div class="content-title">解读流程</div>
+							<ul class="content-list">
+								<li class="content-item">
+									<div class="item-title">报告解读</div>
+									<div class="item-msg">针对所有测评工具的报告结果进行专业分析，对比常模，找准位置。</div>
+								</li>
+								<li class="content-item">
+									<div class="item-title">指标分析</div>
+									<div class="item-msg">报告中各项指标的具体含义，优势项和劣势项如何做区分，如何分别干预。</div>
+								</li>
+								<li class="content-item">
+									<div class="item-title">发展建议</div>
+									<div class="item-msg">针对短板的个性化发展建议，采取精简易行的原则。</div>
+								</li>
+								<li class="content-item">
+									<div class="item-title">行动计划</div>
+									<div class="item-msg">手把手教授用具体的工具为自己制定行动计划。</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="detail-tips-box">
+					<div class="tips-title">温馨提示</div>
+					<div class="tips-box tips-one">
+						<span class="tips-head">您可当日看到报告的测评有：</span>
+						<span class="tips-text">EPA职业性格全画像测试，ES就业竞争力测试，AT智力测试，创业成功率测试。</span>
+					</div>
+					<div class="tips-box tips-two">
+						<span class="tips-head">您可3日内看到报告的测评有：</span>
+						<span class="tips-text">EQ情商测试，Harrison最佳优势测试。</span>
+					</div>
+				</div>
+			</div>
+			
 		</section>
 		
 	</div>
@@ -281,6 +359,43 @@
 			    prevButton: '.swiper-button-prev',
 			    
 			})
+			
+			$("body").on("click",".introduce-btn",function(){
+				$(this).css("color","#ffbf00");
+				$(".detail-btn").css("color","#6d6d6d");
+				$(".introduce-btn").hover(function(){
+    				$(this).css("color","#ffbf00");
+				},function(){
+    				$(this).css("color","#333");
+				});
+				
+				$(".detail-btn").hover(function(){
+    				$(this).css("color","#ffbf00");
+				},function(){
+    				$(this).css("color","#6d6d6d");
+				});
+				$(".detail-box").hide();
+				$(".introduce-box").show();
+			})
+			
+			$("body").on("click",".detail-btn",function(){
+				$(this).css("color","#ffbf00");
+				$(".introduce-btn").css("color","#6d6d6d");
+				$(".detail-btn").hover(function(){
+    				$(this).css("color","#ffbf00");
+				},function(){
+    				$(this).css("color","#333");
+				});
+				
+				$(".detail-btn").hover(function(){
+    				$(this).css("color","#ffbf00");
+				},function(){
+    				$(this).css("color","#6d6d6d");
+				});
+				$(".introduce-box").hide();
+				$(".detail-box").show();
+			})
+			
 			
 			$("body").on("click",".back-top",function(event){
 				$('body,html').animate({scrollTop:0},300);

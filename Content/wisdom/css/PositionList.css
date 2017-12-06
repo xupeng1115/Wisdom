@@ -504,6 +504,10 @@ section{
 	position:relative;
 }
 
+.recommend-item .add-more-box .add-more-list .add-more-item .item-box .item-list .item-list-item:hover span{
+	color:#ffbf00;
+}
+
 .recommend-item .add-more-box .add-more-list .add-more-item .item-box .item-list .item-list-item span::after{
 	display:none;
 	position:absolute;

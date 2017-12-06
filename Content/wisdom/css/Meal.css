@@ -116,6 +116,12 @@ textarea::-webkit-input-placeholder {
 	color:#c8c8c8;
 }
 
+.clearbox::after{
+	display:block;
+	content:"";
+	clear:both;
+}
+
 /***************************头部banner***********************/
 
 header{
@@ -300,6 +306,14 @@ section .introduce-detail{
 	color:#333;
 }
 
+.introduce-detail .introduce-btn:hover{
+	color:#ffbf00;
+}
+
+.introduce-detail .detail-btn:hover{
+	color:#ffbf00;
+}
+
 .introduce-detail .introduce-btn::after{
 	position:absolute;
 	top:20px;
@@ -313,6 +327,7 @@ section .introduce-detail{
 
 /*******************************************套餐介绍introduce*************************************/
 .introduce-box{
+	display:block;
 	position:relative;
 	background:#fff;
 }
@@ -751,8 +766,291 @@ section .introduce-detail{
 
 
 /*********************************套餐详情部分************************************/
+.detail-box{
+	display:none;
+	position:relative;
+	background:#fff;
+}
 
+.detail-box .detail-evaluation-box{
+	position:relative;
+	background:url(../img/meal_detail_evaluation_bg.png)no-repeat center center;
+	background-size:cover;
+}
 
+.detail-evaluation-box .evaluation-title{
+	position:relative;
+	margin-top:60px;
+	padding-top:60px;
+	font-family: NotoSansCJKsc;
+  	font-size: 32px;
+  	font-weight: 500;
+  	letter-spacing: 2px;
+  	text-align: center;
+  	color: #333333;
+}
+
+.detail-evaluation-box .evaluation-msg{
+	margin-top:10px;
+	padding-bottom:400px;
+	font-family: NotoSansCJKsc;
+  	font-size: 16px;
+  	letter-spacing: 1px;
+ 	text-align: center;
+  	color: #6d6d6d;
+}
+
+.detail-evaluation-box .evaluation-content-title{
+	position:absolute;
+	top:200px;
+	left:50%;
+	margin-left:-290px;
+	width:580px;
+	height:45px;
+	line-height:45px;
+	background:#182733;
+	font-family: NotoSansCJKsc;
+  	font-size: 16px;
+  	letter-spacing: 1px;
+  	text-align: center;
+  	color: #fff;
+  	z-index:100;
+}
+
+.detail-evaluation-box .evaluation-content{
+	position:absolute;
+	top:222px;
+	left:50%;
+	margin-left:-550px;
+	padding:20px 130px;
+	width:1100px;
+	background:#fff;
+	box-shadow: 0 2px 10px 0 rgba(213, 213, 213, 0.5);
+	border-radius:10px;
+  	z-index:10;
+}
+
+.evaluation-content .content-msg{
+	padding-top:20px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	letter-spacing: 0.9px;
+  	text-align: center;
+  	color: #6d6d6d;
+}
+
+.evaluation-content .evaluation-list{
+	position:relative;
+	margin:10px 0;
+	width:100%;
+}
+
+.evaluation-content .evaluation-list::before{
+	position:absolute;
+	top:160px;
+	left:50%;
+	margin-left:-460px;
+	content:"";
+	width:920px;
+	height:0;
+	border-top:1px dashed #e9e9e9;
+	z-index:10;
+}
+
+.evaluation-list .evaluation-item{
+	float:left;
+	margin:30px 100px 30px 0; 
+	width:210px;
+}
+
+.evaluation-list .evaluation-item:nth-of-type(3n+0){
+	margin-right:0;
+}
+
+.evaluation-item .item-title{
+	margin-bottom:20px;
+	line-height:27px;
+	font-family: NotoSansCJKsc;
+  	font-size: 18px;
+  	text-align: center;
+  	color: #0099e5;
+}
+
+.evaluation-item .item-msg{
+	height:54px;
+	line-height:18px;
+	font-family: NotoSansCJKsc;
+  	font-size: 12px;
+  	letter-spacing: 1px;
+  	text-align: center;
+  	color: #333;
+  	overflow:hidden;
+}
+
+.detail-box .detail-read-box{
+	position:relative;
+	width:100%;
+	background:#595959;
+}
+
+.detail-read-box .read-title{
+	padding-top:150px;
+	font-family: NotoSansCJKsc;
+  	font-size: 32px;
+  	font-weight: 500;
+  	letter-spacing: 2px;
+  	text-align: center;
+  	color: #ffbf00;
+}
+
+.detail-read-box .read-msg{
+	margin:0 auto;
+	margin-top:10px;
+	width:500px;
+	line-height:24px;
+	font-family: NotoSansCJKsc;
+  	font-size: 16px;
+  	letter-spacing: 1px;
+  	text-align: center;
+  	color: #d6d6d6;
+}
+
+.detail-read-box .read-box{
+	margin:0 auto;
+	margin-top:30px;
+	padding-bottom:60px;
+	width:1050px;
+}
+
+.read-box .read-img{
+	margin-top:45px;
+	float:left;
+	width: 473px;
+  	height: 284px;
+  	background:url(../img/meal_read.png)no-repeat center center;
+  	background-size:100% 100%;
+}
+
+.read-box .read-content{
+	float:right;
+	width:520px;
+}
+
+.read-content .content-title{
+	font-family: NotoSansCJKsc;
+  	font-size: 24px;
+  	font-weight: 500;
+  	letter-spacing: 2px;
+  	text-align: left;
+  	color: #ffffff;
+}
+
+.read-content .content-list{
+	position:relative;
+	margin-top:18px;
+}
+
+.content-list::before{
+	position:absolute;
+	top:10px;
+	left:2px;
+	content:"";
+	width:1px;
+	height:300px;
+	background:#818181;
+}
+
+.content-list .content-item{
+	position:relative;
+	margin-bottom:30px;
+	padding-left:20px;
+}
+
+.content-list .content-item::before{
+	position:absolute;
+	top:2px;
+	left:-5px;
+	content:"";
+	width: 15px;
+  	height: 15px;
+  	background-color: rgba(255,191,0,0.32);
+  	border-radius:100px;
+  	z-index:10;
+}
+
+.content-list .content-item::after{
+	position:absolute;
+	top:7px;
+	left:0px;
+	content:"";
+	width: 5px;
+  	height: 5px;
+  	background-color:#ffbf00;
+  	border-radius:100px;
+  	z-index:11;
+}
+
+.content-list .content-item:last-child{
+	margin-bottom:0;
+	padding-bottom:10px;
+}
+
+.content-item .item-title{
+	font-family: NotoSansCJKsc;
+  	font-size: 18px;
+  	letter-spacing: 1.1px;
+  	text-align: left;
+  	color: #ffbf00;
+}
+
+.content-item .item-msg{
+	margin-top:5px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	letter-spacing: 0.9px;
+  	text-align: left;
+  	color: #ffffff;
+}
+
+.detail-box .detail-tips-box{
+	padding:60px 0;
+	width:100%;
+	background:url(../img/meal_tips.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+.detail-tips-box .tips-title{
+	font-family: NotoSansCJKsc;
+  	font-size: 28px;
+  	letter-spacing: 1.8px;
+  	text-align: center;
+  	color: #333333;
+}
+
+.detail-tips-box .tips-one{
+	margin-top:30px;
+}
+
+.detail-tips-box .tips-two{
+	margin-top:10px;
+}
+
+.detail-tips-box .tips-box span{
+	display:inline-block;
+}
+
+.detail-tips-box .tips-box{
+	font-family: NotoSansCJKsc;
+  	font-size: 16px;
+ 	letter-spacing: 1.3px;
+ 	text-align: center;
+ 	color: #6d6d6d;
+}
+
+.detail-tips-box .tips-box .tips-head{
+	font-size: 18px;
+  	color: #333333;
+}
 
 /*********************************swiper轮播部分************************************/
 .swiper-button-prev {

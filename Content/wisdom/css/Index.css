@@ -79,6 +79,7 @@ textarea::-webkit-input-placeholder {
 .col-lg-12{
 	padding:0;
 }
+
 .col-md-1,
 .col-md-2,
 .col-md-3,
@@ -200,6 +201,7 @@ header .top-box{
 	height:0;
 	width:0;
 }
+
 .top-box .top-nav .top-nav-item:hover a::after{
 	display:block;
 }
@@ -218,6 +220,7 @@ header .top-msg{
 	padding-right:550px;
 	line-height:33px;
 	font-family: NotoSansCJKsc;
+	font-weight:lighter;
 	font-size: 22px;
   	text-align: left;
   	color: #fff;
@@ -275,6 +278,7 @@ header .top-evaluation{
 }
 
 header .top-evaluation .top-evaluation-btn{
+	position:relative;
 	display:inline-block;
 	padding-bottom:3px;
 	line-height:24px;
@@ -287,7 +291,7 @@ header .top-evaluation .top-evaluation-btn{
 }
 
 header .top-evaluation .top-evaluation-btn:hover{
-	border-color:#ffbf00;
+	border-color:#fff;
 }
 
 header .top-evaluation .top-evaluation-btn span{
@@ -297,6 +301,9 @@ header .top-evaluation .top-evaluation-btn span{
 }
 
 header .top-evaluation .top-evaluation-btn .evaluation-arrow{
+	position:absolute;
+	top:0;
+	right:-22px;
 	margin-top:4px;
 	margin-left:4px;
 	width:18px;
@@ -315,6 +322,7 @@ header .top-evaluation .top-evaluation-btn .evaluation-arrow::before{
 	background:#fff;
 	
 }
+
 header .top-evaluation .top-evaluation-btn .evaluation-arrow::after{
 	content:"";
 	position:absolute;
@@ -331,7 +339,6 @@ header .top-evaluation .top-evaluation-btn .evaluation-arrow::after{
 	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
 	-o-transform:rotate(-45deg); 	/* Opera */
 }
-
 
 /***************************中间内容区content***********************/
 section{
@@ -472,7 +479,6 @@ section .flow-standard{
   	color: #939393;
   	overflow:hidden;
 }
-
 
 section .module-title{
 	padding-top:60px;
@@ -1195,7 +1201,7 @@ section .team .team-box{
 .team-box .team-dec-box .team-dec-item{
 	position:relative;
 	float:left;
-	padding:0 20px 40px 35px;
+	padding:0 20px 20px 35px;
 	width:340px;
 }
 
@@ -1517,7 +1523,7 @@ section .cooperation{
 .cooperation .cooperation-box{
 	position:relative;
 	margin:0 auto;
-	width:898px;
+	width:948px;
 	height:255px;
 	overflow:hidden;
 }
@@ -1543,14 +1549,9 @@ section .cooperation{
 .company-list-item .list-content .company-item{
 	position:relative;
 	float:left;
-	margin-right:50px;
-	margin-bottom:30px;
+	margin:0 25px 30px 25px;
 	width:187px;
 	height:55px;
-}
-
-.company-list-item .list-content .company-item:nth-of-type(4n+0){
-	margin-right:0;
 }
 
 .company-list-item .list-content .company-item .company-item-box{
@@ -2030,6 +2031,7 @@ footer .about-us::after{
 }
 
 .about-us .about-left{
+	position:relative;
 	float:left;
 	width:500px;
 	font-family: PingFangSC;
@@ -2087,8 +2089,8 @@ footer .about-us::after{
 
 .about-left .about-email{
 	position:absolute;
-	bottom:130px;
-	left:340px;
+	bottom:72px;
+	left:230px;
 	padding-bottom:2px;
 	padding-left:25px;
 }

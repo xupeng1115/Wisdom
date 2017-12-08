@@ -178,7 +178,7 @@ header .top-box{
 
 header .top-banner {
 	height:313px;
-	background:url(../img/position_detail_banner.png)no-repeat center center;
+	background:url(../img/backstage_banner.png)no-repeat center center;
 	background-size:cover;
 }
 
@@ -187,22 +187,6 @@ header .top-banner {
 	margin:0 auto;
 	width:1200px;
 	height:100%;
-}
-
-.banner-content .send-resume-btn{
-	position:absolute;
-	top:127px;
-	right:20px;
-	width: 180px;
-  	height: 60px;
-  	line-height:60px;
-  	background-color: #0099e5;
-  	font-family: NotoSansCJKsc;
-  	font-size: 16px;
-  	letter-spacing: 1.1px;
-  	text-align: center;
-  	color: #ffffff;
-  	cursor:pointer;
 }
 
 .banner-content .send-resume-btn:hover{

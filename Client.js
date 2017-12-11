@@ -3,8 +3,8 @@ var http = require('http');
 // 用于请求的选项
 var options = {
    host: 'localhost',
-   port: '8081',
-   path: '/Views/Core/Index.htm'  
+   port: '8088',
+   path: '/index.htm'  
 };
 
 // 处理响应的回调函数

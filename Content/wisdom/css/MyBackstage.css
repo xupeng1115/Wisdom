@@ -188,7 +188,7 @@ header .top-banner {
 	background-size:cover;
 }
 
-.top-banner .resume-head-box{
+.top-banner .banner-head-box{
 	margin:0 auto;
 	position:relative;
 	margin-top:67px;
@@ -198,7 +198,7 @@ header .top-banner {
 	border-radius:100%;
 }
 
-.top-banner .resume-head-box .resume-head{
+.top-banner .banner-head-box .banner-head{
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -210,7 +210,7 @@ header .top-banner {
 	border-radius:100%;
 }
 
-.top-banner .resume-name{
+.top-banner .banner-name{
 	margin-top:10px;
 	font-family: NotoSansCJKsc;
   	font-size: 30px;
@@ -219,7 +219,7 @@ header .top-banner {
   	color: #ffffff;
 }
 
-.top-banner .resume-tag-box{
+.top-banner .banner-tag-box{
 	position:relative;
 	margin:0 auto;
 	margin-top:20px;
@@ -227,19 +227,19 @@ header .top-banner {
   	text-align:center;
 }
 
-.resume-tag-box .resume-tag-content{
+.banner-tag-box .banner-tag-content{
 	display:inline-block;
 	position:relative;
 	height:30px;
 }
 
-.resume-tag-content .resume-tag{
+.banner-tag-content .banner-tag{
 	margin:0 auto;
 	padding-right:54px;
 	height:30px;
 }
 
-.resume-tag-content .resume-tag .tag-item{
+.banner-tag-content .banner-tag .tag-item{
 	margin-right:10px;
 	padding:0 20px;
 	float:left;
@@ -254,7 +254,7 @@ header .top-banner {
   	color: #ffffff;
 }
 
-.resume-tag-content .add-tag-btn{
+.banner-tag-content .add-tag-btn{
 	position:absolute;
 	top:0px;
 	right:0;
@@ -265,7 +265,7 @@ header .top-banner {
 	cursor:pointer;
 }
 
-.resume-tag-content .add-tag-btn::before{
+.banner-tag-content .add-tag-btn::before{
 	display:block;
 	position:absolute;
 	top:50%;
@@ -278,7 +278,7 @@ header .top-banner {
 	background:#fff;
 }
 
-.resume-tag-content .add-tag-btn::after{
+.banner-tag-content .add-tag-btn::after{
 	display:block;
 	position:absolute;
 	top:50%;
@@ -333,7 +333,8 @@ section .nav-content{
   	cursor:pointer;
 }
 
-.nav-box .nav-item:nth-child(4){
+
+.nav-box .nav-item-active{
 	background:#fff;
 	color:#333;
 }
@@ -349,17 +350,112 @@ section .nav-content{
   	color: #ee5c54;
 }
 
-/**********************************简历头部信息******************************/
-.content-box .head-content{
+/******************简历导航部分*******************/
+
+.content-box .resume-nav-content{
 	position:relative;
+	float:right;
+	margin-top:60px;
+	width:200px;
+}
+
+.resume-nav-content .resume-nav-box{
+	width:200px;
+}
+
+.resume-nav-content .resume-nav-scroll{
+	position: fixed;
+    margin-left: 0;
+    width: 282px;
+    top: 0;
+}
+
+.resume-nav-box .resume-nav-head{
+	width:100%;
+	height: 45px;
+	line-height:45px;
+  	background-color: #fbf4e8;
+  	font-family: PingFangSC;
+  	font-size: 16px;
+  	text-align: center;
+  	color: #333333;
+}
+	
+.resume-nav-box .resume-nav-list{
+	position:relative;
+	margin-top:25px;
+	margin-bottom:30px;
+	width:100%;
+	border-left:2px solid #efefef;
+}
+
+.resume-nav-list .resume-nav-item{
+	position:relative;
+	margin-bottom:25px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color:#6d6d6d;
+  	cursor:pointer;
+}
+
+.resume-nav-list .resume-nav-item:last-child{
+	margin-bottom:0;
+}
+
+.resume-nav-item .resume-nav-line{
+	position:absolute;
+	top:0px;
+	left:-2px;
+	width:2px;
+	height:30px;
+	background:#efefef;
+}
+
+.resume-nav-list .resume-nav-active{
+	background:#F8F8F8;
+}
+
+.resume-nav-list .resume-nav-active .resume-nav-line{
+	background:#ffbf00;
+}
+
+.resume-nav-item span{
+	float:left;
+	display:inline-block;
+	height:30px;
+}
+
+.resume-nav-item .resume-nav-icon{
+	padding:3px 10px 0 20px;
+	font-size:16px;
+	color:#ffbf00;
+}
+
+/**********************************简历内容部分*******************************************/
+
+.content-box .resume-content{
+	position:relative;
+	float:left;
 	width:960px;
+	background-color: #fff;
+}
+
+/**************简历头部信息*************/
+
+.resume-content .head-box{
+	position:relative;
+	width:100%;
 	font-family: PingFangSC;
   	font-size: 14px;
   	text-align: left;
   	color: #333333;
 }
 
-.head-content .head-img{
+.head-box .head-img{
 	display:block;
 	margin:0 auto;
 	margin-top:60px;
@@ -369,7 +465,7 @@ section .nav-content{
 	border: 8px solid #fbf4e8;
 }
 
-.head-content .head-name{
+.head-box .head-name{
 	display:inline-block;
 	margin:0 auto;
 	position:relative;
@@ -403,7 +499,7 @@ section .nav-content{
 	display:none;
 }
 
-.head-content .head-contact{
+.head-box .head-contact{
 	position:relative;
 	margin:0 auto;
 	text-align:center;
@@ -432,7 +528,7 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
-.head-content .head-address{
+.head-box .head-address{
 	position:relative;
 	margin:0 auto;
 	margin-top:10px;
@@ -450,16 +546,332 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
-/**********************************简历部分*******************************************/
-.content-box .resume-content{
+
+/*******************************简历模块区*******************************/
+
+.resume-content .resume-box{
 	position:relative;
+	padding:30px;
 	margin-top:30px;
 	margin-bottom:112px;
-	width:960px;
-	height:1000px;
+	width:100%;
 	background-color: #fefefe;
   	box-shadow: 0 2px 10px 0 rgba(211, 211, 211, 0.5);
 }
+
+.resume-box .resume-module{
+	position:relative;
+	margin:0 auto;
+	padding-bottom:30px;
+}
+
+.resume-module .module-wrapper{
+	padding-left:15px;
+	width:100%;
+}
+
+.resume-module .resume-module-top{
+	position:relative;
+	width:100%;
+	height:30px;	
+}
+
+.resume-module .resume-module-top::before{
+	position:absolute;
+	top:15px;
+	left:0;
+	content:"";
+	width:810px;
+	height:0;
+	border-bottom: dashed 1px #e4e4e4;
+	z-index:10;
+}
+
+.resume-module .resume-module-top span{
+	display:inline-block;
+	height:30px;
+	background:#fff;
+	line-height:30px;
+}
+
+.resume-module .resume-module-top .top-icon{
+	position:absolute;
+	top:0;
+	left:0;
+	padding:3px 10px 0 0;
+	font-size:16px;
+	color:#ffbf00;
+	z-index:20;
+}
+
+.resume-module .resume-module-top .top-title{
+	position:absolute;
+	top:0;
+	left:33px;
+	padding:0 10px 0 2px;
+	font-size:16px;
+	color:#333;
+	z-index:20;
+}
+
+.resume-module .resume-module-top .add-module-btn{
+	position:absolute;
+	top:0;
+	right:0;
+	padding-left:20px;
+	width:78px;
+	height:30px;
+	line-height:28px;
+	border:1px solid #0099e5;
+	border-radius:15px;
+	font-family: PingFangSC;
+  	font-size: 12px;
+  	text-align: left;
+  	color: #0099e5;
+	cursor:pointer;
+	z-index:20;
+}
+
+.resume-module .resume-module-top .add-module-btn::before{
+	position:absolute;
+	top:14px;
+	right:16px;
+	content:"";
+	width:10px;
+	height:2px;
+	background:#0099e5;
+}
+
+.resume-module .resume-module-top .add-module-btn::after{
+	position:absolute;
+	top:10px;
+	right:20px;
+	content:"";
+	width:2px;
+	height:10px;
+	background:#0099e5;
+}
+
+.resume-module-active .resume-module-top .add-module-btn{
+	color: #6d6d6d;
+	cursor:default;
+	border-color:#6d6d6d;
+}
+
+.resume-module-active .resume-module-top .add-module-btn::before{
+	background:#6d6d6d;
+}
+
+.resume-module-active .resume-module-top .add-module-btn::after{
+	background:#6d6d6d;
+}
+
+/***********教育背景模块区******************/
+.education-box .education-wrapper{
+	padding-top:30px;
+} 
+
+.education-wrapper .education-date-box{
+	position:relative;
+	margin-left:20px;
+	float:left;
+	width:55px;
+}
+
+.education-date-box .education-date{
+	position:relative;
+	padding-bottom:30px;
+	width:100%;
+	text-align:left;
+}
+
+.education-date-box .education-date span{
+	display:inline-block;
+}
+
+.education-date-box .education-date::before{
+	position:absolute;
+	top:20px;
+	right:0;
+	content:"";
+	width:0;
+	height:80px;
+	border-left:1px solid #d8d8d8;
+}
+
+.education-date-box .education-date:last-child::before{
+	height:60px;
+}
+
+.education-date-box .education-date::after{
+	position:absolute;
+	top:20px;
+	right:-3px;
+	content:"";
+	width:8px;
+	height:8px;
+	border-radius:8px;
+	background:#d8d8d8;
+}
+
+.education-date-box .education-date .date-year{
+	font-family: PingFangSC;
+  	font-size: 18px;
+  	text-align: left;
+  	color: #69a2cd;
+}
+
+.education-date-box .education-date .date-mouth{
+	font-family: PingFangSC;
+  	font-size: 12px;
+  	color: #6d6d6d;
+  	text-align: left;
+}
+
+.education-date-box .education-date .date-predict-text{
+	display:none;
+	position:absolute;
+	top:-14px;
+	left:0;
+	font-family: PingFangSC;
+  	font-size: 12px;
+  	color: #6d6d6d;
+  	text-align: left;
+}
+
+.education-date-box .education-date-predict .date-predict-text{
+	display:block;
+}
+
+.education-wrapper .education-container{
+	position:relative;
+	float:right;
+	width:798px;
+}
+
+.education-container .education-list{
+	position:relative;
+	margin-top:10px;
+	width:100%;
+}
+
+.education-container .education-list .education-item{
+	position:relative;
+	margin-bottom:50px;
+	padding-right:80px;
+	width:798px;
+	height:30px;
+	background:transparent;
+	line-height:30px;
+	text-align:left;
+}
+
+.education-item span{
+	display:inline-block;
+	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #6d6d6d;
+}
+
+.education-item .education-school{
+	position:relative;
+	padding:0 10px;
+	font-family: PingFangSC;
+  	font-size: 16px;
+  	color: #333333;
+}
+
+.education-item .education-school::before{
+	position:absolute;
+	top:10px;
+	right:0;
+	content:"";
+	width:0;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+.education-item .education-background{
+	margin-left:10px;
+	font-family: PingFangSC;
+  	font-size: 16px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.education-item .education-major{
+	margin-left:30px;
+}
+
+.education-item .date-begin{
+	position:relative;
+	margin-left:30px;
+	padding-right:10px;
+}
+
+.education-item .date-begin::before{
+	position:absolute;
+	top:14px;
+	right:-10px;
+	content:"";
+	width:12px;
+	height:0px;
+	border-bottom:1px solid #cdcdcd;
+}
+
+.education-item .date-end{
+	margin-left:12px;
+}
+
+.education-item .delete-btn{
+	position:absolute;
+	top:0;
+	right:7px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #ee5c54;
+  	cursor:pointer;
+}
+
+.education-item .edit-btn{
+	position:absolute;
+	top:0;
+	right:40px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #0099e5;
+  	cursor:pointer;
+}
+
+.education-item .edit-btn::before{
+	position:absolute;
+	top:10px;
+	right:0px;
+	content:"";
+	width:0px;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+
+/***********所获荣誉模块区******************/
+
+
+
+
+/***********实习经历模块区******************/
+
+
+
+/***********语言技术模块区******************/
+
+
+
+
+/**********课外活动模块区******************/
+
+
 
 
 

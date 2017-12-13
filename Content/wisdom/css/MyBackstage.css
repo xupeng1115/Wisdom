@@ -609,9 +609,11 @@ section .nav-content{
 	top:0;
 	left:33px;
 	padding:0 10px 0 2px;
-	font-size:16px;
-	color:#333;
-	z-index:20;
+	font-family: PingFangSC;
+  	font-size: 20px;
+  	text-align: left;
+  	color: #333333;
+  	z-index:20;
 }
 
 .resume-module .resume-module-top .add-module-btn{
@@ -665,6 +667,164 @@ section .nav-content{
 .resume-module-active .resume-module-top .add-module-btn::after{
 	background:#6d6d6d;
 }
+
+
+/**************编辑区**************/
+.module-wrapper .module-edit-container{
+	display:none;
+	position:relative;
+	padding:20px;
+	padding-right:268px;
+	width:100%;
+	background:#f8f8f8;
+}
+
+.module-edit-container input{
+	display:block;
+	float:left;
+	position:relative;
+	padding:11px 15px;
+	margin:0 10px 10px 0;
+	width:300px;
+	height:44px;
+	line-height:20px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #333;
+  	outline:none;
+}
+
+.module-edit-container textarea{
+	display:block;
+	float:left;
+	position:relative;
+	padding:11px 15px;
+	margin:0 10px 10px 0;
+	width:510px;
+	height:125px;
+	line-height:20px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #333;
+  	outline:none;
+  	resize:none;
+}
+
+.module-edit-container input:focus{
+	border-color:#ffbf00;
+}
+
+.module-edit-container textarea:focus{
+	border-color:#ffbf00;
+}
+
+.module-edit-container .module-select{
+	position:relative;
+	float:left;
+	padding:11px 25px 11px 15px;
+	margin-bottom:10px;
+	width:200px;
+	height:44px;
+	line-height:20px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #c3c3c3;
+  	cursor:pointer;
+}
+
+.module-edit-container .module-select::after{
+	position:absolute;
+	top:15px;
+	right:15px;
+	content:"";
+	width:7px;
+	height:7px;
+	border-left:1px solid #8896a7;
+	border-bottom:1px solid #8896a7;
+	
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg); 	/* IE 9 */
+	-moz-transform:rotate(-45deg); 	/* Firefox */
+	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-45deg); 	/* Opera */
+}
+
+.module-select .module-select-content{
+	width:100%;
+	height:20px;
+	line-height:20px;
+	color:#c3c3c3;
+}
+
+.module-select .module-select-list{
+	display:none;
+	position:absolute;
+	top:48px;
+	left:-1px;
+	z-index:10;
+	padding:5px 0;
+	width:200px;
+	height:212px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	overflow-y:auto;
+  	overflow-x:hidden;
+}
+
+.module-select .module-select-list .module-select-item{
+	width:100%;
+	height:40px;
+	padding-left:10px;
+	background:#fff;
+	line-height:40px;
+	font-family: MicrosoftYaHei;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #475669;
+}
+
+.module-select .module-select-list .module-select-item:hover{
+	color:#ffbf00;
+}
+
+.module-edit-container .module-btn{
+	margin-top:10px;
+	float:left;
+	width: 90px;
+  	height:44px;
+  	line-height:44px;
+  	border-radius: 2px;
+  	background-color: #ffbf00;
+  	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: center;
+  	color: #ffffff;
+  	cursor:pointer;
+}
+
+.module-edit-container .module-save-btn{
+	margin-right:10px;
+	background:#ffbf00;
+}
+
+.module-edit-container .module-cancel-btn{
+	background:#c3c3c3;
+}
+
+
 
 /***********教育背景模块区******************/
 .education-box .education-wrapper{
@@ -757,13 +917,17 @@ section .nav-content{
 
 .education-container .education-list .education-item{
 	position:relative;
-	margin-bottom:50px;
+	margin-bottom:45px;
 	padding-right:80px;
 	width:798px;
 	height:30px;
 	background:transparent;
 	line-height:30px;
 	text-align:left;
+}
+
+.education-container .education-list .education-item:hover{
+	background:#f8f8f8;
 }
 
 .education-item span{
@@ -825,6 +989,7 @@ section .nav-content{
 }
 
 .education-item .delete-btn{
+	display:none;
 	position:absolute;
 	top:0;
 	right:7px;
@@ -835,6 +1000,7 @@ section .nav-content{
 }
 
 .education-item .edit-btn{
+	display:none;
 	position:absolute;
 	top:0;
 	right:40px;
@@ -842,6 +1008,14 @@ section .nav-content{
   	font-size: 16px;
   	color: #0099e5;
   	cursor:pointer;
+}
+
+.education-container .education-list .education-item:hover .delete-btn{
+	display:block;
+}
+
+.education-container .education-list .education-item:hover .edit-btn{
+	display:block;
 }
 
 .education-item .edit-btn::before{
@@ -856,22 +1030,571 @@ section .nav-content{
 
 
 /***********所获荣誉模块区******************/
+.award-wrapper .award-container{
+	margin-top:30px;
+	position:relative;
+	width:100%;
+}
 
+.award-container .award-list{
+	position:relative;
+	width:100%;
+}
 
+.award-list .award-item{
+	position:relative;
+	margin-bottom:10px;
+	padding:0 80px 0 20px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	background:#fff;
+	text-align:left;
+}
+
+.award-container .award-list .award-item:hover{
+	background:#f8f8f8;
+}
+
+.award-item span{
+	display:inline-block;
+	height:30px;
+	font-family: PingFangSC;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #6d6d6d;
+}
+
+.award-item .award-name{
+	font-family: PingFangSC;
+  	font-size: 16px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.award-item .award-date{
+	padding-left:30px;
+}
+
+.award-item .delete-btn{
+	display:none;
+	position:absolute;
+	top:0;
+	right:7px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #ee5c54;
+  	cursor:pointer;
+}
+
+.award-item .edit-btn{
+	display:none;
+	position:absolute;
+	top:0;
+	right:40px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #0099e5;
+  	cursor:pointer;
+}
+
+.award-item .edit-btn::before{
+	position:absolute;
+	top:10px;
+	right:0px;
+	content:"";
+	width:0px;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+.award-item:hover .delete-btn{
+	display:block;
+}
+
+.award-item:hover .edit-btn{
+	display:block;
+}
 
 
 /***********实习经历模块区******************/
+.practice-wrapper .practice-container{
+	margin-top:20px;
+	position:relative;
+	width:100%;
+}
+
+.practice-container .practice-list{
+	position:relative;
+	width:100%;
+}
+
+.practice-list .practice-item{
+	position:relative;
+	margin-bottom:30px;
+	padding:10px 80px 0 20px;
+	width:100%;
+	background:#fff;
+	text-align:left;
+}
+
+.practice-item span{
+	display:inline-block;
+}
+
+.practice-item .item-head{
+	position:relative;
+	width:100%;
+	height:60px;
+}
+
+.practice-item .item-head .item-company-logo{
+	display:block;
+	width:60px;
+	height:60px;
+	float:left;
+}
+
+.practice-item .item-head .head-msg{
+	padding-left:10px;
+	height:60px;
+	float:left;
+}
+
+.practice-item .item-head .head-msg .msg-top{
+	margin-bottom:13px;
+	height:27px;
+	line-height:27px;
+	text-align:left;
+}
+
+.practice-item .item-head .head-msg span{
+	display:inline-block;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	letter-spacing: 0.9px;
+  	text-align: left;
+ 	color: #6d6d6d;
+}
+
+.practice-item .item-head .head-msg .msg-top .msg-company-name{
+	font-family: NotoSansCJKsc;
+  	font-size: 18px;
+  	letter-spacing: 1.1px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.practice-item .item-head .head-msg .msg-top .msg-position-name{
+	padding-left:10px;
+}
+
+.practice-item .item-head .head-msg .msg-bottom{
+	height:20px;
+	line-height:20px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	letter-spacing: 0.9px;
+  	text-align: left;
+  	color: #9d9d9d;
+}
+
+.practice-item .item-head .head-msg .msg-bottom .msg-date{
+	padding-left:30px;
+}
+
+.practice-item .item-content{
+	padding:10px 0;
+	line-height:22px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.practice-container .practice-list .practice-item:hover{
+	background:#f8f8f8;
+}
+
+.practice-item .delete-btn{
+	display:none;
+	position:absolute;
+	top:10px;
+	right:7px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #ee5c54;
+  	cursor:pointer;
+}
+
+.practice-item .edit-btn{
+	display:none;
+	position:absolute;
+	top:10px;
+	right:40px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #0099e5;
+  	cursor:pointer;
+}
+
+.practice-item .edit-btn::before{
+	position:absolute;
+	top:5px;
+	right:0px;
+	content:"";
+	width:0px;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+.practice-item:hover .delete-btn{
+	display:block;
+}
+
+.practice-item:hover .edit-btn{
+	display:block;
+}
+
+.practice-edit-container .practice-address{
+	width:200px;
+	margin-right:0;
+}
+
+.practice-edit-container .uploader-box{
+	position:relative;
+	margin-right:420px;
+	margin-bottom:10px;
+	float:left;
+	width:100px;
+	height:100px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	cursor:pointer;
+}
+
+.practice-edit-container .uploader-box::before{
+	position:absolute;
+	top:40px;
+	left:43px;
+	content:"";
+	width:14px;
+	height:2px;
+	z-index:10;
+	background:#c3c3c3;
+}
+
+.practice-edit-container .uploader-box::after{
+	position:absolute;
+	top:34px;
+	left:49px;
+	content:"";
+	width:2px;
+	height:14px;
+	z-index:10;
+	background:#c3c3c3;
+}
+
+.practice-edit-container .uploader-box .uploader-input{
+	display:block;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	text-align:center;
+	border:none;
+	background:#fff;
+	opacity:0;
+	cursor:pointer;
+}
+
+.practice-edit-container .uploader-box .uploader-msg{
+	display:inline-block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	line-height:136px;
+	font-family: PingFangSC;
+  	font-size: 12px;
+  	text-align: center;
+  	color: #c3c3c3;
+  	cursor:pointer;
+}
 
 
 
-/***********语言技术模块区******************/
+
+
+/***********语言技能模块区******************/
+.skill-wrapper .skill-container{
+	margin-top:30px;
+	position:relative;
+	width:100%;
+}
+
+.skill-container .skill-list{
+	position:relative;
+	width:100%;
+}
+
+.skill-list .skill-item{
+	position:relative;
+	margin-bottom:10px;
+	padding:0 80px 0 20px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	background:#fff;
+	text-align:left;
+}
+
+.skill-container .skill-list .skill-item:hover{
+	background:#f8f8f8;
+}
+
+.skill-item span{
+	display:inline-block;
+	height:30px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #6d6d6d;
+}
+
+.skill-item .skill-name{
+	width:200px;
+	height:30px;
+	font-family: NotoSansCJKsc;
+  	font-size: 16px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.skill-item .skill-bar-box{
+	position:relative;
+	margin-top:9px;
+	margin-left:10px;
+	width:400px;
+	height:12px;
+	background:#efefef;
+	border-radius:6px;
+}
+
+.skill-item .skill-bar-box .skill-bar{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	height:12px;
+	background:#ffbf00;
+	border-radius:6px;
+}
+
+.skill-list .skill-item:nth-child(1) .skill-bar-box .skill-bar{
+	width:200px;
+}
+
+.skill-list .skill-item:nth-child(2) .skill-bar-box .skill-bar{
+	width:300px;
+}
+
+.skill-list .skill-item:nth-child(3) .skill-bar-box .skill-bar{
+	width:100px;
+}
+
+.skill-list .skill-item:nth-child(4) .skill-bar-box .skill-bar{
+	width:50px;
+}
+
+.skill-item .skill-dec{
+	margin-left:30px;
+	width:130px;
+	height:30px;
+}
+
+.skill-item .delete-btn{
+	display:none;
+	position:absolute;
+	top:0;
+	right:7px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #ee5c54;
+  	cursor:pointer;
+}
+
+.skill-item .edit-btn{
+	display:none;
+	position:absolute;
+	top:0;
+	right:40px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #0099e5;
+  	cursor:pointer;
+}
+
+.skill-item .edit-btn::before{
+	position:absolute;
+	top:10px;
+	right:0px;
+	content:"";
+	width:0px;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+.skill-item:hover .delete-btn{
+	display:block;
+}
+
+.skill-item:hover .edit-btn{
+	display:block;
+}
+
+.skill-wrapper .skill-edit-container{
+	padding-right:250px;
+}
+
+.skill-edit-container .skill-dec{
+	width:300px;
+	margin-right:0;
+}
+
 
 
 
 
 /**********课外活动模块区******************/
+.activity-wrapper .activity-container{
+	margin-top:30px;
+	position:relative;
+	width:100%;
+}
 
+.activity-container .activity-list{
+	position:relative;
+	width:100%;
+}
 
+.activity-list .activity-item{
+	position:relative;
+	margin-bottom:10px;
+	padding:10px 80px 10px 20px;
+	width:100%;
+	background:#fff;
+}
+
+.activity-container .activity-list .activity-item:hover{
+	background:#f8f8f8;
+}
+
+.activity-item span{
+	display:inline-block;
+}
+
+.activity-item .activity-name{
+	height:35px;
+	font-family: NotoSansCJKsc;
+  	font-size: 18px;
+  	text-align: left;
+  	color: #333333;
+}
+
+.activity-item .activity-name .name-text{
+	display:inline-block;
+	padding-bottom:5px;
+	border-bottom:2px solid #ffbf00;
+}
+
+.activity-item .activity-msg{
+	margin-top:10px;
+	height:20px;
+	line-height:20px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #6d6d6d;
+}
+
+.activity-item .activity-msg span{
+	display:inline-block;
+}
+
+.activity-item .activity-msg .msg-site{
+	padding-left:10px;
+}
+
+.activity-item .activity-dec{
+	margin-top:10px;
+	font-family: NotoSansCJKsc;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #6d6d6d;
+}
+
+.activity-item .delete-btn{
+	display:none;
+	position:absolute;
+	top:10px;
+	right:7px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #ee5c54;
+  	cursor:pointer;
+}
+
+.activity-item .edit-btn{
+	display:none;
+	position:absolute;
+	top:10px;
+	right:40px;
+	padding:0 10px;
+  	font-size: 16px;
+  	color: #0099e5;
+  	cursor:pointer;
+}
+
+.activity-item .edit-btn::before{
+	position:absolute;
+	top:5px;
+	right:0px;
+	content:"";
+	width:0px;
+	height:12px;
+	border-left:1px solid #cdcdcd;
+}
+
+.activity-item:hover .delete-btn{
+	display:block;
+}
+
+.activity-item:hover .edit-btn{
+	display:block;
+}
+
+.activity-edit-container .activity-input-name{
+	width:510px;
+	margin-right:0;
+}
+
+.activity-edit-container .activity-select{
+	width:300px;
+	margin-right:10px;
+}
+
+.activity-edit-container .activity-select .activity-select-list{
+	width:300px;
+}
+
+.activity-edit-container .activity-input-address{
+	width:200px;
+	margin-right:0;
+}
 
 
 

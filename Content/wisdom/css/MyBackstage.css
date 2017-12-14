@@ -10,8 +10,7 @@ body{
 	margin:0;
 	padding:0;
 	border: 0;
-	font-family:"Microsoft YaHei","微软雅黑","PingFang SC","Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
-	display:block;
+	font-family:NotoSansCJKsc;
 	position:relative;
 }
 
@@ -212,7 +211,7 @@ header .top-banner {
 
 .top-banner .banner-name{
 	margin-top:10px;
-	font-family: NotoSansCJKsc;
+	font-family:NotoSansCJKsc;
   	font-size: 30px;
   	letter-spacing: 1.3px;
   	text-align: center;

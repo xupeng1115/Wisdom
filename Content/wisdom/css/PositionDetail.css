@@ -10,7 +10,7 @@ body{
 	margin:0;
 	padding:0;
 	border: 0;
-	font-family:"Microsoft YaHei","微软雅黑","PingFang SC","Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+	font-family:"Helvetica Neue" ,Helvetica,Arial, "PingFang SC" , "Hiragino Sans GB" ,"WenQuanYi Micro Hei" ,"Microsoft Yahei" ,sans-serif;
 	display:block;
 	position:relative;
 }
@@ -153,7 +153,6 @@ header .top-box{
 }
 
 .top-box .top-nav .top-nav-item a{
-	font-family: NotoSansCJKsc;
 	font-size:16px;
 	color:#6d6d6d;
 	position:relative;
@@ -163,7 +162,7 @@ header .top-box{
 	padding:0 30px;
 	margin-top:10px;
 	height:45px;
-	line-height:45px;
+	line-height:43px;
 	border:1px solid #6d6d6d;
 	border-radius:23px;
 }
@@ -197,7 +196,6 @@ header .top-banner {
   	height: 60px;
   	line-height:60px;
   	background-color: #0099e5;
-  	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	letter-spacing: 1.1px;
   	text-align: center;
@@ -213,7 +211,6 @@ header .top-banner {
 .banner-content .company-name{
 	padding-top:60px;
 	line-height:27px;
-	font-family: NotoSansCJKsc;
   	font-size: 18px;
   	letter-spacing: 2.6px;
   	text-align: left;
@@ -229,7 +226,6 @@ header .top-banner {
 	display:inline-block;
 	float:left;
 	line-height:62px;
-	font-family: NotoSansCJKsc;
   	font-size: 42px;
   	letter-spacing: 2.6px;
   	text-align: left;
@@ -264,7 +260,6 @@ header .top-banner {
 	border-radius: 4px;
 	line-height:24px;
 	background:#ffbf00;
-	font-family: PingFangSC;
   	font-size: 12px;
   	text-align: center;
   	color: #ffffff;
@@ -272,7 +267,6 @@ header .top-banner {
 
 .banner-content .position-address{
 	margin-top:30px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	letter-spacing: 2px;
   	text-align: left;
@@ -348,14 +342,12 @@ section .content-box .position-box::after{
 .msg-item .msg-title{
 	margin-bottom:20px;
 	line-height:36px;
-	font-family: NotoSansCJKsc;
   	font-size: 24px;
   	text-align: left;
   	color: #333333;
 }
 
 .msg-item .msg-content{
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #6d6d6d;
@@ -370,7 +362,6 @@ section .content-box .position-box::after{
 }
 
 .position-right .title-big{
-	font-family: NotoSansCJKsc;
   	font-size: 24px;
   	text-align: left;
   	color: #333333;
@@ -378,7 +369,6 @@ section .content-box .position-box::after{
 
 .position-right .title-little{
 	padding-left:20px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: left;
   	color: #9a9a9a;
@@ -387,7 +377,6 @@ section .content-box .position-box::after{
 .position-right #indicatorContainer canvas{
 	width:120px;
 	height:120px;
-	font-family: NotoSansCJKsc;
   	font-size: 20px;
   	line-height: 1.35;
   	text-align: center;
@@ -402,7 +391,6 @@ section .content-box .position-box::after{
 	position:relative;
 	display:inline-block;
 	padding-right:20px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #666666;
@@ -494,7 +482,6 @@ section .content-box .position-box::after{
 	float:left;
 	max-width:220px;
 	padding-left:20px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: left;
   	color: #333333;
@@ -506,7 +493,6 @@ section .content-box .position-box::after{
 .course-recommend .course-list .course-item a .course-msg .course-num{
 	float:left;
 	padding-left:10px;
-	font-family: NotoSansCJKsc;
   	font-size: 12px;
   	text-align: left;
   	color: #c3c3c3;
@@ -540,7 +526,6 @@ section .reply-box{
 	background-color: #ffffff;
   	border: solid 1px #dfdfdf;
   	border-right:none;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #333;
@@ -553,7 +538,6 @@ section .reply-box{
 	height:80px;
 	background:#ffbf00;
 	line-height:80px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: center;
   	color: #fff;
@@ -593,7 +577,6 @@ section .reply-box{
 }
 
 .commend-list .commend-item .commend-content .commend-name{
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #666;
@@ -602,7 +585,6 @@ section .reply-box{
 .commend-list .commend-item .commend-content .commend-text{
 	padding-top:10px;
 	line-height:24px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: left;
   	color: #333;
@@ -613,7 +595,6 @@ section .reply-box{
 	position:absolute;
 	bottom:20px;
 	right:0;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #666666;
@@ -624,7 +605,6 @@ section .reply-box{
 	position:absolute;
 	bottom:20px;
 	left:0;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #69a2cd;
@@ -645,7 +625,6 @@ section .reply-box{
 	height:60px;
 	background-color: #fff;
   	border: solid 1px #dfdfdf;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #333;
@@ -660,7 +639,6 @@ section .reply-box{
   	height: 45px;
   	background-color: #505050;
   	line-height:45px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: center;
   	color: #fff;
@@ -727,7 +705,6 @@ textarea:focus{
 }
 
 .item-commend-list .item-commend-item .item-commend-content .item-commend-name{
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #666;
@@ -736,7 +713,6 @@ textarea:focus{
 .item-commend-list .item-commend-item .item-commend-content .item-commend-text{
 	padding-top:10px;
 	line-height:24px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: left;
   	color: #333;
@@ -747,7 +723,6 @@ textarea:focus{
 	position:absolute;
 	bottom:20px;
 	right:0;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #666666;
@@ -805,7 +780,6 @@ footer .back-top:hover{
 	bottom: 11px;
     left: 20px;
     content: "Top";
-    font-family: PingFangSC;
     font-size: 14px;
   	letter-spacing: 0.8px;
   	text-align: center;
@@ -827,14 +801,12 @@ footer .about-us::after{
 .about-us .about-left{
 	float:left;
 	width:500px;
-	font-family: PingFangSC;
   	font-size: 14px;
   	text-align: justify;
   	color: #e7e7e7;
 }
 
 .about-left .about-title .title-big{
-	font-family: PingFangSC;
   	font-size: 34px;
   	text-align: justify;
   	color: #fff;
@@ -845,7 +817,6 @@ footer .about-us::after{
 }
 
 .about-left .about-title .title-little{
-	font-family: NotoSansCJKsc;
   	font-size: 26px;
   	font-weight: 300;
   	text-align: justify;
@@ -857,7 +828,6 @@ footer .about-us::after{
 }
 
 .about-left .about-dec .dec-text{
-	font-family: NotoSansCJKsc;
   	color: #fff;
 }
 
@@ -937,7 +907,6 @@ footer .about-right .right-box{
 
 .right-box .right-dec{
 	padding-top:30px;
-	font-family: PingFangSC;
   	font-size: 18px;
   	text-align: center;
   	color: #ffffff;

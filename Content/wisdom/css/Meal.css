@@ -10,7 +10,7 @@ body{
 	margin:0;
 	padding:0;
 	border: 0;
-	font-family:"Microsoft YaHei","微软雅黑","PingFang SC","Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+	font-family:"Helvetica Neue" ,Helvetica,Arial, "PingFang SC" , "Hiragino Sans GB" ,"WenQuanYi Micro Hei" ,"Microsoft Yahei" ,sans-serif;
 	display:block;
 	position:relative;
 }
@@ -163,7 +163,6 @@ header .top-box{
 }
 
 .top-box .top-nav .top-nav-item a{
-	font-family: NotoSansCJKsc;
 	font-size:16px;
 	color:#6d6d6d;
 	position:relative;
@@ -173,7 +172,7 @@ header .top-box{
 	padding:0 30px;
 	margin-top:10px;
 	height:45px;
-	line-height:45px;
+	line-height:43px;
 	border:1px solid #6d6d6d;
 	border-radius:23px;
 }
@@ -208,7 +207,6 @@ header .top-banner .banner-msg{
 	margin:0 auto;
 	width: 630px;
   	line-height: 36px;
-  	font-family: NotoSansCJKsc;
   	font-size: 18px;
   	text-align: center;
   	color: #ffffff;
@@ -233,7 +231,6 @@ header .top-banner .banner-price{
 
 header .top-banner .banner-price .promation{
 	margin-right:17px;
-	font-family: NotoSansCJKsc;
   	font-size: 22px;
   	font-weight: 500;
   	text-align: left;
@@ -245,7 +242,6 @@ header .top-banner .banner-price .promation .red{
 }
 
 header .top-banner .banner-price .original{
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #c8c8c8;
@@ -259,7 +255,6 @@ header .top-banner .banner-buy-btn{
   	border-radius: 22.5px;
   	background-color: #ffbf00;
   	line-height:48px;
-	font-family: NotoSansCJKsc;
 	font-size: 15px;
 	letter-spacing: 2px;
 	text-align: center;
@@ -295,7 +290,6 @@ section .introduce-detail{
 	padding:0 30px;
 	height:100%;
 	line-height:60px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	color: #6d6d6d;
   	cursor:pointer;
@@ -346,7 +340,6 @@ section .introduce-detail{
 .introduce-title-box span{
 	display:inline-block;
 	margin-right:15px;
-	font-family: NotoSansCJKsc;
   	font-size: 32px;
   	font-weight: 500;
   	color: #333333;
@@ -362,7 +355,6 @@ section .introduce-detail{
 	margin-top:60px;
 	width:1080px;
 	line-height:24px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	text-align: left;
   	color: #6d6d6d;
@@ -437,7 +429,6 @@ section .introduce-detail{
 
 .msg-content .msg-title{
 	padding-top:60px;
-	font-family: NotoSansCJKsc;
   	font-size: 22px;
   	text-align: center;
   	color: #fbc02d;
@@ -464,7 +455,6 @@ section .introduce-detail{
 	width:425px;
 	height:60px;
 	line-height:20px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	text-align: left;
   	color: #ffffff;
@@ -510,7 +500,6 @@ section .introduce-detail{
 
 .evaluation-box .evaluation-title{
 	margin-top:60px;
-	font-family: NotoSansCJKsc;
 	font-size: 32px;
 	font-weight: 500;
 	letter-spacing: 2px;
@@ -606,7 +595,6 @@ section .introduce-detail{
 }
 
 .course-box .course-content .course-title{
-	font-family: NotoSansCJKsc;
   	font-size: 32px;
   	font-weight: 500;
   	letter-spacing: 2px;
@@ -635,7 +623,6 @@ section .introduce-detail{
 
 .course-content .course-msg .msg-text{
 	margin-bottom:30px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	letter-spacing: 1px;
   	text-align: left;
@@ -655,7 +642,6 @@ section .introduce-detail{
 }
 
 .company-box .company-title{
-	font-family: NotoSansCJKsc;
   	font-size: 32px;
   	letter-spacing: 2px;
   	text-align: center;
@@ -727,7 +713,6 @@ section .introduce-detail{
 .item-list-item .company-type{
 	padding-top:17px;
 	line-height:27px;
-	font-family: NotoSansCJKsc;
   	font-size: 18px;
   	letter-spacing: 1.1px;
   	text-align: center;
@@ -751,7 +736,6 @@ section .introduce-detail{
 	margin-right:30px;
 	margin-bottom:20px;
 	width:60px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	letter-spacing: 0.9px;
   	text-align: center;
@@ -782,7 +766,6 @@ section .introduce-detail{
 	position:relative;
 	margin-top:60px;
 	padding-top:60px;
-	font-family: NotoSansCJKsc;
   	font-size: 32px;
   	font-weight: 500;
   	letter-spacing: 2px;
@@ -793,7 +776,6 @@ section .introduce-detail{
 .detail-evaluation-box .evaluation-msg{
 	margin-top:10px;
 	padding-bottom:400px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	letter-spacing: 1px;
  	text-align: center;
@@ -809,7 +791,6 @@ section .introduce-detail{
 	height:45px;
 	line-height:45px;
 	background:#182733;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	letter-spacing: 1px;
   	text-align: center;
@@ -832,7 +813,6 @@ section .introduce-detail{
 
 .evaluation-content .content-msg{
 	padding-top:20px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	letter-spacing: 0.9px;
   	text-align: center;
@@ -870,7 +850,6 @@ section .introduce-detail{
 .evaluation-item .item-title{
 	margin-bottom:20px;
 	line-height:27px;
-	font-family: NotoSansCJKsc;
   	font-size: 18px;
   	text-align: center;
   	color: #0099e5;
@@ -879,7 +858,6 @@ section .introduce-detail{
 .evaluation-item .item-msg{
 	height:54px;
 	line-height:18px;
-	font-family: NotoSansCJKsc;
   	font-size: 12px;
   	letter-spacing: 1px;
   	text-align: center;
@@ -895,7 +873,6 @@ section .introduce-detail{
 
 .detail-read-box .read-title{
 	padding-top:150px;
-	font-family: NotoSansCJKsc;
   	font-size: 32px;
   	font-weight: 500;
   	letter-spacing: 2px;
@@ -908,7 +885,6 @@ section .introduce-detail{
 	margin-top:10px;
 	width:500px;
 	line-height:24px;
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
   	letter-spacing: 1px;
   	text-align: center;
@@ -937,7 +913,6 @@ section .introduce-detail{
 }
 
 .read-content .content-title{
-	font-family: NotoSansCJKsc;
   	font-size: 24px;
   	font-weight: 500;
   	letter-spacing: 2px;
@@ -996,7 +971,6 @@ section .introduce-detail{
 }
 
 .content-item .item-title{
-	font-family: NotoSansCJKsc;
   	font-size: 18px;
   	letter-spacing: 1.1px;
   	text-align: left;
@@ -1005,7 +979,6 @@ section .introduce-detail{
 
 .content-item .item-msg{
 	margin-top:5px;
-	font-family: NotoSansCJKsc;
   	font-size: 14px;
   	letter-spacing: 0.9px;
   	text-align: left;
@@ -1020,7 +993,6 @@ section .introduce-detail{
 }
 
 .detail-tips-box .tips-title{
-	font-family: NotoSansCJKsc;
   	font-size: 28px;
   	letter-spacing: 1.8px;
   	text-align: center;
@@ -1040,7 +1012,6 @@ section .introduce-detail{
 }
 
 .detail-tips-box .tips-box{
-	font-family: NotoSansCJKsc;
   	font-size: 16px;
  	letter-spacing: 1.3px;
  	text-align: center;
@@ -1136,7 +1107,6 @@ footer .back-top:hover{
 	bottom: 11px;
     left: 20px;
     content: "Top";
-    font-family: PingFangSC;
     font-size: 14px;
   	letter-spacing: 0.8px;
   	text-align: center;
@@ -1158,14 +1128,12 @@ footer .about-us::after{
 .about-us .about-left{
 	float:left;
 	width:500px;
-	font-family: PingFangSC;
   	font-size: 14px;
   	text-align: justify;
   	color: #e7e7e7;
 }
 
 .about-left .about-title .title-big{
-	font-family: PingFangSC;
   	font-size: 34px;
   	text-align: justify;
   	color: #fff;
@@ -1176,7 +1144,6 @@ footer .about-us::after{
 }
 
 .about-left .about-title .title-little{
-	font-family: NotoSansCJKsc;
   	font-size: 26px;
   	font-weight: 300;
   	text-align: justify;
@@ -1188,7 +1155,6 @@ footer .about-us::after{
 }
 
 .about-left .about-dec .dec-text{
-	font-family: NotoSansCJKsc;
   	color: #fff;
 }
 
@@ -1268,7 +1234,6 @@ footer .about-right .right-box{
 
 .right-box .right-dec{
 	padding-top:30px;
-	font-family: PingFangSC;
   	font-size: 18px;
   	text-align: center;
   	color: #ffffff;

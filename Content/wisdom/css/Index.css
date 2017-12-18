@@ -12,7 +12,7 @@ body{
 	margin:0;
 	padding:0;
 	border: 0;
-	font-family:"Helvetica Neue" ,Helvetica,Arial, "PingFang SC" , "Hiragino Sans GB" ,"WenQuanYi Micro Hei" ,"Microsoft Yahei" ,sans-serif;
+	font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft Yahei",sans-serif;
 	display:block;
 	position:relative;
 }
@@ -211,6 +211,7 @@ header .top-box{
 header .top-title{
 	margin-top:170px;
 	line-height:70px;
+	font-family:"NotoSansCJKsc-Light";
   	font-size: 48px;
   	text-align: left;
   	color: #fff;
@@ -220,6 +221,7 @@ header .top-msg{
 	margin-top:35px;
 	padding-right:550px;
 	line-height:33px;
+	font-family:"NotoSansCJKsc-Light";
 	font-size: 22px;
   	text-align: left;
   	color: #fff;

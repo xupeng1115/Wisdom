@@ -1,187 +1,8 @@
-/******************************初始化公共样式****************************/
 @charset "utf-8";
-*{
-	padding:0;
-	margin:0;
-}
-
-html,
-body{
-	min-width:1220px;
-	margin:0;
-	padding:0;
-	border: 0;
-	font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft Yahei",sans-serif;
+/***************************banner***********************/
+.top-banner {
 	position:relative;
-}
-
-.clearfix{
-	visibility:hidden;
-	display:block;
-	font-size:0;
-	content:" ";
-	clear:both;
-	height:0;
-	*zoom:1;
-}
-
-ul{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-
-a{
-    text-decoration: none; 
-}
-
-a:link,
-a:active,
-a:visited,
-a:hover{
-	text-decoration:none;
-}
-
-input:-moz-placeholder,   
-textarea:-moz-placeholder {   
-    color: #999999;   
-}   
-  
-input:-ms-input-placeholder,   
-textarea:-ms-input-placeholder {   
-    color: #999999;   
-}   
-  
-input::-webkit-input-placeholder,   
-textarea::-webkit-input-placeholder {   
-    color: #999999;   
-}  
-
-.container-fluid {
-  	padding:0;
-}
-
-.row{
-	margin:0;
-}
-
-.col-lg-1,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12{
-	padding:0;
-}
-.col-md-1,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12{
-	padding:0;
-}
-
-.overflow-text{
-	overflow:hidden;
-	text-overflow:ellipsis;
-	white-space:nowrap;
-}
-
-.clearbox::after{
-	display:block;
-	content:"";
-	clear:both;
-}
-
-.yellow{
-	color:#ffbf00;
-}
-
-.red{
-	color:#ee5c54;
-}
-
-.blue{
-	color:#0099e5;
-}
-
-/***************************头部banner***********************/
-
-header{
-	position:relative;
-}
-
-header .top-width{
-	width:1200px;
-	margin:0 auto;
-}
-
-header .top-box{
-	height:65px;
-}
-
-.top-box .top-logo{
-	width:192px;
-	height:30px;
-	float:left;
-	margin-top:18px;
-	background:url(../img/logo_02.png)no-repeat center center;
-	background-size:cover;
-}
-
-.top-box .top-nav{
-	width:600px;
-	height:100%;
-	float:right;
-	margin-right:5px;
-}
-
-.top-box .top-nav .top-nav-item{
-	height:100%;
-	position:relative;
-	float:left;
-	margin-left:45px;
-	line-height:65px;
-	cursor:pointer;
-}
-
-.top-box .top-nav .top-nav-item a{
-	font-size:16px;
-	color:#6d6d6d;
-	position:relative;
-}
-
-.top-box .top-nav .login-register{
-	padding:0 30px;
-	margin-top:10px;
-	height:45px;
-	line-height:43px;
-	border:1px solid #6d6d6d;
-	border-radius:23px;
-}
-
-.top-box .top-nav .top-nav-item:hover a{
-	color:#ffbf00;
-}
-
-.top-box .top-nav .login-register:hover{
-	border:1px solid #ffbf00;
-}
-
-header .top-banner {
+	width:100%;
 	height:400px;
 	background:url(../img/backstage_banner.png)no-repeat center center;
 	background-size:cover;
@@ -288,7 +109,7 @@ header .top-banner {
 	background:#fff;
 }
 
-/***************************中间内容区content***********************/
+/***************************Content***********************/
 section{
 	position:relative;
 	background:#fff;
@@ -318,6 +139,11 @@ section .nav-content{
 
 .nav-box .nav-item{
 	position:relative;
+	
+}
+
+.nav-box .nav-item{
+	position:relative;
 	float:left;
 	padding:0 30px;
 	height:45px;
@@ -325,8 +151,8 @@ section .nav-content{
 	background:transparent;
   	font-size: 16px;
   	text-align: center;
-  	color:#6d6d6d;
   	cursor:pointer;
+	color:#6d6d6d;
 }
 
 .nav-box .nav-item-active{
@@ -344,9 +170,13 @@ section .nav-content{
   	color: #ee5c54;
 }
 
-/******************简历导航部分*******************/
-
-.content-box .resume-nav-content{
+/**********************************************我的简历************************************************/
+.content-box .resume-module-container{
+	display:none;
+	position:relative;
+	width:100%;
+}
+.resume-module-container .resume-nav-content{
 	position:relative;
 	float:right;
 	margin-top:60px;
@@ -429,7 +259,7 @@ section .nav-content{
 
 /**********************************简历内容部分*******************************************/
 
-.content-box .resume-content{
+.resume-module-container .resume-content{
 	position:relative;
 	float:left;
 	width:960px;
@@ -657,7 +487,7 @@ section .nav-content{
 }
 
 
-/**************编辑区**************/
+/**************简历编辑区**************/
 .module-wrapper .module-edit-container{
 	display:none;
 	position:relative;
@@ -806,7 +636,6 @@ section .nav-content{
 .module-edit-container .module-cancel-btn{
 	background:#c3c3c3;
 }
-
 
 /***********教育背景模块区******************/
 .education-box .education-wrapper{
@@ -1004,7 +833,6 @@ section .nav-content{
 	border-left:1px solid #cdcdcd;
 }
 
-
 /***********所获荣誉模块区******************/
 .award-wrapper .award-container{
 	margin-top:30px;
@@ -1089,7 +917,6 @@ section .nav-content{
 .award-item:hover .edit-btn{
 	display:block;
 }
-
 
 /***********实习经历模块区******************/
 .practice-wrapper .practice-container{
@@ -1293,10 +1120,6 @@ section .nav-content{
   	cursor:pointer;
 }
 
-
-
-
-
 /***********语言技能模块区******************/
 .skill-wrapper .skill-container{
 	margin-top:30px;
@@ -1432,10 +1255,6 @@ section .nav-content{
 	margin-right:0;
 }
 
-
-
-
-
 /**********课外活动模块区******************/
 .activity-wrapper .activity-container{
 	margin-top:30px;
@@ -1559,10 +1378,41 @@ section .nav-content{
 	width:200px;
 	margin-right:0;
 }
+/***********************************************我的简历结束**************************************/
 
 
 
-/*********************************标签选项表**************************************/
+/*********************************收藏职位**************************************/
+.content-box .collect-module-container{
+	
+}
+
+
+
+/*********************************投递职位**************************************/
+.content-box .send-module-container{
+	
+}
+
+
+/*********************************有关留言**************************************/
+.content-box .message-module-container{
+	
+}
+
+/*********************************我的测评**************************************/
+.content-box .evaluation-module-container{
+	
+}
+
+/*********************************空模块**************************************/
+.content-box .empty-content{
+	
+}
+
+
+
+/*********************************标签选项表弹窗**************************************/
 .flo-box{
 	display:none;
 	position:fixed;
@@ -1745,188 +1595,4 @@ section .nav-content{
 .select-btn-box .select-reset-btn{
 	color: #ee5c54;
 }
-
-
-/************************************公共底部footer***************************************/
-
-footer{
-	position:relative;
-	width:100%;
-	height:385px;
-	background:url(../img/footer_bg.png)no-repeat center center;
-	background-size:cover;
-}
-
-footer .back-top{
-	display:block;
-	position:absolute;
-	top:-32px;
-	right:50%;
-	margin-right:-500px;
-	width:64px;
-	height:64px;
-	border-radius:100%;
-	background-color: #64d3de;
-  	box-shadow: 0 3px 6px 0 rgba(154, 154, 154, 0.5);
-	cursor:pointer;
-}
-
-footer .back-top:hover{
-	background:#2ecbdb;
-}
-
-.back-top::before{
-	position:absolute;
-	top: 21px;
-    left: 27px;
-    content: "";
-    width: 11px;
-    height: 11px;
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-	
-	transform:rotate(-45deg);
-	-ms-transform:rotate(-45deg); 	/* IE 9 */
-	-moz-transform:rotate(-45deg); 	/* Firefox */
-	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
-	-o-transform:rotate(-45deg); 	/* Opera */
-}
-
-.back-top::after{
-	position:absolute;
-	bottom: 11px;
-    left: 20px;
-    content: "Top";
-    font-size: 14px;
-  	letter-spacing: 0.8px;
-  	text-align: center;
-  	color: #fff;
-}
-
-footer .about-us{
-	margin:0 auto;
-	padding-top:60px;
-	width:1200px;
-}
-
-footer .about-us::after{
-	display:block;
-	content:"";
-	clear:both;
-}
-
-.about-us .about-left{
-	float:left;
-	width:500px;
-  	font-size: 14px;
-  	text-align: justify;
-  	color: #e7e7e7;
-}
-
-.about-left .about-title .title-big{
-  	font-size: 34px;
-  	text-align: justify;
-  	color: #fff;
-}
-
-.about-left .about-title{
-	padding-bottom:30px;
-}
-
-.about-left .about-title .title-little{
-  	font-size: 26px;
-  	font-weight: 300;
-  	text-align: justify;
-  	color: #cacaca;
-}
-
-.about-left .about-dec{
-	padding-bottom:30px;
-}
-
-.about-left .about-dec .dec-text{
-  	color: #fff;
-}
-
-.about-left .about-dec .dec-text .dec-name{
-  	font-size: 18px;
-  	color: #ffbf00;
-}
-
-.about-left .about-phone{
-	position:relative;
-	padding-bottom:2px;
-	padding-left:25px;
-}
-
-.about-left .about-phone i{
-	position:absolute;
-	top:0;
-	left:0;
-	font-size:16px;
-	color:#fff;
-}
-
-.about-left .about-email{
-	position:absolute;
-	bottom:130px;
-	left:340px;
-	padding-bottom:2px;
-	padding-left:25px;
-}
-
-.about-left .about-email i{
-	position:absolute;
-	top:0;
-	left:0;
-	font-size:16px;
-	color:#fff;
-}
-
-.about-left .about-address{
-	position:relative;
-	padding-bottom:30px;
-	padding-left:25px;
-  	color: #e6e6e6;
-}
-
-.about-left .about-address i{
-	position:absolute;
-	top:0;
-	left:0;
-	font-size:16px;
-	color:#fff;
-}
-
-.about-left .about-other{
-	padding-bottom:2px;
-  	color: rgba(208, 208, 208, 0.9);
-}
-
-footer .about-right{
-	float:right;
-	width:250px;
-}
-
-footer .about-right .right-box{
-	margin-top:40px;
-	width:250px;
-	height:300px;
-	display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.right-box img{
-	display:inline-block;
-	width:170px;
-}
-
-.right-box .right-dec{
-	padding-top:30px;
-  	font-size: 18px;
-  	text-align: center;
-  	color: #ffffff;
-}
-
 

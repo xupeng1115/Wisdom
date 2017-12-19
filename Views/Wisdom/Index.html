@@ -5,23 +5,30 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<title>Index</title>
-		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/fontfamily/NotoSansCJKsc-Light.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/swiper-3.4.2.min.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/css/Index.css?v=20171204"/>
+		
+		<!-- Public Header -->
+		<link rel="stylesheet" href="../../Content/wisdom/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../Content/wisdom/lib/font-awesome.min.css"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/Template.css?v=20171219"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
 	      <script src="../../Scripts/widom/lib/respond.min.js"></script>
 	    <![endif]-->
+	    
+	    <!-- Private Header -->
+	    <link rel="stylesheet" href="../../Content/wisdom/fontfamily/NotoSansCJKsc-Light.css" />
+		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
+	    <link rel="stylesheet" href="../../Content/wisdom/lib/swiper-3.4.2.min.css" />
+	    <link rel="stylesheet" href="../../Content/wisdom/css/Index.css?v=20171219"/>
 		
 	</head>
 <body>
 	
 	<div class="container-fluid">
-		<header id="page-top" class="row">
+		
+		<!-- Top -->
+		<header class="row">
 			<div class="row top-box top-width">
 				<div class="top-logo"></div>
 				<ul class="top-nav">
@@ -34,7 +41,10 @@
 				</ul>
 			</div>
 		</header>
-		<div id="page-banner" class="row top-banner" >
+		
+		<!--********************************************Private结构************************************-->
+		<!-- Banner-->
+		<div class="row top-banner" >
 			<div class="search-wrapper">
 				<div class="row top-search">
 					<input type="text" class="search-box" placeholder="请输入您意向工作城市"/>
@@ -78,8 +88,7 @@
 				</span>
 			</div>
 		</div>
-		
-		<!-- 中间内容区 -->
+		<!-- Content -->
 		<section class="row">
 			<ul class="meal-box">
 				<li class="meal-item">
@@ -268,7 +277,6 @@
 										<div class="commend-name">_大利猫：</div>
 										<div class="commend-text">作为一名研发人员，我们无法把控产品的战略方向和命运，唯一能做的就是把代码写成诗，每一个版本都是一篇有鉴赏价值的文章，尽量做出一些技术亮点。</div>
 										<div class="commend-date">2017-07-05 10:08:00</div>
-										<div class="commend-item-reply-btn">回复</div>
 									</div>
 								</li>
 								<li class="commend-item">
@@ -277,7 +285,6 @@
 										<div class="commend-name">_大利猫：</div>
 										<div class="commend-text">作为一名研发人员，我们无法把控产品的战略方向和命运，唯一能做的就是把代码写成诗，每一个版本都是一篇有鉴赏价值的文章，尽量做出一些技术亮点。</div>
 										<div class="commend-date">2017-07-05 10:08:00</div>
-										<div class="commend-item-reply-btn">回复</div>
 									</div>
 								</li>
 							</ul>
@@ -527,7 +534,6 @@
 				</div>
 			</div>
 			
-			
 			<div class="row case">
 				<div class="case-title module-title">我们的成功案例</div>
 				<div class="case-msg module-msg">成就学员是我们的使命，学员的认可是我的前进动力</div>
@@ -733,300 +739,127 @@
 				<div class="swiper-pagination2"></div>
 			</div>
 		</section>
-	</div>
+		<!--********************************************Private结构End*********************************-->
 		
-	<!-- 登录与注册 -->
-	<div class="lr-container">
-		<div class="lr-wrapper">
-			<div class="lr-box">
-				<div class="lr-cancel"></div>
-				<div class="lr-btn-box clearbox">
-					<div class="login-btn lr-btn">
-						登录
-						<div class="btn-line"></div>
-					</div>
-					<div class="register-btn lr-btn">
-						注册
-						<div class="btn-line"></div>
-					</div>
-				</div>
-				<div class="login-box">
-					<div class="login-title">欢迎登录Career Success</div>
-					<div class="form-box">
-						<div class="input-box">
-							<input type="text" class="input-item login-phone" placeholder="请输入登录手机号" maxlength="11"/>
+		<!-- Login and Register Dialog -->
+		<div class="lr-container">
+			<div class="lr-wrapper">
+				<div class="lr-box">
+					<div class="lr-cancel"></div>
+					<div class="lr-btn-box clearbox">
+						<div class="login-btn lr-btn">
+							登录
+							<div class="btn-line"></div>
 						</div>
-						<div class="login-phone-tips lr-tips"></div>
-						<div class="input-box">
-							<input type="password" class="input-item login-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="28"/>
+						<div class="register-btn lr-btn">
+							注册
+							<div class="btn-line"></div>
 						</div>
-						<div class="login-password-tips lr-tips"></div>
-						<div class="rf-box clearbox">
-							<div class="remember-password-box lr-checkbox-box">
-								<div class="yes rp-yes lr-checkbox"></div>
-								<div class="no rp-no lr-checkbox"></div>
-								<div class="rp-text lr-text">记住密码</div>
+					</div>
+					<div class="login-box">
+						<div class="login-title">欢迎登录Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item login-phone" placeholder="请输入登录手机号" maxlength="11"/>
 							</div>
-							<div class="forget-password-box lr-text">忘记密码？</div>
+							<div class="login-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item login-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="28"/>
+							</div>
+							<div class="login-password-tips lr-tips"></div>
+							<div class="rf-box clearbox">
+								<div class="remember-password-box lr-checkbox-box">
+									<div class="yes rp-yes lr-checkbox"></div>
+									<div class="no rp-no lr-checkbox"></div>
+									<div class="rp-text lr-text">记住密码</div>
+								</div>
+								<div class="forget-password-box lr-text">忘记密码？</div>
+							</div>
+							<div class="lr-login-btn lr-confirm-btn">登录</div>
 						</div>
-						<div class="lr-login-btn lr-confirm-btn">登录</div>
 					</div>
-				</div>
-				<div class="register-box">
-					<div class="register-title">欢迎注册Career Success</div>
-					<div class="form-box">
-						<div class="input-box">
-							<input type="text" class="input-item register-username" placeholder="请输入用户名" maxlength="20"/>
-						</div>
-						<div class="register-username-tips lr-tips"></div>
-						<div class="input-box">
-							<input type="text" class="input-item register-phone" placeholder="请输入注册手机号" maxlength="11"/>
-						</div>
-						<div class="register-phone-tips lr-tips"></div>
-						<div class="input-box">
-							<input type="text" class="input-item test-code" placeholder="请输入验证码" maxlength="6"/>
-							<div class="get-code-btn">获取验证码</div>
-						</div>
-						<div class="code-tips lr-tips"></div>
-						<div class="input-box">
-							<input type="password" class="input-item register-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="20"/>
-						</div>
-						<div class="register-password-tips lr-tips"></div>
-						<div class="protocol-box lr-checkbox-box">
-							<div class="yes protocol-yes lr-checkbox"></div>
-							<div class="no protocol-no lr-checkbox"></div>
-							<div class="lr-text">同意《Caree Success注册协议》</div>
-						</div>
-						<div class="lr-register-btn-box clearbox">
-							<div class="complate-msg-btn">完善信息</div>
-							<div class="lr-register-btn">直接注册</div>
+					<div class="register-box">
+						<div class="register-title">欢迎注册Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item register-username" placeholder="请输入用户名" maxlength="20"/>
+							</div>
+							<div class="register-username-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item register-phone" placeholder="请输入注册手机号" maxlength="11"/>
+							</div>
+							<div class="register-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item test-code" placeholder="请输入验证码" maxlength="6"/>
+								<div class="get-code-btn">获取验证码</div>
+							</div>
+							<div class="code-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item register-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="20"/>
+							</div>
+							<div class="register-password-tips lr-tips"></div>
+							<div class="protocol-box lr-checkbox-box">
+								<div class="yes protocol-yes lr-checkbox"></div>
+								<div class="no protocol-no lr-checkbox"></div>
+								<div class="lr-text">同意《Caree Success注册协议》</div>
+							</div>
+							<div class="lr-register-btn-box clearbox">
+								<div class="complate-msg-btn">完善信息</div>
+								<div class="lr-register-btn">直接注册</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Bottom -->
+		<footer class="row">
+			<a href="#" class="back-top"></a>
+			<div class="about-us">
+				<div class="about-left">
+					<div class="about-title">
+						<span class="title-big">联系我们</span>
+						<span class="title-little">contact us</span>
+					</div>
+					<div class="about-dec">
+						<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
+					</div>
+					<div class="about-phone">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						电话: (+86) 021-31336975
+					</div>
+					<div class="about-email">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+							mickeyge@knx.com.cn
+					</div>
+					<div class="about-address">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+						地址: 上海长宁区虹桥路1438号古北财富二期16层
+					</div>
+					<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
+				</div>
+				<div class="about-right">
+					<div class="right-box">
+						<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
+						<div class="right-dec">官方微信公众号：KNX_China</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
 	</div>
 	
-	<footer>
-		<a href="#" class="back-top"></a>
-		<div class="about-us">
-			<div class="about-left">
-				<div class="about-title">
-					<span class="title-big">联系我们</span>
-					<span class="title-little">contact us</span>
-				</div>
-				<div class="about-dec">
-					<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
-				</div>
-				<div class="about-phone">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					电话: (+86) 021-31336975
-				</div>
-				<div class="about-email">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-						mickeyge@knx.com.cn
-				</div>
-				<div class="about-address">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					地址: 上海长宁区虹桥路1438号古北财富二期16层
-				</div>
-				<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
-			</div>
-			<div class="about-right">
-				<div class="right-box">
-					<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
-					<div class="right-dec">官方微信公众号：KNX_China</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	
+	<!-- Public JS -->
 	<script src="../../Scripts/wisdom/lib/jquery-1.11.3.min.js"></script>
 	<script src="../../Scripts/wisdom/lib/vue.min.js"></script>
+	<script src="../../Scripts/wisdom/js/Template.js?v=20171219"></script>
+	
+	<!-- Private JS -->
 	<script src="../../Scripts/wisdom/lib/swiper-3.4.2.jquery.min.js"></script>
+	<script src="../../Scripts/wisdom/js/Index.js?v=20171219"></script>
+	
 	<script>
-		$(function(){
-			
-			var mySwiper1 = new Swiper ('.swiper-container1', {
-    			autoplay:3000,
-    			speed:1600,
-			    loop: true,
-			    
-			    // 如果需要前进后退按钮
-			    nextButton: '.swiper-button-next',
-			    prevButton: '.swiper-button-prev',
-			    
-			})
-			
-    		var mySwiper2 = new Swiper ('.swiper-container2', {
-    			autoplay:3000,
-    			speed:1600,
-			    loop: true,
-			    
-			    // 如果需要分页器
-			    pagination: '.swiper-pagination2',
-				paginationClickable :true,
-			    
-			})
 		
-			$("body").on("click",".flow-btn",function(event){
-				$(this).css("background","#fff");
-				$(".flow-content").show();
-				$(".standard-btn").css("background","#f1f5f9");
-				$(".standard-content").hide();
-			})
-			
-			$("body").on("click",".standard-btn",function(event){
-				$(this).css("background","#fff");
-				$(".flow-content").hide();
-				$(".flow-btn").css("background","#f1f5f9");
-				$(".standard-content").show();
-			})
-			
-			$("body").on("click",".search-btn",function(){
-				window.location.href="PositionList.html";
-			})
-			
-			$("body").on("click",".position-top-name",function(){
-				window.location.href="PositionDetail.html";
-			})
-			
-			$("body").on("click",".back-top",function(){
-				$('body,html').animate({scrollTop:0},500);
-			})
-			
-			$("body").on("click",".like-box",function(){
-				$(this).find(".like-icon").find(".fa-heart-o").hide()
-				$(this).find(".like-icon").find(".fa-heart").show();
-			})
-			
-			$("body").on("click",".standard-btn",function(){
-				$(".standard-item").eq(0).find(".item-content").show();
-				$(".standard-item").eq(0).find(".item-bg").css("background-image","url(../../Content/wisdom/img/standard_01_bg.png)");			
-			})
-			
-			$("body").on("mouseover",".standard-item",function(){
-				var oIndex=parseInt($(this).attr("index"));
-				if(oIndex!==1){
-					$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01.png)");
-					$(".first-content").hide();
-				}else{
-					$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01_bg.png)");
-					$(".first-content").show();
-				}
-			})
-			
-			$("body").on("mouseout",".item-first",function(){
-				$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01.png)");
-				$(".first-content").hide();
-			})
-			
-			$("body").on("click",".login-phone",function(){
-				$(".login-phone-tips").text("重复密码不能为空");
-				$(".login-phone-tips").show();
-			})
-			
-			$("body").on("click",".login-password",function(){
-				$(".login-password-tips").text("密码不能为空");
-				$(".login-password-tips").show();
-			})
-			
-			$("body").on("click",".rp-no",function(){
-				$(this).hide();
-				$(".rp-yes").show();
-			})
-			
-			$("body").on("click",".rp-yes",function(){
-				$(this).hide();
-				$(".rp-no").show();
-			})
-			
-			$("body").on("click",".lr-cancel",function(){
-				$(".lr-container").hide();
-			})
-			
-			$("body").on("click",".login-register",function(){
-				$(".lr-container").show();
-			})
-			
-			$("body").on("click",".forget-password-box",function(){
-				window.location.href="FindPassword.html";
-			})
-			
-			$("body").on("click",".top-evaluation-btn",function(){
-				window.location.href="Test.html";
-			})
-			
-			
-			
-			$("body").on("click",".register-username",function(){
-				$(".register-username-tips").text("用户名不能为空");
-				$(".register-username-tips").show();
-			})
-			
-			$("body").on("click",".test-code",function(){
-				$(".code-tips").text("验证码不能为空");
-				$(".code-tips").show();
-			})
-			
-			$("body").on("click",".register-phone",function(){
-				$(".register-phone-tips").text("手机号码不能为空");
-				$(".register-phone-tips").show();
-			})
-			
-			$("body").on("click",".register-password",function(){
-				$(".register-password-tips").text("密码不能为空");
-				$(".register-password-tips").show();
-			})
-			
-			$("body").on("click",".protocol-no",function(){
-				$(this).hide();
-				$(".protocol-yes").show();
-			})
-			
-			$("body").on("click",".protocol-yes",function(){
-				$(this).hide();
-				$(".protocol-no").show();
-			})
-			
-			$("body").on("click",".lr-cancel",function(){
-				$(".lr-container").hide();
-			})
-			
-			$("body").on("click",".lr-login-btn",function(){
-				$(".protocol-yes").show();
-				$(".protocol-no").hide();
-				$(".rp-yes").hide();
-				$(".rp-no").show();
-				$(".lr-tips").text("").hide();
-				$(".lr-container").hide();
-			})
-			
-			$("body").on("click",".lr-register-btn",function(){
-				$(".lr-tips").text("").hide();
-				$(".lr-container").hide();
-			})
-			
-			$("body").on("click",".login-btn",function(){
-				$(this).css("color","#ffbf00");
-				$(this).find(".btn-line").show();
-				$(".register-btn").css("color","#6d6d6d");
-				$(".register-btn").find(".btn-line").hide();
-				$(".register-box").hide();
-				$(".login-box").show();
-			})
-			
-			$("body").on("click",".register-btn",function(){
-				$(this).css("color","#ffbf00");
-				$(this).find(".btn-line").show();
-				$(".login-btn").css("color","#6d6d6d");
-				$(".login-btn").find(".btn-line").hide();
-				$(".login-box").hide();
-				$(".register-box").show();
-			})
-			
-			
-		})
 	</script>
 </body>
 </html>

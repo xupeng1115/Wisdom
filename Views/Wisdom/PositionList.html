@@ -5,48 +5,59 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<title>List</title>
-		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/PositionList.css?v=20171204"/>
+		
+		<!-- Public Header -->
+		<link rel="stylesheet" href="../../Content/wisdom/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../Content/wisdom/lib/font-awesome.min.css"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/Template.css?v=20171219"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
 	      <script src="../../Scripts/widom/lib/respond.min.js"></script>
 	    <![endif]-->
+	    
+	    <!-- Private Header -->
+	    <link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
+	    <link rel="stylesheet" href="../../Content/wisdom/css/PositionList.css?v=20171219"/>
 		
 	</head>
 <body>
 	
 	<div class="container-fluid">
-		<header id="page-top" class="row">
+		
+		<!-- Top -->
+		<header class="row">
 			<div class="row top-box top-width">
 				<div class="top-logo"></div>
 				<ul class="top-nav">
 					<li class="top-nav-item"><a href="Index.html">首页</a></li>
-					<li class="top-nav-item"><a href="PositionList.html">职位</a></li>
-					<li class="top-nav-item"><a href="MyBackstage.html">服务</a></li>
+					<li class="top-nav-item"><a href="PositionList.html">职位兴趣</a></li>
+					<li class="top-nav-item"><a href="MyBackstage.html">我的职位</a></li>
+					<li class="top-nav-item"><a href="MyBackstage.html">服务内容</a></li>
 					<li class="top-nav-item"><a href="#">关于我们</a></li>
 					<li class="top-nav-item login-register"><a href="#">注册/登录</a></li>
 				</ul>
 			</div>
-			<div class="row top-banner">
-				<div class="banner-title">行业趋势、创新变革、时代机遇</div>
-				<div class="banner-msg">寻找不一样的你，不断尝试新的可能。</div>
-				<div class="banner-search">
-					<input type="text" class="search-input" placeholder="搜索你想要的职位"/>
-					<div class="search-btn">搜索</div>
-					<ul class="hot-search">
-						<li class="hot-item">Java</li>
-						<li class="hot-item">前端</li>
-						<li class="hot-item">产品经理</li>
-						<li class="hot-item">销售</li>
-						<li class="hot-item">开发</li>
-					</ul>
-				</div>
-			</div>
 		</header>
 		
+		<!--********************************************Private结构************************************-->
+		<!-- Banner-->
+		<div class="row top-banner">
+			<div class="banner-title">行业趋势、创新变革、时代机遇</div>
+			<div class="banner-msg">寻找不一样的你，不断尝试新的可能。</div>
+			<div class="banner-search">
+				<input type="text" class="search-input" placeholder="搜索你想要的职位"/>
+				<div class="search-btn">搜索</div>
+				<ul class="hot-search">
+					<li class="hot-item">Java</li>
+					<li class="hot-item">前端</li>
+					<li class="hot-item">产品经理</li>
+					<li class="hot-item">销售</li>
+					<li class="hot-item">开发</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Content -->
 		<section class="row">
 			<div class="row recommend-box">
 				<ul class="recommend-list">
@@ -784,85 +795,126 @@
 			</div>
 			
 		</section>
+		<!--********************************************Private结构End*********************************-->
 		
-	</div>
-	<footer>
-		<a href="#" class="back-top"></a>
-		<div class="about-us">
-			<div class="about-left">
-				<div class="about-title">
-					<span class="title-big">联系我们</span>
-					<span class="title-little">contact us</span>
-				</div>
-				<div class="about-dec">
-					<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
-				</div>
-				<div class="about-phone">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					电话: (+86) 021-31336975
-				</div>
-				<div class="about-email">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-						mickeyge@knx.com.cn
-				</div>
-				<div class="about-address">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					地址: 上海长宁区虹桥路1438号古北财富二期16层
-				</div>
-				<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
-			</div>
-			<div class="about-right">
-				<div class="right-box">
-					<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
-					<div class="right-dec">官方微信公众号：KNX_China</div>
+		<!-- Login and Register Dialog -->
+		<div class="lr-container">
+			<div class="lr-wrapper">
+				<div class="lr-box">
+					<div class="lr-cancel"></div>
+					<div class="lr-btn-box clearbox">
+						<div class="login-btn lr-btn">
+							登录
+							<div class="btn-line"></div>
+						</div>
+						<div class="register-btn lr-btn">
+							注册
+							<div class="btn-line"></div>
+						</div>
+					</div>
+					<div class="login-box">
+						<div class="login-title">欢迎登录Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item login-phone" placeholder="请输入登录手机号" maxlength="11"/>
+							</div>
+							<div class="login-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item login-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="28"/>
+							</div>
+							<div class="login-password-tips lr-tips"></div>
+							<div class="rf-box clearbox">
+								<div class="remember-password-box lr-checkbox-box">
+									<div class="yes rp-yes lr-checkbox"></div>
+									<div class="no rp-no lr-checkbox"></div>
+									<div class="rp-text lr-text">记住密码</div>
+								</div>
+								<div class="forget-password-box lr-text">忘记密码？</div>
+							</div>
+							<div class="lr-login-btn lr-confirm-btn">登录</div>
+						</div>
+					</div>
+					<div class="register-box">
+						<div class="register-title">欢迎注册Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item register-username" placeholder="请输入用户名" maxlength="20"/>
+							</div>
+							<div class="register-username-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item register-phone" placeholder="请输入注册手机号" maxlength="11"/>
+							</div>
+							<div class="register-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item test-code" placeholder="请输入验证码" maxlength="6"/>
+								<div class="get-code-btn">获取验证码</div>
+							</div>
+							<div class="code-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item register-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="20"/>
+							</div>
+							<div class="register-password-tips lr-tips"></div>
+							<div class="protocol-box lr-checkbox-box">
+								<div class="yes protocol-yes lr-checkbox"></div>
+								<div class="no protocol-no lr-checkbox"></div>
+								<div class="lr-text">同意《Caree Success注册协议》</div>
+							</div>
+							<div class="lr-register-btn-box clearbox">
+								<div class="complate-msg-btn">完善信息</div>
+								<div class="lr-register-btn">直接注册</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</footer>
+		<!-- Bottom -->
+		<footer class="row">
+			<a href="#" class="back-top"></a>
+			<div class="about-us">
+				<div class="about-left">
+					<div class="about-title">
+						<span class="title-big">联系我们</span>
+						<span class="title-little">contact us</span>
+					</div>
+					<div class="about-dec">
+						<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
+					</div>
+					<div class="about-phone">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						电话: (+86) 021-31336975
+					</div>
+					<div class="about-email">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+							mickeyge@knx.com.cn
+					</div>
+					<div class="about-address">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+						地址: 上海长宁区虹桥路1438号古北财富二期16层
+					</div>
+					<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
+				</div>
+				<div class="about-right">
+					<div class="right-box">
+						<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
+						<div class="right-dec">官方微信公众号：KNX_China</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+	</div>
+	
+	<!-- Public JS -->
 	<script src="../../Scripts/wisdom/lib/jquery-1.11.3.min.js"></script>
 	<script src="../../Scripts/wisdom/lib/vue.min.js"></script>
-	<script src="../../Scripts/wisdom/lib/radialIndicator.js"></script>
+	<script src="../../Scripts/wisdom/js/Template.js?v=20171219"></script>
+	
+	<!-- Private JS -->
 	<script src="../../Scripts/wisdom/lib/jquery.page.js"></script>
+	<script src="../../Scripts/wisdom/js/PositionList.js"></script>
 	<script>
-		$(function(){
-			
-			//分页
-			$(".tcdPageCode").createPage({
-		        pageCount:100,
-		        current:1,
-		        backFn:function(p){
-		            console.log(p);
-		        }
-		    });
-			
-			$("body").on("click",".position-name",function(){
-				window.location.href="PositionDetail.html";
-			})
-			
-			$("body").on("click",".back-top",function(){
-				$('body,html').animate({scrollTop:0},300);
-			})
-			
-			$("body").on("click",".sort-item",function(){
-				var _self=this;
-				if(!$(_self).hasClass(".sort-item-change")){
-					$(".sort-item").each(function(i,obj){
-						$(obj).removeClass("sort-item-change");
-					})
-					$(_self).addClass("sort-item-change");
-				}else{
-					
-				}
-			})
-			
-			$("body").on("click",".position-like",function(){
-				$(this).find(".like-icon").find(".fa-heart-o").hide();
-				$(this).find(".like-icon").find(".fa-heart").show();
-			})
-			
-			
-			
-		})
+		
 	</script>
 </body>
 </html>

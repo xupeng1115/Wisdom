@@ -4,33 +4,47 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<title>MyBackstage</title>
-		<link rel="stylesheet" href="../../Content/wisdom/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="../../Content/wisdom/css/MyBackstage.css?v=20171207"/>
+		<title>MyBackStage</title>
+		
+		<!-- Public Header -->
+		<link rel="stylesheet" href="../../Content/wisdom/lib/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../Content/wisdom/lib/font-awesome.min.css"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/Template.css?v=20171219"/>
 		
 		<!--[if lt IE 9]>
 	      <script src="../../Scripts/widom/lib/html5shiv.min.js"></script>
 	      <script src="../../Scripts/widom/lib/respond.min.js"></script>
 	    <![endif]-->
+	    
+	    <!-- Private Header -->
+		<link rel="stylesheet" href="../../Content/wisdom/iconfont/material-icons.css"/>
+	    <link rel="stylesheet" href="../../Content/wisdom/lib/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="../../Content/wisdom/css/MyBackStage.css?v=20171219"/>
+		<link rel="stylesheet" href="../../Content/wisdom/css/Module.css" />
 		
 	</head>
 <body>
 	
 	<div class="container-fluid">
-		<header id="page-top" class="row">
+		
+		<!-- Top -->
+		<header class="row">
 			<div class="row top-box top-width">
 				<div class="top-logo"></div>
 				<ul class="top-nav">
 					<li class="top-nav-item"><a href="Index.html">首页</a></li>
-					<li class="top-nav-item"><a href="PositionList.html">职位</a></li>
-					<li class="top-nav-item"><a href="MyBackstage.html">服务</a></li>
+					<li class="top-nav-item"><a href="PositionList.html">职位兴趣</a></li>
+					<li class="top-nav-item"><a href="MyBackstage.html">我的职位</a></li>
+					<li class="top-nav-item"><a href="MyBackstage.html">服务内容</a></li>
 					<li class="top-nav-item"><a href="#">关于我们</a></li>
 					<li class="top-nav-item login-register"><a href="#">注册/登录</a></li>
 				</ul>
 			</div>
-			<div class="row top-banner">
+		</header>
+		
+		<!--********************************************Private结构************************************-->
+		<!-- Banner-->
+		<div class="row top-banner">
 				<div class="banner-head-box">
 					<img src="../../Content/wisdom/img/head.png" alt="头像" class="banner-head"/>
 				</div>
@@ -46,8 +60,7 @@
 					</div>
 				</div>
 			</div>
-		</header>
-		
+		<!-- Content -->
 		<section class="row">
 			<div class="nav-content">
 				<ul class="nav-box clearbox">
@@ -74,883 +87,739 @@
 				</ul>
 			</div>
 			<div class="content-box clearbox">
-				<!-- 左侧简历内容区 -->
-				<div class="resume-content">
-					<!-- 简历头部个人信息 -->
-					<div class="head-box">
-						<img src="../../Content/wisdom/img/head.png" alt="头像" class="head-img"/>
-						<div class="head-name">
-							<span class="name-text">Jessie Lai</span>
-							<span class="name-icon"><i class="fa fa-venus" aria-hiden="true"></i><i class="fa fa-mars" aria-hidden="true"></i></span>
+				
+				<!--我的简历-->
+				<div class="resume-module-container">
+					<!-- 左侧简历内容区 -->
+					<div class="resume-content">
+						<!-- 简历头部个人信息 -->
+						<div class="head-box">
+							<img src="../../Content/wisdom/img/head.png" alt="头像" class="head-img"/>
+							<div class="head-name">
+								<span class="name-text">Jessie Lai</span>
+								<span class="name-icon"><i class="fa fa-venus" aria-hiden="true"></i><i class="fa fa-mars" aria-hidden="true"></i></span>
+							</div>
+							<div class="head-contact">
+								<span class="head-phone"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num">13801010101</span></span>
+								<span class="head-email"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num">9993332738@163.com</span></span>
+							</div>
+							<div class="head-address">
+								<span class="address-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+								<span class="address-text">上海市长宁区玛瑙路1438号国际古北财富中心二期</span>
+							</div>
 						</div>
-						<div class="head-contact">
-							<span class="head-phone"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num">13801010101</span></span>
-							<span class="head-email"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num">9993332738@163.com</span></span>
-						</div>
-						<div class="head-address">
-							<span class="address-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-							<span class="address-text">上海市长宁区玛瑙路1438号国际古北财富中心二期</span>
+						<!-- 简历模块部分 -->
+						<div class="resume-box">
+							<div class="resume-module education-box">
+								<div class="resume-module-top">
+									<span class="top-icon"><i class="material-icons">&#xE80C;</i></span>
+									<span class="top-title">教育背景</span>
+									<span class="add-module-btn add-education-btn">添加</span>
+								</div>
+								<div class="module-wrapper education-wrapper clearbox">
+									<ul class="education-date-box">
+										<li class="education-date">
+											<span class="date-predict-text">(预计)</span>
+											<span class="date-year">2012</span>
+											<span class="date-mouth">6月8日</span>
+										</li>
+										<li class="education-date">
+											<span class="date-predict-text">(预计)</span>
+											<span class="date-year">2015</span>
+											<span class="date-mouth">6月8日</span>
+										</li>
+										<li class="education-date education-date-predict">
+											<span class="date-predict-text">(预计)</span>
+											<span class="date-year">2019</span>
+											<span class="date-mouth">6月8日</span>
+										</li>
+									</ul>
+									<div class="education-container">
+										<div class="module-edit-container education-edit-container clearbox">
+											<input type="text" class="module-input" placeholder="请输入学校名称"/>
+											<div class="module-select background-select">
+												<div class="module-select-content background-content">学历</div>
+												<ul class="module-select-list background-select-list">
+													<li class="module-select-item background-item">大专</li>
+													<li class="module-select-item background-item">本科</li>
+													<li class="module-select-item background-item">硕士</li>
+													<li class="module-select-item background-item">博士</li>
+													<li class="module-select-item background-item">其他</li>
+												</ul>
+											</div>
+											<input type="text" class="module-input" placeholder="请输入所学专业"/>
+											<div class="module-select graduate-select">
+												<div class="module-select-content graduate-content">毕业年份</div>
+												<ul class="module-select-list graduate-select-list">
+													<li class="module-select-item graduate-item">2019</li>
+													<li class="module-select-item graduate-item">2018</li>
+													<li class="module-select-item graduate-item">2017</li>
+													<li class="module-select-item graduate-item">2016</li>
+													<li class="module-select-item graduate-item">2015</li>
+													<li class="module-select-item graduate-item">2014</li>
+													<li class="module-select-item graduate-item">2013</li>
+													<li class="module-select-item graduate-item">2012</li>
+													<li class="module-select-item graduate-item">2011</li>
+													<li class="module-select-item graduate-item">2010</li>
+												</ul>
+											</div>
+											<div class="module-save-btn module-btn education-save-btn">保存</div>
+											<div class="module-cancel-btn module-btn education-cancel-btn">取消</div>
+										</div>
+										<ul class="education-list">
+											<li class="education-item">
+												<span class="education-school">哈佛大学</span>
+												<span class="education-background">本科</span>
+												<span class="education-major">机械及自动化专业</span>
+												<span class="date-begin">2012年6月1日</span>
+												<span class="date-end">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="education-item">
+												<span class="education-school">耶鲁大学</span>
+												<span class="education-background">硕士</span>
+												<span class="education-major">金融学专业</span>
+												<span class="date-begin">2012年6月1日</span>
+												<span class="date-end">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="education-item">
+												<span class="education-school">斯坦福大学</span>
+												<span class="education-background">博士</span>
+												<span class="education-major">国际经济与贸易</span>
+												<span class="date-begin">2015年6月19日</span>
+												<span class="date-end">至今</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="resume-module award-box">
+								<div class="resume-module-top">
+									<span class="top-icon"><i class="material-icons">&#xE86E;</i></span>
+									<span class="top-title">所获荣誉</span>
+									<span class="add-module-btn add-award-btn">添加</span>
+								</div>
+								<div class="module-wrapper award-wrapper">
+									<div class="award-container">
+										<div class="module-edit-container award-edit-container clearbox">
+											<input type="text" class="module-input" placeholder="荣誉名称"/>
+											<div class="module-select award-select">
+												<div class="module-select-content award-content">学历</div>
+												<ul class="module-select-list award-select-list">
+													<li class="module-select-item award-item">2019</li>
+													<li class="module-select-item award-item">2018</li>
+													<li class="module-select-item award-item">2017</li>
+													<li class="module-select-item award-item">2016</li>
+													<li class="module-select-item award-item">2015</li>
+													<li class="module-select-item award-item">2014</li>
+													<li class="module-select-item award-item">2013</li>
+													<li class="module-select-item award-item">2012</li>
+													<li class="module-select-item award-item">2011</li>
+													<li class="module-select-item award-item">2010</li>
+												</ul>
+											</div>
+											<div class="module-save-btn module-btn award-save-btn">保存</div>
+											<div class="module-cancel-btn module-btn award-cancel-btn">取消</div>
+										</div>
+										
+										<ul class="award-list">
+											<li class="award-item">
+												<span class="award-name">外语系第十三届英语戏剧比赛一等奖</span>
+												<span class="award-date">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="award-item">
+												<span class="award-name">外语系第十三届英语戏剧比赛一等奖一等奖</span>
+												<span class="award-date">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="award-item">
+												<span class="award-name">红点设计大奖</span>
+												<span class="award-date">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="award-item">
+												<span class="award-name">外语系第十三届英语戏剧奖一等奖</span>
+												<span class="award-date">2015年6月19日</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="resume-module practice-box">
+								<div class="resume-module-top">
+									<span class="top-icon"><i class="material-icons">&#xE85D;</i></span>
+									<span class="top-title">实习经历</span>
+									<span class="add-module-btn add-practice-btn">添加</span>
+								</div>
+								<div class="module-wrapper practice-wrapper">
+									<div class="practice-container">
+										<div class="module-edit-container practice-edit-container clearbox">
+											<div class="uploader-box">
+												<span class="uploader-msg">上传公司logo</span>
+												<input type="file" class="uploader-input" placeholder="上传公司logo"/>
+											</div>
+											<input type="text" class="module-input" placeholder="请输入公司名称"/>
+											<input type="text" class="module-input practice-address" placeholder="公司地址"/>
+											<textarea class="practice-area" placeholder="工作职能"></textarea>
+											<div class="module-save-btn module-btn practice-save-btn">保存</div>
+											<div class="module-cancel-btn module-btn practice-cancel-btn">取消</div>
+										</div>
+										<ul class="practice-list">
+											<li class="practice-item">
+												<div class="item-head">
+													<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
+													<div class="head-msg">
+														<div class="msg-top">
+															<span class="msg-company-name">洋葱数学</span>
+															<span class="msg-position-name">HR助理</span>
+														</div>
+														<div class="msg-bottom">
+															<span class="msg-site">长沙-岳麓区</span>
+															<span class="msg-date">2016/08/11 - 2016/09/20</span>
+														</div>
+													</div>
+												</div>
+												<div class="item-content">
+													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
+													<br>
+													2、建立、维护人事档案，办理和更新劳动合同；
+													<br>
+													3、收集相关的劳动用工等人事政策及法规；
+													<br>
+													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
+													<br>
+													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
+													<br>
+													6、办理相应的社会保险、医保等外联工作；
+													<br>
+													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
+													<br>
+													8、其他临时任务。
+												</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="practice-item">
+												<div class="item-head">
+													<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
+													<div class="head-msg">
+														<div class="msg-top">
+															<span class="msg-company-name">洋葱数学</span>
+															<span class="msg-position-name">HR助理</span>
+														</div>
+														<div class="msg-bottom">
+															<span class="msg-site">长沙-岳麓区</span>
+															<span class="msg-date">2016/08/11 - 2016/09/20</span>
+														</div>
+													</div>
+												</div>
+												<div class="item-content">
+													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
+													<br>
+													2、建立、维护人事档案，办理和更新劳动合同；
+													<br>
+													3、收集相关的劳动用工等人事政策及法规；
+													<br>
+													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
+													<br>
+													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
+													<br>
+													6、办理相应的社会保险、医保等外联工作；
+													<br>
+													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
+													<br>
+													8、其他临时任务。
+												</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="practice-item">
+												<div class="item-head">
+													<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
+													<div class="head-msg">
+														<div class="msg-top">
+															<span class="msg-company-name">洋葱数学</span>
+															<span class="msg-position-name">HR助理</span>
+														</div>
+														<div class="msg-bottom">
+															<span class="msg-site">长沙-岳麓区</span>
+															<span class="msg-date">2016/08/11 - 2016/09/20</span>
+														</div>
+													</div>
+												</div>
+												<div class="item-content">
+													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
+													<br>
+													2、建立、维护人事档案，办理和更新劳动合同；
+													<br>
+													3、收集相关的劳动用工等人事政策及法规；
+													<br>
+													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
+													<br>
+													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
+													<br>
+													6、办理相应的社会保险、医保等外联工作；
+													<br>
+													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
+													<br>
+													8、其他临时任务。
+												</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="practice-item">
+												<div class="item-head">
+													<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
+													<div class="head-msg">
+														<div class="msg-top">
+															<span class="msg-company-name">洋葱数学</span>
+															<span class="msg-position-name">HR助理</span>
+														</div>
+														<div class="msg-bottom">
+															<span class="msg-site">长沙-岳麓区</span>
+															<span class="msg-date">2016/08/11 - 2016/09/20</span>
+														</div>
+													</div>
+												</div>
+												<div class="item-content">
+													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
+													<br>
+													2、建立、维护人事档案，办理和更新劳动合同；
+													<br>
+													3、收集相关的劳动用工等人事政策及法规；
+													<br>
+													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
+													<br>
+													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
+													<br>
+													6、办理相应的社会保险、医保等外联工作；
+													<br>
+													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
+													<br>
+													8、其他临时任务。
+												</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="resume-module resume-module-active skill-box">
+								<div class="resume-module-top">
+									<span class="top-icon"><i class="material-icons">&#xE8A3;</i></span>
+									<span class="top-title">语言/技术技能</span>
+									<span class="add-module-btn add-skill-btn">添加</span>
+								</div>
+								<div class="module-wrapper skill-wrapper">
+									<div class="skill-container">
+										<div class="module-edit-container skill-edit-container clearbox">
+											<input type="text" class="module-input" placeholder="语音/技能名称"/>
+											<input type="text" class="module-input skill-dec" placeholder="熟练度描述"/>
+											<div class="module-save-btn module-btn skill-save-btn">保存</div>
+											<div class="module-cancel-btn module-btn skill-cancel-btn">取消</div>
+										</div>
+										<ul class="skill-list">
+											<li class="skill-item">
+												<span class="skill-name">英语CET-6</span>
+												<span class="skill-bar-box"><span class="skill-bar"></span></span>
+												<span class="skill-dec">熟练使用英语交流</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="skill-item">
+												<span class="skill-name">日语N3</span>
+												<span class="skill-bar-box"><span class="skill-bar"></span></span>
+												<span class="skill-dec">无障碍日常沟通</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="skill-item">
+												<span class="skill-name">国家计算机二级</span>
+												<span class="skill-bar-box"><span class="skill-bar"></span></span>
+												<span class="skill-dec">最多七个字</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="skill-item">
+												<span class="skill-name">英语CET-6</span>
+												<span class="skill-bar-box"><span class="skill-bar"></span></span>
+												<span class="skill-dec">假文字十二字</span>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="resume-module activity-box">
+								<div class="resume-module-top">
+									<span class="top-icon"><i class="material-icons">&#xE566;</i></span>
+									<span class="top-title">课外活动</span>
+									<span class="add-module-btn add-activity-btn">添加</span>
+								</div>
+								<div class="module-wrapper activity-wrapper">
+									<div class="activity-container">
+										<div class="module-edit-container activity-edit-container clearbox">
+											<input type="text" class="module-input activity-input-name" placeholder="活动名称"/>
+											<div class="module-select activity-select">
+												<div class="module-select-content activity-content">活动时间</div>
+												<ul class="module-select-list activity-select-list">
+													<li class="module-select-item activity-item">2019</li>
+													<li class="module-select-item activity-item">2018</li>
+													<li class="module-select-item activity-item">2017</li>
+													<li class="module-select-item activity-item">2016</li>
+													<li class="module-select-item activity-item">2015</li>
+													<li class="module-select-item activity-item">2014</li>
+													<li class="module-select-item activity-item">2013</li>
+													<li class="module-select-item activity-item">2012</li>
+													<li class="module-select-item activity-item">2011</li>
+													<li class="module-select-item activity-item">2010</li>
+												</ul>
+											</div>
+											<input type="text" class="module-input activity-input-address" placeholder="活动地点"/>
+											<textarea class="activity-area" placeholder="活动描述"></textarea>
+											<div class="module-save-btn module-btn activity-save-btn">保存</div>
+											<div class="module-cancel-btn module-btn activity-cancel-btn">取消</div>
+										</div>
+										<ul class="activity-list">
+											<li class="activity-item">
+												<div class="activity-name">
+													<span class="name-text">学术学术辩论</span>
+												</div>
+												<div class="activity-msg">
+													<span class="msg-date">2017年1月20日</span>
+													<span class="msg-site">苏州</span>
+												</div>
+												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="activity-item">
+												<div class="activity-name">
+													<span class="name-text">学术学术辩论</span>
+												</div>
+												<div class="activity-msg">
+													<span class="msg-date">2017年1月20日</span>
+													<span class="msg-site">苏州</span>
+												</div>
+												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="activity-item">
+												<div class="activity-name">
+													<span class="name-text">学术学术辩论</span>
+												</div>
+												<div class="activity-msg">
+													<span class="msg-date">2017年1月20日</span>
+													<span class="msg-site">苏州</span>
+												</div>
+												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+											<li class="activity-item">
+												<div class="activity-name">
+													<span class="name-text">学术学术辩论</span>
+												</div>
+												<div class="activity-msg">
+													<span class="msg-date">2017年1月20日</span>
+													<span class="msg-site">苏州</span>
+												</div>
+												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
+												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<!-- 简历模块部分 -->
-					<div class="resume-box">
-						<div class="resume-module education-box">
-							<div class="resume-module-top">
-								<span class="top-icon"><i class="material-icons">&#xE80C;</i></span>
-								<span class="top-title">教育背景</span>
-								<span class="add-module-btn add-education-btn">添加</span>
-							</div>
-							<div class="module-wrapper education-wrapper clearbox">
-								<ul class="education-date-box">
-									<li class="education-date">
-										<span class="date-predict-text">(预计)</span>
-										<span class="date-year">2012</span>
-										<span class="date-mouth">6月8日</span>
-									</li>
-									<li class="education-date">
-										<span class="date-predict-text">(预计)</span>
-										<span class="date-year">2015</span>
-										<span class="date-mouth">6月8日</span>
-									</li>
-									<li class="education-date education-date-predict">
-										<span class="date-predict-text">(预计)</span>
-										<span class="date-year">2019</span>
-										<span class="date-mouth">6月8日</span>
-									</li>
-								</ul>
-								<div class="education-container">
-									<div class="module-edit-container education-edit-container clearbox">
-										<input type="text" class="module-input" placeholder="请输入学校名称"/>
-										<div class="module-select background-select">
-											<div class="module-select-content background-content">学历</div>
-											<ul class="module-select-list background-select-list">
-												<li class="module-select-item background-item">大专</li>
-												<li class="module-select-item background-item">本科</li>
-												<li class="module-select-item background-item">硕士</li>
-												<li class="module-select-item background-item">博士</li>
-												<li class="module-select-item background-item">其他</li>
-											</ul>
-										</div>
-										<input type="text" class="module-input" placeholder="请输入所学专业"/>
-										<div class="module-select graduate-select">
-											<div class="module-select-content graduate-content">毕业年份</div>
-											<ul class="module-select-list graduate-select-list">
-												<li class="module-select-item graduate-item">2019</li>
-												<li class="module-select-item graduate-item">2018</li>
-												<li class="module-select-item graduate-item">2017</li>
-												<li class="module-select-item graduate-item">2016</li>
-												<li class="module-select-item graduate-item">2015</li>
-												<li class="module-select-item graduate-item">2014</li>
-												<li class="module-select-item graduate-item">2013</li>
-												<li class="module-select-item graduate-item">2012</li>
-												<li class="module-select-item graduate-item">2011</li>
-												<li class="module-select-item graduate-item">2010</li>
-											</ul>
-										</div>
-										<div class="module-save-btn module-btn education-save-btn">保存</div>
-										<div class="module-cancel-btn module-btn education-cancel-btn">取消</div>
-									</div>
-									<ul class="education-list">
-										<li class="education-item">
-											<span class="education-school">哈佛大学</span>
-											<span class="education-background">本科</span>
-											<span class="education-major">机械及自动化专业</span>
-											<span class="date-begin">2012年6月1日</span>
-											<span class="date-end">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="education-item">
-											<span class="education-school">耶鲁大学</span>
-											<span class="education-background">硕士</span>
-											<span class="education-major">金融学专业</span>
-											<span class="date-begin">2012年6月1日</span>
-											<span class="date-end">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="education-item">
-											<span class="education-school">斯坦福大学</span>
-											<span class="education-background">博士</span>
-											<span class="education-major">国际经济与贸易</span>
-											<span class="date-begin">2015年6月19日</span>
-											<span class="date-end">至今</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="resume-module award-box">
-							<div class="resume-module-top">
-								<span class="top-icon"><i class="material-icons">&#xE86E;</i></span>
-								<span class="top-title">所获荣誉</span>
-								<span class="add-module-btn add-award-btn">添加</span>
-							</div>
-							<div class="module-wrapper award-wrapper">
-								<div class="award-container">
-									<div class="module-edit-container award-edit-container clearbox">
-										<input type="text" class="module-input" placeholder="荣誉名称"/>
-										<div class="module-select award-select">
-											<div class="module-select-content award-content">学历</div>
-											<ul class="module-select-list award-select-list">
-												<li class="module-select-item award-item">2019</li>
-												<li class="module-select-item award-item">2018</li>
-												<li class="module-select-item award-item">2017</li>
-												<li class="module-select-item award-item">2016</li>
-												<li class="module-select-item award-item">2015</li>
-												<li class="module-select-item award-item">2014</li>
-												<li class="module-select-item award-item">2013</li>
-												<li class="module-select-item award-item">2012</li>
-												<li class="module-select-item award-item">2011</li>
-												<li class="module-select-item award-item">2010</li>
-											</ul>
-										</div>
-										<div class="module-save-btn module-btn award-save-btn">保存</div>
-										<div class="module-cancel-btn module-btn award-cancel-btn">取消</div>
-									</div>
-									
-									<ul class="award-list">
-										<li class="award-item">
-											<span class="award-name">外语系第十三届英语戏剧比赛一等奖</span>
-											<span class="award-date">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="award-item">
-											<span class="award-name">外语系第十三届英语戏剧比赛一等奖一等奖</span>
-											<span class="award-date">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="award-item">
-											<span class="award-name">红点设计大奖</span>
-											<span class="award-date">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="award-item">
-											<span class="award-name">外语系第十三届英语戏剧奖一等奖</span>
-											<span class="award-date">2015年6月19日</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="resume-module practice-box">
-							<div class="resume-module-top">
-								<span class="top-icon"><i class="material-icons">&#xE85D;</i></span>
-								<span class="top-title">实习经历</span>
-								<span class="add-module-btn add-practice-btn">添加</span>
-							</div>
-							<div class="module-wrapper practice-wrapper">
-								<div class="practice-container">
-									<div class="module-edit-container practice-edit-container clearbox">
-										<div class="uploader-box">
-											<span class="uploader-msg">上传公司logo</span>
-											<input type="file" class="uploader-input" placeholder="上传公司logo"/>
-										</div>
-										<input type="text" class="module-input" placeholder="请输入公司名称"/>
-										<input type="text" class="module-input practice-address" placeholder="公司地址"/>
-										<textarea class="practice-area" placeholder="工作职能"></textarea>
-										<div class="module-save-btn module-btn practice-save-btn">保存</div>
-										<div class="module-cancel-btn module-btn practice-cancel-btn">取消</div>
-									</div>
-									<ul class="practice-list">
-										<li class="practice-item">
-											<div class="item-head">
-												<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
-												<div class="head-msg">
-													<div class="msg-top">
-														<span class="msg-company-name">洋葱数学</span>
-														<span class="msg-position-name">HR助理</span>
-													</div>
-													<div class="msg-bottom">
-														<span class="msg-site">长沙-岳麓区</span>
-														<span class="msg-date">2016/08/11 - 2016/09/20</span>
-													</div>
-												</div>
-											</div>
-											<div class="item-content">
-												1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-												<br>
-												2、建立、维护人事档案，办理和更新劳动合同；
-												<br>
-												3、收集相关的劳动用工等人事政策及法规；
-												<br>
-												4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-												<br>
-												5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-												<br>
-												6、办理相应的社会保险、医保等外联工作；
-												<br>
-												7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-												<br>
-												8、其他临时任务。
-											</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="practice-item">
-											<div class="item-head">
-												<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
-												<div class="head-msg">
-													<div class="msg-top">
-														<span class="msg-company-name">洋葱数学</span>
-														<span class="msg-position-name">HR助理</span>
-													</div>
-													<div class="msg-bottom">
-														<span class="msg-site">长沙-岳麓区</span>
-														<span class="msg-date">2016/08/11 - 2016/09/20</span>
-													</div>
-												</div>
-											</div>
-											<div class="item-content">
-												1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-												<br>
-												2、建立、维护人事档案，办理和更新劳动合同；
-												<br>
-												3、收集相关的劳动用工等人事政策及法规；
-												<br>
-												4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-												<br>
-												5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-												<br>
-												6、办理相应的社会保险、医保等外联工作；
-												<br>
-												7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-												<br>
-												8、其他临时任务。
-											</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="practice-item">
-											<div class="item-head">
-												<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
-												<div class="head-msg">
-													<div class="msg-top">
-														<span class="msg-company-name">洋葱数学</span>
-														<span class="msg-position-name">HR助理</span>
-													</div>
-													<div class="msg-bottom">
-														<span class="msg-site">长沙-岳麓区</span>
-														<span class="msg-date">2016/08/11 - 2016/09/20</span>
-													</div>
-												</div>
-											</div>
-											<div class="item-content">
-												1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-												<br>
-												2、建立、维护人事档案，办理和更新劳动合同；
-												<br>
-												3、收集相关的劳动用工等人事政策及法规；
-												<br>
-												4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-												<br>
-												5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-												<br>
-												6、办理相应的社会保险、医保等外联工作；
-												<br>
-												7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-												<br>
-												8、其他临时任务。
-											</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="practice-item">
-											<div class="item-head">
-												<img src="../../Content/wisdom/img/position_head.png" alt="logo" class="item-company-logo"/>
-												<div class="head-msg">
-													<div class="msg-top">
-														<span class="msg-company-name">洋葱数学</span>
-														<span class="msg-position-name">HR助理</span>
-													</div>
-													<div class="msg-bottom">
-														<span class="msg-site">长沙-岳麓区</span>
-														<span class="msg-date">2016/08/11 - 2016/09/20</span>
-													</div>
-												</div>
-											</div>
-											<div class="item-content">
-												1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-												<br>
-												2、建立、维护人事档案，办理和更新劳动合同；
-												<br>
-												3、收集相关的劳动用工等人事政策及法规；
-												<br>
-												4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-												<br>
-												5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-												<br>
-												6、办理相应的社会保险、医保等外联工作；
-												<br>
-												7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-												<br>
-												8、其他临时任务。
-											</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="resume-module resume-module-active skill-box">
-							<div class="resume-module-top">
-								<span class="top-icon"><i class="material-icons">&#xE8A3;</i></span>
-								<span class="top-title">语言/技术技能</span>
-								<span class="add-module-btn add-skill-btn">添加</span>
-							</div>
-							<div class="module-wrapper skill-wrapper">
-								<div class="skill-container">
-									<div class="module-edit-container skill-edit-container clearbox">
-										<input type="text" class="module-input" placeholder="语音/技能名称"/>
-										<input type="text" class="module-input skill-dec" placeholder="熟练度描述"/>
-										<div class="module-save-btn module-btn skill-save-btn">保存</div>
-										<div class="module-cancel-btn module-btn skill-cancel-btn">取消</div>
-									</div>
-									<ul class="skill-list">
-										<li class="skill-item">
-											<span class="skill-name">英语CET-6</span>
-											<span class="skill-bar-box"><span class="skill-bar"></span></span>
-											<span class="skill-dec">熟练使用英语交流</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="skill-item">
-											<span class="skill-name">日语N3</span>
-											<span class="skill-bar-box"><span class="skill-bar"></span></span>
-											<span class="skill-dec">无障碍日常沟通</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="skill-item">
-											<span class="skill-name">国家计算机二级</span>
-											<span class="skill-bar-box"><span class="skill-bar"></span></span>
-											<span class="skill-dec">最多七个字</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="skill-item">
-											<span class="skill-name">英语CET-6</span>
-											<span class="skill-bar-box"><span class="skill-bar"></span></span>
-											<span class="skill-dec">假文字十二字</span>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="resume-module activity-box">
-							<div class="resume-module-top">
-								<span class="top-icon"><i class="material-icons">&#xE566;</i></span>
-								<span class="top-title">课外活动</span>
-								<span class="add-module-btn add-activity-btn">添加</span>
-							</div>
-							<div class="module-wrapper activity-wrapper">
-								<div class="activity-container">
-									<div class="module-edit-container activity-edit-container clearbox">
-										<input type="text" class="module-input activity-input-name" placeholder="活动名称"/>
-										<div class="module-select activity-select">
-											<div class="module-select-content activity-content">活动时间</div>
-											<ul class="module-select-list activity-select-list">
-												<li class="module-select-item activity-item">2019</li>
-												<li class="module-select-item activity-item">2018</li>
-												<li class="module-select-item activity-item">2017</li>
-												<li class="module-select-item activity-item">2016</li>
-												<li class="module-select-item activity-item">2015</li>
-												<li class="module-select-item activity-item">2014</li>
-												<li class="module-select-item activity-item">2013</li>
-												<li class="module-select-item activity-item">2012</li>
-												<li class="module-select-item activity-item">2011</li>
-												<li class="module-select-item activity-item">2010</li>
-											</ul>
-										</div>
-										<input type="text" class="module-input activity-input-address" placeholder="活动地点"/>
-										<textarea class="activity-area" placeholder="活动描述"></textarea>
-										<div class="module-save-btn module-btn activity-save-btn">保存</div>
-										<div class="module-cancel-btn module-btn activity-cancel-btn">取消</div>
-									</div>
-									<ul class="activity-list">
-										<li class="activity-item">
-											<div class="activity-name">
-												<span class="name-text">学术学术辩论</span>
-											</div>
-											<div class="activity-msg">
-												<span class="msg-date">2017年1月20日</span>
-												<span class="msg-site">苏州</span>
-											</div>
-											<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="activity-item">
-											<div class="activity-name">
-												<span class="name-text">学术学术辩论</span>
-											</div>
-											<div class="activity-msg">
-												<span class="msg-date">2017年1月20日</span>
-												<span class="msg-site">苏州</span>
-											</div>
-											<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="activity-item">
-											<div class="activity-name">
-												<span class="name-text">学术学术辩论</span>
-											</div>
-											<div class="activity-msg">
-												<span class="msg-date">2017年1月20日</span>
-												<span class="msg-site">苏州</span>
-											</div>
-											<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-										<li class="activity-item">
-											<div class="activity-name">
-												<span class="name-text">学术学术辩论</span>
-											</div>
-											<div class="activity-msg">
-												<span class="msg-date">2017年1月20日</span>
-												<span class="msg-site">苏州</span>
-											</div>
-											<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-											<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-											<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-										</li>
-									</ul>
-								</div>
-							</div>
+					<!-- 右侧简历导航区 -->
+					<div class="resume-nav-content clearbox">
+						<div class="resume-nav-box">
+							<div class="resume-nav-head">Jessie的简历</div>
+							<ul class="resume-nav-list clearbox">
+								<li class="resume-nav-item resume-nav-active">
+									<span class="resume-nav-line"></span>
+									<span class="resume-nav-icon"><i class="material-icons">&#xE80C;</i></span>
+									<span class="resume-nav-text">教育背景</span>
+								</li>
+								<li class="resume-nav-item">
+									<span class="resume-nav-line"></span>
+									<span class="resume-nav-icon"><i class="material-icons">&#xE86E;</i></span>
+									<span class="resume-nav-text">所获荣誉</span>
+								</li>
+								<li class="resume-nav-item">
+									<span class="resume-nav-line"></span>
+									<span class="resume-nav-icon"><i class="material-icons">&#xE85D;</i></span>
+									<span class="resume-nav-text">实习经历</span>
+								</li>
+								<li class="resume-nav-item">
+									<span class="resume-nav-line"></span>
+									<span class="resume-nav-icon"><i class="material-icons">&#xE8A3;</i></span>
+									<span class="resume-nav-text">语言/技术技能</span>
+								</li>
+								<li class="resume-nav-item">
+									<span class="resume-nav-line"></span>
+									<span class="resume-nav-icon"><i class="material-icons">&#xE566;</i></span>
+									<span class="resume-nav-text">课外活动</span>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-				<!-- 右侧简历导航区 -->
-				<div class="resume-nav-content clearbox">
-					<div class="resume-nav-box">
-						<div class="resume-nav-head">Jessie的简历</div>
-						<ul class="resume-nav-list clearbox">
-							<li class="resume-nav-item resume-nav-active">
-								<span class="resume-nav-line"></span>
-								<span class="resume-nav-icon"><i class="material-icons">&#xE80C;</i></span>
-								<span class="resume-nav-text">教育背景</span>
-							</li>
-							<li class="resume-nav-item">
-								<span class="resume-nav-line"></span>
-								<span class="resume-nav-icon"><i class="material-icons">&#xE86E;</i></span>
-								<span class="resume-nav-text">所获荣誉</span>
-							</li>
-							<li class="resume-nav-item">
-								<span class="resume-nav-line"></span>
-								<span class="resume-nav-icon"><i class="material-icons">&#xE85D;</i></span>
-								<span class="resume-nav-text">实习经历</span>
-							</li>
-							<li class="resume-nav-item">
-								<span class="resume-nav-line"></span>
-								<span class="resume-nav-icon"><i class="material-icons">&#xE8A3;</i></span>
-								<span class="resume-nav-text">语言/技术技能</span>
-							</li>
-							<li class="resume-nav-item">
-								<span class="resume-nav-line"></span>
-								<span class="resume-nav-icon"><i class="material-icons">&#xE566;</i></span>
-								<span class="resume-nav-text">课外活动</span>
-							</li>
-						</ul>
+				
+				<!--收藏职位-->
+				<div class="collect-module-container">
+					<div class="collect-empty-content empty-content">
+						<div class="empty-img"></div>
+						<div class="empty-msg">你还没有收藏职位，职位职位职位职位职位宣传语，快去寻找适合的岗位吧</div>
+						<div class="empty-btn collect-empty-btn">去职位看看</div>
 					</div>
+					<div class="collect-content"></div>
+				</div>	
+				
+				<!--投递职位-->
+				<div class="send-module-container">
+					<div class="send-empty-content empty-content">
+						<div class="empty-img"></div>
+						<div class="empty-msg">你还没有投递职位，职位职位职位职位职位宣传语，快去寻找适合的岗位吧</div>
+						<div class="empty-btn send-empty-btn">去职位看看</div>
+					</div>
+					<div class="send-content"></div>
 				</div>
+				
+				<!--有关留言-->
+				<div class="message-module-container">
+					<div class="message-empty-content empty-content">
+						<div class="empty-img"></div>
+						<div class="empty-msg">你还没有留言，职位职位职位职位职位宣传语，快去寻找适合的岗位吧</div>
+						<div class="empty-btn message-empty-btn">去职位看看</div>
+					</div>
+					<div class="message-content"></div>
+				</div>
+				
+				<!--我的测评-->
+				<div class="evaluation-module-container">
+					<div class="evaluation-empty-content empty-content">
+						<div class="empty-img"></div>
+						<div class="empty-msg">你还没有测评过，职位职位职位职位职位宣传语，快去寻找适合的测评吧</div>
+						<div class="empty-btn evaluation-empty-btn">去测评看看</div>
+					</div>
+					<div class="evaluation-content"></div>
+				</div>
+				
 			</div>
 		</section>
+		<!-- Tag Dialog -->
+		<div class="flo-box">
+			<div class="tag-select-box">
+				<div class="tag-cancel-btn"></div>
+				<div class="select-title">
+					<span class="title-text">标签选择</span>
+					<span class="title-dec">最多选择5个标签</span>
+					<span class="tag-num-box">共213个标签</span>
+				</div>
+				<ul class="select-list">
+					<li class="select-list-item">
+						<div class="select-item-title">标签分类一</div>
+						<ul class="select-item-list clearbox">
+							<li class="select-item">数据分析</li>
+							<li class="select-item">标签123</li>
+							<li class="select-item">学习能力</li>
+							<li class="select-item">标签3</li>
+							<li class="select-item">标签2</li>
+							<li class="select-item">标签454</li>
+							<li class="select-item">标签5445</li>
+							<li class="select-item">标签67</li>
+							<li class="select-item">标签7</li>
+							<li class="select-item">标签3</li>
+							<li class="select-item">标签363</li>
+							<li class="select-item">标签3223</li>
+						</ul>
+					</li>
+					<li class="select-list-item">
+						<div class="select-item-title">标签分类二二二</div>
+						<ul class="select-item-list clearbox">
+							<li class="select-item">操作简单</li>
+							<li class="select-item">学习容易</li>
+							<li class="select-item">讲解清晰</li>
+							<li class="select-item">学习能力</li>
+							<li class="select-item">标签3</li>
+							<li class="select-item">标签2</li>
+							<li class="select-item">标签4</li>
+							<li class="select-item">标签5</li>
+							<li class="select-item">标签6</li>
+							<li class="select-item">标签7</li>
+							<li class="select-item">标签3</li>
+							<li class="select-item">标签3</li>
+						</ul>
+					</li>
+					<li class="select-list-item">
+						<div class="select-item-title">标签分类三三三</div>
+						<ul class="select-item-list clearbox">
+							<li class="select-item">可以加班</li>
+							<li class="select-item">接受安排</li>
+							<li class="select-item">乐于奉献</li>
+							<li class="select-item">标签3434</li>
+							<li class="select-item">标签3434</li>
+							<li class="select-item">标签34</li>
+							<li class="select-item">标签4</li>
+							<li class="select-item">标签388</li>
+							<li class="select-item">标签3434</li>
+							<li class="select-item">标签34</li>
+							<li class="select-item">标签555</li>
+							<li class="select-item">标签666</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="select-btn-box clearbox">
+					<div class="select-btn select-confirm-btn">
+						<span class="select-icon"><i class="material-icons">&#xE5CA;</i></span>
+						<span class="btn-text">确定</span>
+					</div>
+					<div class="select-btn select-reset-btn">
+						<span class="select-icon"><i class="material-icons">&#xE5D5;</i></span>
+						<span class="btn-text">重置</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--********************************************Private结构End*********************************-->
 		
-	</div>
-	
-	<div class="flo-box">
-		<div class="tag-select-box">
-			<div class="tag-cancel-btn"></div>
-			<div class="select-title">
-				<span class="title-text">标签选择</span>
-				<span class="title-dec">最多选择5个标签</span>
-				<span class="tag-num-box">共213个标签</span>
-			</div>
-			<ul class="select-list">
-				<li class="select-list-item">
-					<div class="select-item-title">标签分类一</div>
-					<ul class="select-item-list clearbox">
-						<li class="select-item">数据分析</li>
-						<li class="select-item">标签123</li>
-						<li class="select-item">学习能力</li>
-						<li class="select-item">标签3</li>
-						<li class="select-item">标签2</li>
-						<li class="select-item">标签454</li>
-						<li class="select-item">标签5445</li>
-						<li class="select-item">标签67</li>
-						<li class="select-item">标签7</li>
-						<li class="select-item">标签3</li>
-						<li class="select-item">标签363</li>
-						<li class="select-item">标签3223</li>
-					</ul>
-				</li>
-				<li class="select-list-item">
-					<div class="select-item-title">标签分类二二二</div>
-					<ul class="select-item-list clearbox">
-						<li class="select-item">操作简单</li>
-						<li class="select-item">学习容易</li>
-						<li class="select-item">讲解清晰</li>
-						<li class="select-item">学习能力</li>
-						<li class="select-item">标签3</li>
-						<li class="select-item">标签2</li>
-						<li class="select-item">标签4</li>
-						<li class="select-item">标签5</li>
-						<li class="select-item">标签6</li>
-						<li class="select-item">标签7</li>
-						<li class="select-item">标签3</li>
-						<li class="select-item">标签3</li>
-					</ul>
-				</li>
-				<li class="select-list-item">
-					<div class="select-item-title">标签分类三三三</div>
-					<ul class="select-item-list clearbox">
-						<li class="select-item">可以加班</li>
-						<li class="select-item">接受安排</li>
-						<li class="select-item">乐于奉献</li>
-						<li class="select-item">标签3434</li>
-						<li class="select-item">标签3434</li>
-						<li class="select-item">标签34</li>
-						<li class="select-item">标签4</li>
-						<li class="select-item">标签388</li>
-						<li class="select-item">标签3434</li>
-						<li class="select-item">标签34</li>
-						<li class="select-item">标签555</li>
-						<li class="select-item">标签666</li>
-					</ul>
-				</li>
-			</ul>
-			<div class="select-btn-box clearbox">
-				<div class="select-btn select-confirm-btn">
-					<span class="select-icon"><i class="material-icons">&#xE5CA;</i></span>
-					<span class="btn-text">确定</span>
-				</div>
-				<div class="select-btn select-reset-btn">
-					<span class="select-icon"><i class="material-icons">&#xE5D5;</i></span>
-					<span class="btn-text">重置</span>
+		<!-- Login and Register Dialog -->
+		<div class="lr-container">
+			<div class="lr-wrapper">
+				<div class="lr-box">
+					<div class="lr-cancel"></div>
+					<div class="lr-btn-box clearbox">
+						<div class="login-btn lr-btn">
+							登录
+							<div class="btn-line"></div>
+						</div>
+						<div class="register-btn lr-btn">
+							注册
+							<div class="btn-line"></div>
+						</div>
+					</div>
+					<div class="login-box">
+						<div class="login-title">欢迎登录Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item login-phone" placeholder="请输入登录手机号" maxlength="11"/>
+							</div>
+							<div class="login-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item login-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="28"/>
+							</div>
+							<div class="login-password-tips lr-tips"></div>
+							<div class="rf-box clearbox">
+								<div class="remember-password-box lr-checkbox-box">
+									<div class="yes rp-yes lr-checkbox"></div>
+									<div class="no rp-no lr-checkbox"></div>
+									<div class="rp-text lr-text">记住密码</div>
+								</div>
+								<div class="forget-password-box lr-text">忘记密码？</div>
+							</div>
+							<div class="lr-login-btn lr-confirm-btn">登录</div>
+						</div>
+					</div>
+					<div class="register-box">
+						<div class="register-title">欢迎注册Career Success</div>
+						<div class="form-box">
+							<div class="input-box">
+								<input type="text" class="input-item register-username" placeholder="请输入用户名" maxlength="20"/>
+							</div>
+							<div class="register-username-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item register-phone" placeholder="请输入注册手机号" maxlength="11"/>
+							</div>
+							<div class="register-phone-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="text" class="input-item test-code" placeholder="请输入验证码" maxlength="6"/>
+								<div class="get-code-btn">获取验证码</div>
+							</div>
+							<div class="code-tips lr-tips"></div>
+							<div class="input-box">
+								<input type="password" class="input-item register-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="20"/>
+							</div>
+							<div class="register-password-tips lr-tips"></div>
+							<div class="protocol-box lr-checkbox-box">
+								<div class="yes protocol-yes lr-checkbox"></div>
+								<div class="no protocol-no lr-checkbox"></div>
+								<div class="lr-text">同意《Caree Success注册协议》</div>
+							</div>
+							<div class="lr-register-btn-box clearbox">
+								<div class="complate-msg-btn">完善信息</div>
+								<div class="lr-register-btn">直接注册</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Bottom -->
+		<footer>
+			<a href="#" class="back-top"></a>
+			<div class="about-us">
+				<div class="about-left">
+					<div class="about-title">
+						<span class="title-big">联系我们</span>
+						<span class="title-little">contact us</span>
+					</div>
+					<div class="about-dec">
+						<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
+					</div>
+					<div class="about-phone">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						电话: (+86) 021-31336975
+					</div>
+					<div class="about-email">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+							mickeyge@knx.com.cn
+					</div>
+					<div class="about-address">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+						地址: 上海长宁区虹桥路1438号古北财富二期16层
+					</div>
+					<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
+				</div>
+				<div class="about-right">
+					<div class="right-box">
+						<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
+						<div class="right-dec">官方微信公众号：KNX_China</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
 	</div>
 	
-	<footer>
-		<a href="#" class="back-top"></a>
-		<div class="about-us">
-			<div class="about-left">
-				<div class="about-title">
-					<span class="title-big">联系我们</span>
-					<span class="title-little">contact us</span>
-				</div>
-				<div class="about-dec">
-					<span class="dec-text"><span class="dec-name">Success Career</span>是海内外大学生职业发展增值服务平台，上海肯耐珂萨人才服务股份有限公司(www.knx.com.cn)（简称KNX）旗下专注于海归就业和国际化人才服务的核心系统之一，助你斩获名企高薪Offer。</span>
-				</div>
-				<div class="about-phone">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					电话: (+86) 021-31336975
-				</div>
-				<div class="about-email">
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-						mickeyge@knx.com.cn
-				</div>
-				<div class="about-address">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					地址: 上海长宁区虹桥路1438号古北财富二期16层
-				</div>
-				<div class="about-other">©肯耐珂萨 2016 | 沪ICP备09051952号-2</div>
-			</div>
-			<div class="about-right">
-				<div class="right-box">
-					<img src="../../Content/wisdom/img/erwei.png" alt="微信公众号" />
-					<div class="right-dec">官方微信公众号：KNX_China</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<!-- Public JS -->
 	<script src="../../Scripts/wisdom/lib/jquery-1.11.3.min.js"></script>
 	<script src="../../Scripts/wisdom/lib/vue.min.js"></script>
+	<script src="../../Scripts/wisdom/js/Template.js"></script>
+	
+	<!-- Private JS -->
+	<script src="../../Scripts/wisdom/js/MyBackStage.js"></script>
+	
 	<script>
 		
-		$(function(){
-			
-			$("body").on("click",".back-top",function(event){
-				$('body,html').animate({scrollTop:0},300);
-			})
-			
-			$("body").on("click",".tag-cancel-btn",function(event){
-				removeSelect();
-				$(".flo-box").hide();
-			})
-			
-			$("body").on("click",".add-tag-btn",function(event){
-				$(".flo-box").show();
-			})
-			
-			$("body").on("click",".select-confirm-btn",function(event){
-				if($(".tag-item").length<=5){
-					$(".resume-tag").append('<li class="tag-item">数据分析</li>');
-				}
-				$(".flo-box").hide();
-			})
-			
-			$("body").on("click",".select-item",function(event){
-				var oKey=$(this).hasClass("selected");
-				if(oKey){
-					$(this).removeClass("selected");
-				}else{
-					$(this).addClass("selected");
-				}
-			})
-			
-			$("body").on("click",".select-reset-btn",function(event){
-				removeSelect();
-			})
-			
-			$("body").on("click",".resume-nav-item",function(event){
-				var oKey=$(this).hasClass("resume-nav-active");
-				var oList=$(".resume-nav-item");
-				if(!oKey){
-					for(var i=0;i<oList.length;i++){
-						if(oList.eq(i).hasClass("resume-nav-active")){
-							oList.eq(i).removeClass("resume-nav-active");
-							break;
-						}
-					}
-					$(this).addClass("resume-nav-active");
-				}
-			})
-			
-			$("body").on("click",".nav-item",function(event){
-				var oKey=$(this).hasClass("nav-item-active");
-				var oList=$(".nav-item");
-				if(!oKey){
-					for(var i=0;i<oList.length;i++){
-						if(oList.eq(i).hasClass("nav-item-active")){
-							oList.eq(i).removeClass("nav-item-active");
-							break;
-						}
-					}
-					$(this).addClass("nav-item-active");
-				}
-			})
-			
-			$("body").on("click",".add-education-btn",function(event){
-				$(".education-edit-container").show();
-			})
-			
-			$("body").on("click",".education-save-btn",function(event){
-				$(".education-edit-container").hide();
-			})
-			
-			$("body").on("click",".education-cancel-btn",function(event){
-				$(".education-edit-container").hide();
-			})
-			
-
-			var oBack=false;
-			$("body").on("click",".background-select",function(event){
-				if(!oBack){
-					$(this).css("borderColor","#ffbf00");
-					$(".background-select-list").show();
-					oBack=true;
-				}else{
-					$(this).css("borderColor","#e3e3e3");
-					$(".background-select-list").hide();
-					oBack=false;
-				}
-			})
-			
-			$("body").on("click",".background-item",function(event){
-				var oContent=$(this).text();
-				$(".background-select").css("border","1px solid #e3e3e3");
-				$(".background-content").text(oContent);
-				$(".background-select-list").hide();
-				oBack=false;
-			})
-			
-			var oGraduate=false;
-			$("body").on("click",".graduate-select",function(event){
-				if(!oGraduate){
-					$(this).css("borderColor","#ffbf00");
-					$(".graduate-select-list").show();
-					oGraduate=true;
-				}else{
-					$(this).css("borderColor","#e3e3e3");
-					$(".graduate-select-list").hide();
-					oGraduate=false;
-				}
-			})
-			
-			$("body").on("click",".graduate-item",function(event){
-				var oContent=$(this).text();
-				$(".graduate-select").css("border","1px solid #e3e3e3");
-				$(".graduate-content").text(oContent);
-				$(".graduate-select-list").hide();
-				oGraduate=false;
-			})
-			
-			
-			$("body").on("click",".add-award-btn",function(event){
-				$(".award-edit-container").show();
-			})
-			
-			$("body").on("click",".award-save-btn",function(event){
-				$(".award-edit-container").hide();
-			})
-			
-			$("body").on("click",".award-cancel-btn",function(event){
-				$(".award-edit-container").hide();
-			})
-			
-			
-			var oAward=false;
-			$("body").on("click",".award-select",function(event){
-				if(!oAward){
-					$(this).css("borderColor","#ffbf00");
-					$(".award-select-list").show();
-					oAward=true;
-				}else{
-					$(this).css("borderColor","#e3e3e3");
-					$(".award-select-list").hide();
-					oAward=false;
-				}
-			})
-			
-			$("body").on("click",".award-item",function(event){
-				var oContent=$(this).text();
-				$(".award-select").css("border","1px solid #e3e3e3");
-				$(".award-content").text(oContent);
-				$(".award-select-list").hide();
-				oAward=false;
-			})
-			
-			
-			
-			$("body").on("click",".add-practice-btn",function(event){
-				$(".practice-edit-container").show();
-			})
-			
-			$("body").on("click",".practice-save-btn",function(event){
-				$(".practice-edit-container").hide();
-			})
-			
-			$("body").on("click",".practice-cancel-btn",function(event){
-				$(".practice-edit-container").hide();
-			})
-			
-			
-			
-			
-			$("body").on("click",".add-skill-btn",function(event){
-				$(".skill-edit-container").show();
-			})
-			
-			$("body").on("click",".skill-save-btn",function(event){
-				$(".skill-edit-container").hide();
-			})
-			
-			$("body").on("click",".skill-cancel-btn",function(event){
-				$(".skill-edit-container").hide();
-			})
-			
-			
-			
-			
-			$("body").on("click",".add-activity-btn",function(event){
-				$(".activity-edit-container").show();
-			})
-			
-			$("body").on("click",".activity-save-btn",function(event){
-				$(".activity-edit-container").hide();
-			})
-			
-			$("body").on("click",".activity-cancel-btn",function(event){
-				$(".activity-edit-container").hide();
-			})
-			
-			
-			var oActivity=false;
-			$("body").on("click",".activity-select",function(event){
-				if(!oActivity){
-					$(this).css("borderColor","#ffbf00");
-					$(".activity-select-list").show();
-					oActivity=true;
-				}else{
-					$(this).css("borderColor","#e3e3e3");
-					$(".activity-select-list").hide();
-					oActivity=false;
-				}
-			})
-			
-			$("body").on("click",".activity-item",function(event){
-				var oContent=$(this).text();
-				$(".activity-select").css("border","1px solid #e3e3e3");
-				$(".activity-content").text(oContent);
-				$(".activity-select-list").hide();
-				oActivity=false;
-			})
-			
-			
-			
-			$(document).on("click",function(e){
-				var b1=$(e.target).hasClass("background-select");
-				var b2=$(e.target).hasClass("background-content");
-				var g1=$(e.target).hasClass("graduate-select");
-				var g2=$(e.target).hasClass("graduate-content");
-				var a1=$(e.target).hasClass("award-select");
-				var a2=$(e.target).hasClass("award-content");
-				var c1=$(e.target).hasClass("activity-select");
-				var c2=$(e.target).hasClass("activity-content");
-				
-				
-				if(!(b1||b2)){
-					$(".background-select").css("border","1px solid #e3e3e3");
-					$(".background-select-list").hide();
-					oBack=false;
-				}
-				
-				if(!(g1||g2)){
-					$(".graduate-select").css("border","1px solid #e3e3e3");
-					$(".graduate-select-list").hide();
-					oGraduate=false;
-				}
-				
-				if(!(a1||a2)){
-					$(".award-select").css("border","1px solid #e3e3e3");
-					$(".award-select-list").hide();
-					oAward=false;
-				}
-				
-				if(!(c1||c2)){
-					$(".activity-select").css("border","1px solid #e3e3e3");
-					$(".activity-select-list").hide();
-					oActivity=false;
-				}
-			})
-		
-			function removeSelect(){
-				var oList=$(".select-item");
-				for(var i=0;i<oList.length;i++){
-					if($(oList.eq(i).hasClass("selected"))){
-						$(oList.eq(i).removeClass("selected"));
-					}else{
-						
-					}
-				}
-			}
-			
-			
-		})
 	</script>
+	
 </body>
 </html>

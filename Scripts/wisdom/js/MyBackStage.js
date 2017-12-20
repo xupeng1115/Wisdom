@@ -284,6 +284,10 @@ $(function(){
 			}
 		})
 
+		$("body").on("click",".empty-btn",function(){
+			window.location.href="PositionList.html";
+		})
+
 		function removeSelect(){
 			var oList=$(".select-item");
 			for(var i=0;i<oList.length;i++){

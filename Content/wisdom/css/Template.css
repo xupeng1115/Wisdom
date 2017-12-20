@@ -273,6 +273,7 @@ footer .about-us::after{
 }
 
 .about-left .about-title .title-little{
+	font-family:"NotoSansCJKsc-Light";
   	font-size: 26px;
   	font-weight: 300;
   	text-align: justify;

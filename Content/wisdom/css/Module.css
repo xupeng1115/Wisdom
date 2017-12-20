@@ -77,7 +77,7 @@
 }
 
 .collect-module-container .empty-content .empty-img{
-	background:url(../img/flow_1.png)no-repeat center center;
+	background:url(../img/empty.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
@@ -86,16 +86,16 @@
 }
 
 .send-module-container .empty-content .empty-img{
-	background:url(../img/flow_1.png)no-repeat center center;
+	background:url(../img/empty.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
 .message-module-container .empty-content{
-	display:none;
+	display:block;
 }
 
 .message-module-container .empty-content .empty-img{
-	background:url(../img/flow_2.png)no-repeat center center;
+	background:url(../img/empty.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .evaluation-module-container .empty-content .empty-img{
-	background:url(../img/flow_2.png)no-repeat center center;
+	background:url(../img/empty.png)no-repeat center center;
 	background-size:100% 100%;
 }
 

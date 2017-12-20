@@ -101,6 +101,10 @@
 	cursor:pointer;
 }
 
+.search-wrapper .search-hot-wrapper .search-hot-item:hover{
+	color:#ffbf00;
+}
+
 .search-wrapper .search-hot-wrapper::before{
 	position:absolute;
 	top:10px;

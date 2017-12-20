@@ -134,7 +134,6 @@ section .nav-content{
 	position:relative;
 	height:45px;
 	background-color: #f2f2f2;
-  	box-shadow: 0 2px 4px 0 rgba(216, 216, 216, 0.5);
 }
 
 .nav-box .nav-item{
@@ -172,10 +171,11 @@ section .nav-content{
 
 /**********************************************我的简历************************************************/
 .content-box .resume-module-container{
-	display:none;
+	display:block;
 	position:relative;
 	width:100%;
 }
+
 .resume-module-container .resume-nav-content{
 	position:relative;
 	float:right;

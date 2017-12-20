@@ -69,20 +69,6 @@ $(function(){
 			}
 		})
 		
-		$("body").on("click",".nav-item",function(event){
-			var oKey=$(this).hasClass("nav-item-active");
-			var oList=$(".nav-item");
-			if(!oKey){
-				for(var i=0;i<oList.length;i++){
-					if(oList.eq(i).hasClass("nav-item-active")){
-						oList.eq(i).removeClass("nav-item-active");
-						break;
-					}
-				}
-				$(this).addClass("nav-item-active");
-			}
-		})
-		
 		$("body").on("click",".add-education-btn",function(event){
 			$(".education-edit-container").show();
 		})
@@ -283,7 +269,21 @@ $(function(){
 			$(this).find(".like-icon").find(".fa-heart").show();
 		})
 		
-		
+		//模块切换
+		$("body").on("click",".nav-item",function(){
+			var oType=$(this).attr("num");
+			var oActive=$(".nav-item-active").attr("num");
+
+			if(oType!==oActive){
+				$(".nav-item[num='"+oActive+"']").removeClass("nav-item-active");
+				$(".backstage-module[num='"+oActive+"']").hide();
+				$(this).addClass("nav-item-active");
+				$(".backstage-module[num='"+oType+"']").show();
+			}else{
+			
+			}
+		})
+
 		function removeSelect(){
 			var oList=$(".select-item");
 			for(var i=0;i<oList.length;i++){

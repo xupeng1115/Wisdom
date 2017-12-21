@@ -588,11 +588,11 @@ footer .about-right .right-box{
 }
 
 .lr-checkbox-box .rp-no{
-	display:block;
+	display:none;
 }
 
 .lr-checkbox-box .rp-yes{
-	display:none;
+	display:block;
 }
 
 .lr-checkbox-box .yes::before{

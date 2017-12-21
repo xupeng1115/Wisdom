@@ -148,7 +148,7 @@ $(function(){
 			}
 		})
 		
-		$("body").on("click",".award-item",function(event){
+		$("body").on("click",".award-year-item",function(event){
 			var oContent=$(this).text();
 			$(".award-select").css("border","1px solid #e3e3e3");
 			$(".award-content").text(oContent);
@@ -205,7 +205,7 @@ $(function(){
 			}
 		})
 		
-		$("body").on("click",".activity-item",function(event){
+		$("body").on("click",".activity-year-item",function(event){
 			var oContent=$(this).text();
 			$(".activity-select").css("border","1px solid #e3e3e3");
 			$(".activity-content").text(oContent);
@@ -285,7 +285,7 @@ $(function(){
 		})
 
 		$("body").on("click",".empty-btn",function(){
-			window.location.href="PositionList.html";
+			window.location.href="../Job/List.html";
 		})
 
 		function removeSelect(){

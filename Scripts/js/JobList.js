@@ -2,7 +2,6 @@ $(function(){
 	
 	//分页
 	(function(){
-		//分页
 		$(".tcdPageCode").createPage({
 	        pageCount:100,
 	        current:1,
@@ -20,7 +19,7 @@ $(function(){
 		})
 		
 		$("body").on("click",".position-name",function(){
-			window.location.href="PositionDetail.html";
+			window.location.href="Index.html";
 		})
 		
 		$("body").on("click",".sort-item",function(){

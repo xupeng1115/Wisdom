@@ -42,11 +42,11 @@ $(function(){
 		})
 		
 		$("body").on("click",".search-btn",function(){
-			window.location.href="PositionList.html";
+			window.location.href="../Job/List.html";
 		})
 		
 		$("body").on("click",".position-top-name",function(){
-			window.location.href="PositionDetail.html";
+			window.location.href="../Job/Index.html";
 		})
 		
 		$("body").on("click",".back-top",function(){
@@ -60,31 +60,31 @@ $(function(){
 		
 		$("body").on("click",".standard-btn",function(){
 			$(".standard-item").eq(0).find(".item-content").show();
-			$(".standard-item").eq(0).find(".item-bg").css("background-image","url(../../Content/wisdom/img/standard_01_bg.png)");			
+			$(".standard-item").eq(0).find(".item-bg").css("background-image","url(../../Content/img/standard_01_bg.png)");			
 		})
 		
 		$("body").on("mouseover",".standard-item",function(){
 			var oIndex=parseInt($(this).attr("index"));
 			if(oIndex!==1){
-				$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01.png)");
+				$(".first-bg").css("background-image","url(../../Content/img/standard_01.png)");
 				$(".first-content").hide();
 			}else{
-				$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01_bg.png)");
+				$(".first-bg").css("background-image","url(../../Content/img/standard_01_bg.png)");
 				$(".first-content").show();
 			}
 		})
 		
 		$("body").on("mouseout",".item-first",function(){
-			$(".first-bg").css("background-image","url(../../Content/wisdom/img/standard_01.png)");
+			$(".first-bg").css("background-image","url(../../Content/img/standard_01.png)");
 			$(".first-content").hide();
 		})
 		
 		$("body").on("click",".top-evaluation-btn",function(){
-			window.location.href="Test.html";
+			window.location.href="../Assessment/Index.html";
 		})
 		
 		$("body").on("click",".top-evaluation-btn",function(){
-			window.location.href="Test.html";
+			window.location.href="../Assessment/Index.html";
 		})
 		
 	}());

@@ -10,7 +10,7 @@
         if((numVerson>5)&&(numVerson<= DEFAULT_VERSION)){
             document.documentElement.style.display="none";
             document.body.style.display="none";
-//          window.location.href="/ogcs/Core/Prompt"
+//          window.location.href="";
 			return;
         }else{
             
@@ -20,19 +20,20 @@
     }
 }());
 
+   
+
 $(function () {
 
-    //全局变量
-    var oRegisterUrl = "",
-        oLoginUrl = "",
-        oCodeUrl = "",
+     //自定义变量
+    var oRegisterUrl = "User/Register",
+        oLoginUrl = "User/Login",
+        oCodeUrl = "User/Register",
         registerKey = false,
         loginKey = false,
         codeKey = false,
         remeberKey=true,
         protocolKey=true,
         myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
-
 
     //事件注册
     (function () {
@@ -69,7 +70,7 @@ $(function () {
         })
 
         $("body").on("click", ".forget-password-box", function () {
-            window.location.href = "../User/FinePassword";
+            window.location.href = "../User/FindPassword";
         })
 
         $("body").on("click", ".register-username", function () {
@@ -136,11 +137,11 @@ $(function () {
             }
 
             var myParams = {
-                Remeber:remeberKey,
-                Phone: oPhone,
+                Tel: oPhone,
                 Password:oPassword
             }
             var mySuccessFun = function (result) {
+                console.log(result);
                 if (result.Success) {
                     $(".protocol-yes").show();
                     $(".protocol-no").hide();
@@ -185,6 +186,7 @@ $(function () {
                 Phone: oPhone,
             }
             var mySuccessFun = function (result) {
+                console.log(result);
                 if (result.Success) {
                     alert("验证码已发送");
                 } else {
@@ -196,7 +198,7 @@ $(function () {
                 alert("网络出错了！");
                 codeKey = false;
             }
-            //发送注册信息
+            //发送验证码信息
             if (!codeKey) {
                 codeKey = true;
                 myAjax("post", oCodeUrl, JSON.stringify(myParams), mySuccessFun, myErrorFun);
@@ -248,11 +250,12 @@ $(function () {
 
             var myParams = {
                 UserName: oUserName,
-                Code: oFormatNum,
-                Phone: oPhone,
+                VerificationCode: oFormatNum,
+                Tel: oPhone,
                 Password: oPassword
             }
             var mySuccessFun = function (result) {
+                console.log(result);
                 if (result.Success) {
                     $(".register-username").val("");
                     $(".register-phone").val("");
@@ -265,7 +268,7 @@ $(function () {
                     registerKey = false;
                 }
             }
-            var myErrorFun = function () {
+            var myErrorFun = function (error) {
                 alert("网络出错了！");
                 registerKey = false;
             }
@@ -304,16 +307,17 @@ $(function () {
 
         var params = {
             "controller": myUrl,
-            data: myParams
+            data: myParams,
+            contentType:"application/json; charset=utf-8"
         };
 
         var successFun = mySuccessFun;
         var errorFun = myErrorFun;
 
         if (myType.toLocaleUpperCase() === "GET") {
-            //communication.get(params, successFun, errorFun);
+            communication.get(params, successFun, errorFun);
         } else {
-            //communication.post(params, successFun, errorFun);
+            communication.post(params, successFun, errorFun);
         }
 
     }

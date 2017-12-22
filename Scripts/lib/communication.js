@@ -25,7 +25,8 @@
 			url:params.controller,
 			type:params.type,
 			dataType:params.dataType,
-			data:params.data,
+			data: params.data,
+			contentType: params.contentType,
 			success:function(result){
 				successFun&&successFun(result);
 			},

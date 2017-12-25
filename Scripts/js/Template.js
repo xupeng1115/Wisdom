@@ -24,7 +24,7 @@
 
 $(function () {
 
-     //自定义变量
+    //自定义变量
     var oRegisterUrl = "User/Register",
         oLoginUrl = "User/Login",
         oCodeUrl = "User/Register",

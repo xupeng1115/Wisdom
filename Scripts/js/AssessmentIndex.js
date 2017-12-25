@@ -3,7 +3,7 @@ $(function(){
 	//分页
 	(function(){
 		$(".tcdPageCode").createPage({
-	        pageCount:10,
+	        pageCount:4,
 	        current:1,
 	        backFn:function(p){
 	            console.log(p);

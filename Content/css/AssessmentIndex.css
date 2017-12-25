@@ -153,7 +153,7 @@ section .content-box{
 	margin:0 auto;
 	margin-top:50px;
 	margin-bottom:100px;
-	width:1140px;
+	width:1110px;
 }
 
 .content-box .content-wrapper{
@@ -175,6 +175,7 @@ section .content-box{
 }
 
 .content-wrapper .content-header{
+	position:relative;
 	width:100%;
 	height:90px;
 	text-align:center;
@@ -184,7 +185,36 @@ section .content-box{
 	color:#0099e5;
 }
 
+.content-header .question-num{
+	display:inline-block;
+	position:absolute;
+	top:40px;
+	right:107px;
+	line-height:20px;
+	font-size:14px;
+	color:#b4b4b4;
+}
+
+.content-header .notice-btn{
+	display:inline-block;
+	position:absolute;
+	top:0;
+	right:20px;
+	line-height: 20px;
+    padding: 9px 5px;
+	width: 45px;
+  	height: 72px;
+  	background:url(../img/assessment_icon2.png)no-repeat center center;
+  	background-size:100% 100%;
+  	text-align:center;
+  	font-size:12px;
+  	color:#fff;
+  	letter-spacing: 0.8px;
+  	cursor:pointer;
+}
+
 .content-tip .tip-header{
+	position:relative;
 	width: 100%;
   	height: 60px;
   	line-height:60px;
@@ -195,9 +225,57 @@ section .content-box{
   	box-shadow: 0 1px 1px 0 #e7e7e7;
 }
 
-.content-tip .tip-header{
-	
+.tip-header .tip-cancel{
+	display:inline-block;
+	position:absolute;
+	top:10px;
+	right:15px;
+	width:25px;
+	height:25px;
+	cursor:pointer;
 }
 
+.tip-header .tip-cancel::before{
+	position:absolute;
+	top: 12px;
+    right: 2px;
+	content:"";
+	width:20px;
+	height:1px;
+	background:#acacac;
+	
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg); 	/* IE 9 */
+	-moz-transform:rotate(-45deg); 	/* Firefox */
+	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-45deg); 	/* Opera */
+}
+
+.tip-header .tip-cancel::after{
+	position:absolute;
+	top: 2px;
+    right: 12px;
+	content:"";
+	height:20px;
+	width:1px;
+	background:#acacac;
+	
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg); 	/* IE 9 */
+	-moz-transform:rotate(-45deg); 	/* Firefox */
+	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-45deg); 	/* Opera */
+}
+
+.content-tip .tip-list{
+	padding:10px 20px;
+	width:100%;
+}
+
+.tip-list .tip-text{
+	padding-top:20px;
+	font-size:14px;
+	color:#6d6d6d;
+}
 
 

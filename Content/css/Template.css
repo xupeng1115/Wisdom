@@ -383,11 +383,11 @@ footer .about-right .right-box{
 
 .lr-container .lr-wrapper{
 	position:fixed;
-	top:100px;
+	top:12%;
 	left:50%;
 	z-index:300;
 	margin-left:-265px;
-	width:530px;
+	width:492px;
 	background:#fff;
 }
 
@@ -400,21 +400,21 @@ footer .about-right .right-box{
 
 .lr-box .lr-cancel{
 	position:absolute;
-	top:-15px;
-	right:-60px;
-	width:50px;
-	height:50px;
+	top:-10px;
+	right:-50px;
+	width:44px;
+	height:44px;
 	cursor:pointer;
 	background:transparent;
 }
 
 .lr-cancel::before{
 	position:absolute;
-	top:23px;
-	left:9px;
-	content:"";
-	width:30px;
-	height:4px;
+	top: 21px;
+    left: 9px;
+    content: "";
+    width: 27px;
+    height: 4px;
 	background:#b4b4b4;
 	
 	transform:rotate(-45deg);
@@ -426,11 +426,11 @@ footer .about-right .right-box{
 
 .lr-cancel::after{
 	position:absolute;
-	top:10px;
-	left:22px;
-	content:"";
-	width:4px;
-	height:30px;
+	top: 10px;
+    left: 20px;
+    content: "";
+    width: 4px;
+    height: 27px;
 	background:#b4b4b4;
 	
 	transform:rotate(-45deg);
@@ -442,18 +442,18 @@ footer .about-right .right-box{
 
 .lr-box .lr-btn-box{
 	margin:0 auto;
-	width:490px;
-	height:60px;
+	width:450px;
+	height:56px;
 	border-bottom:1px solid #ddd;
 }
 
 .lr-btn-box .lr-btn{
 	position:relative;
 	float:left;
-	width:80px;
+	width:60px;
 	height:100%;
-	line-height:59px;
- 	font-size: 18px;
+	line-height:56px;
+ 	font-size: 16px;
   	letter-spacing: 1.1px;
   	text-align: center;
   	color: #6d6d6d;
@@ -482,13 +482,13 @@ footer .about-right .right-box{
 /*****************************登录部分*******************************/
 .lr-box .login-box{
 	display:block;
-	margin:60px auto;
-	margin-bottom:70px;
+	margin:30px auto;
+	margin-bottom:60px;
 	width:370px;
 }
 
 .login-box .login-title{
-  	font-size: 24px;
+  	font-size: 18px;
   	letter-spacing: 1.5px;
   	text-align: center;
   	color: #333333;
@@ -497,13 +497,13 @@ footer .about-right .right-box{
 .form-box{
 	display:block;
 	margin:0 auto;
-	margin-top:40px;
+	margin-top:30px;
 	width:370px;
 }
 
 .form-box .input-box{
 	position:relative;
-	margin-top:20px;
+	margin-top:15px;
 	width:100%;
 	height:45px;
 }
@@ -515,7 +515,7 @@ footer .about-right .right-box{
 	line-height:25px;
 	border:1px solid #d6d6d6;
 	outline:none;
-  	font-size: 16px;
+  	font-size: 14px;
   	letter-spacing: 1px;
   	text-align: left;
   	color: #333;
@@ -528,7 +528,7 @@ footer .about-right .right-box{
 	height:45px;
 	line-height:45px;
 	background:#ffbf00;
-  	font-size: 16px;
+  	font-size: 14px;
   	letter-spacing: 1px;
   	text-align: center;
   	color: #ffffff;
@@ -536,7 +536,7 @@ footer .about-right .right-box{
 }
 
 .form-box .lr-login-btn{
-	margin-top:45px;
+	margin-top:30px;
 }
 
 .form-box .lr-confirm-btn:hover{
@@ -619,7 +619,7 @@ footer .about-right .right-box{
 
 .form-box .lr-text{
 	line-height:20px;
-  	font-size: 14px;
+  	font-size: 12px;
   	letter-spacing: 0.9px;
   	text-align: left;
   	color: #6d6d6d;
@@ -636,13 +636,13 @@ footer .about-right .right-box{
 /*****************************注册部分*******************************/
 .lr-box .register-box{
 	display:none;
-	margin:60px auto;
-	margin-bottom:70px;
+	margin:30px auto;
+	margin-bottom:60px;
 	width:370px;
 }
 
 .register-box .register-title{
-  	font-size: 24px;
+  	font-size: 18px;
   	letter-spacing: 1.5px;
   	text-align: center;
   	color: #333333;
@@ -672,11 +672,11 @@ footer .about-right .right-box{
 }
 
 .form-box .lr-register-btn-box{
-	margin-top:80px;
+	margin-top:60px;
 	width:100%;
 	height:45px;
 	line-height:45px;
-  	font-size: 16px;
+  	font-size: 14px;
   	letter-spacing: 1px;
   	text-align: center;
   	color: #ffffff;

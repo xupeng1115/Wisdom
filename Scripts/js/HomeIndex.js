@@ -25,6 +25,11 @@ $(function(){
 		})
 	}());
 	
+	//初始化操作
+	(function(){
+		$(".back-top").hide();
+	}());
+	
 	//事件注册
 	(function(){
 		$("body").on("click",".flow-btn",function(event){
@@ -54,8 +59,15 @@ $(function(){
 		})
 		
 		$("body").on("click",".like-box",function(){
-			$(this).find(".like-icon").find(".fa-heart-o").hide()
-			$(this).find(".like-icon").find(".fa-heart").show();
+			var oIcon=$(this).find(".like-icon").find("i");
+			var oKey=oIcon.hasClass("red");
+			if(oKey){
+				oIcon.removeClass("red");
+				$(this).attr("status","gray");
+			}else{
+				oIcon.addClass("red");
+				$(this).attr("status","red");
+			}
 		})
 		
 		$("body").on("click",".standard-btn",function(){
@@ -85,6 +97,16 @@ $(function(){
 		
 		$("body").on("click",".top-evaluation-btn",function(){
 			window.location.href="../Assessment/Index.html";
+		})
+		
+		$(window).scroll(function() {
+			//获取文档滚动高度
+		    var top = $(document).scrollTop();
+		    if(top>=1000){
+		    	$("aside").show();
+		    }else{
+		    	$("aside").hide();
+		    }
 		})
 		
 	}());

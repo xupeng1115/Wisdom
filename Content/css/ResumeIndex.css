@@ -190,8 +190,8 @@ section .nav-content{
 .resume-nav-content .resume-nav-scroll{
 	position: fixed;
     margin-left: 0;
-    width: 282px;
-    top: 0;
+    width: 200px;
+    top: 30px;
 }
 
 .resume-nav-box .resume-nav-head{
@@ -286,7 +286,19 @@ section .nav-content{
 	border: 8px solid #fbf4e8;
 }
 
-.head-box .head-name{
+.head-box .head-container{
+	position:relative;
+	margin-top:2px;
+	padding-bottom:20px;
+	width:100%;
+	background:#fff;
+}
+
+.head-box .head-container:hover{
+	background:#f8f8f8;
+}
+
+.head-container .head-name{
 	display:inline-block;
 	margin:0 auto;
 	position:relative;
@@ -319,7 +331,7 @@ section .nav-content{
 	display:none;
 }
 
-.head-box .head-contact{
+.head-container .head-contact{
 	position:relative;
 	margin:0 auto;
 	text-align:center;
@@ -348,7 +360,7 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
-.head-box .head-address{
+.head-container .head-address{
 	position:relative;
 	margin:0 auto;
 	margin-top:10px;
@@ -366,13 +378,195 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
+.head-name .head-edit-btn{
+	display: none;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #0099e5;
+    cursor: pointer;
+}
+
+.head-box .head-container:hover .head-edit-btn{
+	display:block;
+}
+
+/******************简历头部编辑*********************/
+.head-container .info-edit-container{
+	display:none;
+	position:relative;
+	padding:20px;
+	padding-right:268px;
+	width:100%;
+	background:#f8f8f8;
+}
+
+.info-edit-container input{
+	display:block;
+	float:left;
+	position:relative;
+	padding:11px 15px;
+	margin:0 10px 10px 0;
+	width:300px;
+	height:44px;
+	line-height:20px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #333;
+  	outline:none;
+}
+
+.info-edit-container textarea{
+	display:block;
+	float:left;
+	position:relative;
+	padding:11px 15px;
+	margin:0 10px 10px 0;
+	width:510px;
+	height:125px;
+	line-height:20px;
+	border-radius: 2px;
+  	background-color: #ffffff;
+  	border: solid 1px #e3e3e3;
+  	font-size: 14px;
+  	text-align: left;
+  	color: #333;
+  	outline:none;
+  	resize:none;
+}
+
+.info-edit-container input:focus{
+	border-color:#ffbf00;
+}
+
+.info-edit-container textarea:focus{
+	border-color:#ffbf00;
+}
+
+.info-edit-container label{
+	float:left;
+	margin:13px 5px 0 10px;
+	font-size:14px;
+	color:#6d6d6d;
+}
+
+.info-edit-container .name-icon{
+	float:left;
+	margin:14px 10px 0 0;
+}
+
+.info-edit-container .name-icon i{
+	font-size:16px;
+}
+
+.info-edit-container .name-icon i.fa-mars{
+	margin-right:15px;
+	color:#0099e5;
+}
+
+.info-edit-container .name-icon i.fa-venus{
+	color:#ee5c54;
+}
+
+.info-edit-container .info-name{
+	width:300px;
+}
+
+.info-edit-container .info-address{
+	width:610px;
+}
+
+
+.info-edit-container .info-btn{
+	margin-top:10px;
+	float:left;
+	width: 90px;
+  	height:44px;
+  	line-height:44px;
+  	border-radius: 2px;
+  	background-color: #ffbf00;
+  	font-size: 14px;
+  	text-align: center;
+  	color: #ffffff;
+  	cursor:pointer;
+}
+
+.info-edit-container .info-save-btn{
+	margin-right:10px;
+	background:#ffbf00;
+}
+
+.info-edit-container .info-cancel-btn{
+	background:#c3c3c3;
+}
+
+.info-edit-container .info-sex{
+	display:block;
+	position:relative;
+	margin:15px 0 25px 15px;
+	float:left;
+	width: 16px;
+  	height: 16px;
+  	border-radius:100%;
+ 	border: solid 1px #c0ccda;
+ 	background:transparent;
+    outline: 0 !important;
+    font-size:12px;
+}
+
+input[type=radio]{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    outline: 0;
+    cursor: pointer;
+    vertical-align: -2px;
+    border: 1px solid #108cee;
+    -webkit-appearance: none;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+input[type=radio]:checked {
+    border-color: #108cee;
+}
+
+input[type=radio]:checked:before {
+	position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background:#108cee;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+
+
+
+
+
 
 /*******************************简历模块区*******************************/
 
 .resume-content .resume-box{
 	position:relative;
 	padding:30px;
-	margin-top:30px;
+	margin-top:10px;
 	margin-bottom:112px;
 	width:100%;
 	background-color: #fefefe;
@@ -473,17 +667,17 @@ section .nav-content{
 }
 
 .resume-module-active .resume-module-top .add-module-btn{
-	color: #6d6d6d;
+	color: #0099e5;
 	cursor:default;
-	border-color:#6d6d6d;
+	border-color:#0099e5;
 }
 
 .resume-module-active .resume-module-top .add-module-btn::before{
-	background:#6d6d6d;
+	background:#0099e5;
 }
 
 .resume-module-active .resume-module-top .add-module-btn::after{
-	background:#6d6d6d;
+	background:#0099e5;
 }
 
 
@@ -1255,6 +1449,64 @@ section .nav-content{
 	margin-right:0;
 }
 
+/******************可拖动进度条*************************/
+.skill-edit-container .skill-edit-progress{
+	position: relative; 
+	float:left;
+	margin:25px 0 30px 100px;
+	width:100%;
+	
+}
+
+.skill-edit-container .skill-edit-progress::before{
+	position:absolute;
+	top:-6px;
+	left:-100px;
+	content:"熟练度选择";
+	font-size:16px;
+	color:#6d6d6d;
+}
+
+.skill-edit-progress .skill-edit-progress_bg{
+	position:relative;
+	width:404px;
+	height: 12px;
+	border-radius: 7px;
+	background-color:#f2f2f2;
+}
+
+.skill-edit-progress .skill-edit-progress_bar{
+	position:relative;
+	background: #ffbf00;
+	width: 100px;
+	height: 12px;
+	overflow:visibility;
+	white-space:nowrap ;
+	border-radius: 7px;
+}
+
+.skill-edit-progress_bar .skill-edit-degree{
+	position:absolute;
+	top:-25px;
+	right:0;
+	font-size:14px;
+	color:#6d6d6d;
+}
+
+.skill-edit-progress_btn{
+	box-sizing:border-box;
+	position: absolute;
+	left: 100px;
+	top:0; 
+	margin-left:-10px;
+	width: 12px;
+	height: 12px;
+	border-radius: 8px;
+	border:2px solid #ffbf00;
+	cursor: pointer;
+	background:#fff;
+}
+
 /**********课外活动模块区******************/
 .activity-wrapper .activity-container{
 	margin-top:30px;
@@ -1414,7 +1666,7 @@ section .nav-content{
 
 /*********************************标签选项表弹窗**************************************/
 .flo-box{
-	display:none;
+	/*display:none;*/
 	position:fixed;
 	top:0;
 	left:0;
@@ -1427,7 +1679,7 @@ section .nav-content{
 .flo-box .tag-select-box{
 	position:relative;
 	margin:0 auto;
-	margin-top:226px;
+	margin-top:150px;
 	width:530px;
 	height:500px;
 	background:#fff;
@@ -1519,27 +1771,10 @@ section .nav-content{
 	overflow-y:auto;
 }
 
-.select-list .select-list-item{
-	position:relative;
-	width:100%;
-}
-
-.select-list-item .select-item-title{
-	margin-top:20px;
-  	font-size: 16px;
-  	text-align: left;
-  	color: #69a2cd;
-}
-
-.select-list-item .select-item-list{
-	position:relative;
-	width:100%;
-}
-
-.select-item-list .select-item{
+.select-list .select-item{
 	float:left;
+	padding:0 10px;
 	margin:20px 20px 0 0;
-	width:100px;
 	height:30px;
 	line-height:30px;
 	border-radius: 4px;
@@ -1552,15 +1787,15 @@ section .nav-content{
  	cursor:pointer;
 }
 
-.select-item-list .selected{
+.select-list .selected{
 	background:#ffbf00;
 	border-color:#ffbf00;
 	color:#fff;
 }
 
-.select-item-list .select-item:nth-of-type(4n+0){
+/*.select-item-list .select-item:nth-of-type(4n+0){
 	margin-right:0;
-}
+}*/
 
 .tag-select-box .select-btn-box{
 	width:100%;

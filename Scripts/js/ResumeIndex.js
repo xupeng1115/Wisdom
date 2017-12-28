@@ -1,7 +1,65 @@
+"use strict"
+
+//Vue数据模型（交互逻辑和事件绑定）
+var app=new Vue({
+	el:'#app',
+	data:{
+		userHeadUrl:'../../Content/img/head.png',	//用户头像
+		userName:'Jessie Lai',						//用户姓名
+		tagBoxShow:false,							//标签列表 none:flase,block:true
+		totalTags:[									//标签总列表
+			{ID:1,TitleName:"研发类"},
+			{ID:2,TitleName:"吃苦耐劳"},
+			{ID:3,TitleName:"奉献精神呵呵呵"},
+			{ID:4,TitleName:"研发类"},
+			{ID:5,TitleName:"吃苦耐劳"},
+			{ID:6,TitleName:"奉献精神呵呵呵"},
+			{ID:7,TitleName:"研发类"},
+			{ID:8,TitleName:"吃苦耐劳"},
+			{ID:9,TitleName:"奉献精神呵呵呵"}
+		],
+		userTags:[],								//用户自己的标签
+		selectedTags:[]								//用户选中的标签
+	},
+	methods:{
+		addTags:function(){
+			this.tagBoxShow=true;
+		},
+		tagConfirm:function(){
+			this.tagBoxShow=false;
+		},
+		tagClick:function(tag,event){
+			var oSelected=$(event.target).hasClass("selected");
+			var oIndex;
+			if(oSelected){
+				$(event.target).removeClass("selected");
+				$.each(this.selectedTags, function (index, item){
+					if(item.ID===tag.ID){
+						oIndex=index;
+						return;
+					}
+				})
+				this.selectedTags.splice(oIndex,0);
+			}else{
+				$(event.target).addClass("selected");
+				this.selectedTags.push(tag);
+			}
+		},
+		tagCancel:function(){
+			this.tagBoxShow=false;
+		},
+		tagReset:function(){
+			this.tagBoxShow=false;
+		}
+	}
+})
+
+
+
 $(function(){
-	
+
 	//分页
-	(function(){
+	(function($){
 		$(".tcdPageCode1").createPage({
 	        pageCount:100,
 	        current:1,
@@ -17,57 +75,106 @@ $(function(){
 	            console.log(p);
 	        }
 	    });
-	}());
+	}(jQuery));
+	
+	//拖动进度条
+	(function($){
+		var tag = false,ox = 0,left = 100,bgleft = 0,num=0;
+        $('.skill-edit-progress_btn').mousedown(function(e) {
+            ox = e.pageX-left;
+            tag = true;
+        });
+        $(document).mouseup(function() {
+            tag = false;
+        });
+        $("html,body").mouseup(function() {
+            tag = false;
+        });
+        $('.skill-edit-progress').mousemove(function(e) {//鼠标移动
+            if (tag) {
+                left = e.pageX - ox;
+                if (left <= 12) {
+                    left = 10;
+                }else if (left > 404) {
+                    left = 404;
+                }
+
+                if(left>=0&&left<200){
+                	$(".skill-edit-degree").html("一般");
+                }
+                if(left>=200&&left<300){
+                	$(".skill-edit-degree").html("熟练");
+                }
+                if(left>=300&&left<350){
+                	$(".skill-edit-degree").html("良好");
+                }
+                if(left>=350){
+                	$(".skill-edit-degree").html("优秀");
+                }
+                
+                $('.skill-edit-progress_btn').css('left', left);
+                $('.skill-edit-progress_bar').width(left);
+                
+            }
+        });
+	}(jQuery));
+	
+	
+	//页面初始化
+	(function(){
+		
+	}(jQuery));
+	
 	
 	//事件注册
 	(function(){
 
 		$("body").on("click",".back-top",function(event){
-			$('body,html').animate({scrollTop:0},300);
+			$('body,html').animate({scrollTop:0},600);
 		})
 		
-		$("body").on("click",".tag-cancel-btn",function(event){
-			removeSelect();
-			$(".flo-box").hide();
-		})
+//		$("body").on("click",".tag-cancel-btn",function(event){
+//			removeSelect();
+//			$(".flo-box").hide();
+//		})
 		
-		$("body").on("click",".add-tag-btn",function(event){
-			$(".flo-box").show();
-		})
+//		$("body").on("click",".add-tag-btn",function(event){
+//			$(".flo-box").show();
+//		})
 		
-		$("body").on("click",".select-confirm-btn",function(event){
-			if($(".tag-item").length<=5){
-				$(".resume-tag").append('<li class="tag-item">数据分析</li>');
-			}
-			$(".flo-box").hide();
-		})
+//		$("body").on("click",".select-confirm-btn",function(event){
+//			if($(".tag-item").length<=5){
+//				$(".resume-tag").append('<li class="tag-item">数据分析</li>');
+//			}
+//			$(".flo-box").hide();
+//		})
 		
-		$("body").on("click",".select-item",function(event){
-			var oKey=$(this).hasClass("selected");
-			if(oKey){
-				$(this).removeClass("selected");
-			}else{
-				$(this).addClass("selected");
-			}
-		})
+//		$("body").on("click",".select-item",function(event){
+//			var oKey=$(this).hasClass("selected");
+//			if(oKey){
+//				$(this).removeClass("selected");
+//			}else{
+//				$(this).addClass("selected");
+//			}
+//		})
 		
-		$("body").on("click",".select-reset-btn",function(event){
-			removeSelect();
-		})
+//		$("body").on("click",".select-reset-btn",function(event){
+//			removeSelect();
+//		})
 		
-		$("body").on("click",".resume-nav-item",function(event){
-			var oKey=$(this).hasClass("resume-nav-active");
-			var oList=$(".resume-nav-item");
-			if(!oKey){
-				for(var i=0;i<oList.length;i++){
-					if(oList.eq(i).hasClass("resume-nav-active")){
-						oList.eq(i).removeClass("resume-nav-active");
-						break;
-					}
-				}
-				$(this).addClass("resume-nav-active");
-			}
-		})
+//		$("body").on("click",".resume-nav-item",function(event){
+//			var oKey=$(this).hasClass("resume-nav-active");
+//			var oList=$(".resume-nav-item");
+//			if(!oKey){
+//				for(var i=0;i<oList.length;i++){
+//					if(oList.eq(i).hasClass("resume-nav-active")){
+//						oList.eq(i).removeClass("resume-nav-active");
+//						break;
+//					}
+//				}
+//				$(this).addClass("resume-nav-active");
+//			}
+//		})
 		
 		$("body").on("click",".add-education-btn",function(event){
 			$(".education-edit-container").show();
@@ -298,6 +405,43 @@ $(function(){
 				}
 			}
 		}
+		
+		//侧边导航
+		$(window).scroll(function() {
+			//获取文档滚动高度
+		    var top = $(document).scrollTop();
+		    var scrollHeight = $(document).height();
+　　			var windowHeight = $(this).height();
+
+		    if(top>=530&&scrollHeight-top-windowHeight>=0){
+		    	$(".resume-nav-box").addClass("resume-nav-scroll");
+		    }else{
+		    	$(".resume-nav-box").removeClass("resume-nav-scroll");
+		    }
+		})
+		
+		//侧边导航滚动
+		$("body").on("click",".nav-href",function(event){
+			var oActive=$(this).parent(".resume-nav-item").hasClass("resume-nav-active");
+			var oList=$(".resume-nav-item");
+			if(!oActive){
+				$.each(oList,function(index,item){
+					if($(item).hasClass("resume-nav-active")){
+						$(item).removeClass("resume-nav-active");
+						return;
+					}
+				})
+				$(this).parent(".resume-nav-item").addClass("resume-nav-active");
+			}
+			
+			$("html, body").animate({
+		      	scrollTop: ($($(this).attr("href")).offset().top -30)+ "px"
+		    }, {
+		      	duration: 500,
+		      	easing: "swing"
+		    });
+		    return false;
+		})
 		
 	}());
 			

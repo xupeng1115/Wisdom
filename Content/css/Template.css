@@ -148,7 +148,6 @@ header .top-box{
 }
 
 .top-box .top-nav{
-	width:700px;
 	height:100%;
 	float:right;
 	margin-right:5px;
@@ -185,6 +184,15 @@ header .top-box{
 .top-box .top-nav .top-nav-item:hover a{
 	color:#ffbf00;
 }
+
+.top-box .top-nav .lr-success .success-img{
+	display:block;
+	margin-top:10px;
+	width:45px;
+	height:45px;
+	border-radius:100%;
+}
+
 
 /*********************************公用底部footer部分************************************/
 footer{

@@ -46,10 +46,9 @@
 		<!-- Banner-->
 		<div class="row top-banner">
 			<div class="banner-head-box">
-				<img class="banner-head" :src="userHeadUrl"/>
-				<!--<img src="../../Content/img/head.png" class="banner-head"/>-->
+				<img class="banner-head" :src="userInfo.userUrl"/>
 			</div>
-			<div class="banner-name" v-html="userName"></div>
+			<div class="banner-name" v-show="userInfo.userName.length>0" style="display:none;" v-html="userInfo.userName"></div>
 			<div class="banner-tag-box clearbox">
 				<div class="banner-tag-content clearbox">
 					<ul class="banner-tag clearbox">
@@ -94,37 +93,41 @@
 					<div class="resume-content">
 						<!-- 简历头部个人信息 -->
 						<div class="head-box">
-							<!--<img src="../../Content/img/head.png" class="head-img"/>-->
-							<img class="head-img" :src="userHeadUrl"/>
+							<div class="head-img-box">
+								<img class="head-img" :src="userInfo.userUrl"/>
+								<input type="file" class="upload-head"/>
+								<span class="upload-head-icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+							</div>
 							<div class="head-container">
-								<div class="info-edit-container clearbox">
-									<input type="text" class="info-input info-name" placeholder="你的姓名"/>
-									<input type="radio" name="radio" class="info-input info-sex" id="mars" value="男"/>
+								<div class="info-edit-container clearbox" v-show="!userInfoShow" style="display:none;">
+									<input type="text" class="info-input info-name" placeholder="你的姓名" v-model="userEditInfo.userName"/>
+									<input type="radio" name="radio" class="info-input info-sex" id="mars" value="mars"  v-model="userEditInfo.userGender"/>
 									<label for="mars">男</label>
 									<span class="name-icon"><i class="fa fa-mars" aria-hidden="true"></i></span>
-									<input type="radio" name="radio" class="info-input info-sex" id="venus" value="女"/>
+									<input type="radio" name="radio" class="info-input info-sex" id="venus" value="venus" v-model="userEditInfo.userGender"/>
 									<label for="venus">女</label>
 									<span class="name-icon"><i class="fa fa-venus" aria-hiden="true"></i></span>
-									<input type="text" class="info-input info-phone" placeholder="联系电话"/>
-									<input type="text" class="info-input info-email" placeholder="联系邮箱"/>
-									<input type="text" class="info-input info-address" placeholder="联系地址"/>
-									<div class="info-btn info-save-btn">保存</div>
-									<div class="info-btn info-cancel-btn">取消</div>
+									<input type="text" class="info-input info-phone" placeholder="联系电话" v-model="userEditInfo.userPhone"/>
+									<input type="text" class="info-input info-email" placeholder="联系邮箱" v-model="userEditInfo.userEmail"/>
+									<input type="text" class="info-input info-address" placeholder="联系地址" v-model="userEditInfo.userAddress"/>
+									<div class="info-btn info-save-btn" @click="infoSave">保存</div>
+									<div class="info-btn info-cancel-btn" @click="infoCancel">取消</div>
 								</div>
-								<div class="head-name">
-									<span class="name-text" v-html="userName"></span>
-									<span class="name-icon"><i class="fa fa-venus" aria-hiden="true"></i><i class="fa fa-mars" aria-hidden="true"></i></span>
-									<span class="head-edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+								<div class="head-content" v-show="userInfoShow" style="display:none;">
+									<div class="head-name">
+										<span class="name-text" v-show="userInfo.userName.length>0" style="display:none;" v-html="userInfo.userName"><!--Jessie Lai--></span>
+										<span class="name-icon" v-show="userInfo.userGender.length>0" style="display:none;"><i class="fa fa-venus" aria-hiden="true" v-show="userInfo.userGender==='venus'" style="display:none;"></i><i class="fa fa-mars" aria-hidden="true" v-show="userInfo.userGender==='mars'" style="display:none;"></i></span>
+										<span class="head-edit-btn" @click="infoEdit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+									</div>
+									<div class="head-contact">
+										<span class="head-phone" v-show="userInfo.userPhone.length>0" style="display:none;"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num" v-html="userInfo.userPhone"><!--13801010101--></span></span>
+										<span class="head-email" v-show="userInfo.userEmail.length>0" style="display:none;"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num" v-html="userInfo.userEmail"><!--9993332738@163.com--></span></span>
+									</div>	
+									<div class="head-address" v-show="userInfo.userAddress.length>0" style="display:none;">
+										<span class="address-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+										<span class="address-text" v-html="userInfo.userAddress"><!--上海市长宁区玛瑙路1438号国际古北财富中心二期--></span>
+									</div>
 								</div>
-								<div class="head-contact">
-									<span class="head-phone"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num">13801010101</span></span>
-									<span class="head-email"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num">9993332738@163.com</span></span>
-								</div>
-								<div class="head-address">
-									<span class="address-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-									<span class="address-text">上海市长宁区玛瑙路1438号国际古北财富中心二期</span>
-								</div>
-								
 							</div>
 						</div>
 						<!-- 简历模块部分 -->

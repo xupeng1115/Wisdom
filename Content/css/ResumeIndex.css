@@ -276,7 +276,56 @@ section .nav-content{
   	color: #333333;
 }
 
-.head-box .head-img{
+.head-box .head-img-box{
+	margin:0 auto;
+	position:relative;
+	width:116px;
+	height:116px;
+  	cursor:pointer;
+}
+
+.head-img-box .upload-head{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:20;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: #fff;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.head-img-box .upload-head-icon{
+	display:none;
+	position:absolute;
+	top:8px;
+	left:8px;
+	z-index:10;
+	width:100px;
+	height:100px;
+	border-radius:100%;
+	line-height:100px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	background:rgba(0,0,0,0.5);
+}
+
+.head-img-box:hover .upload-head{
+	display:block;
+}
+
+.head-img-box:hover .upload-head-icon{
+	display:block;
+}
+
+.head-img-box .head-img{
 	display:block;
 	margin:0 auto;
 	margin-top:60px;
@@ -294,11 +343,17 @@ section .nav-content{
 	background:#fff;
 }
 
-.head-box .head-container:hover{
+.head-container .head-content{
+	position:relative;
+	padding-bottom:20px;
+	width:100%;
+}
+
+.head-container .head-content:hover{
 	background:#f8f8f8;
 }
 
-.head-container .head-name{
+.head-content .head-name{
 	display:inline-block;
 	margin:0 auto;
 	position:relative;
@@ -323,15 +378,7 @@ section .nav-content{
   	color: #ee5c54;
 }
 
-.head-name .name-icon .fa-venus{
-	display:block;
-}
-
-.head-name .name-icon .fa-mars{
-	display:none;
-}
-
-.head-container .head-contact{
+.head-content .head-contact{
 	position:relative;
 	margin:0 auto;
 	text-align:center;
@@ -360,7 +407,7 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
-.head-container .head-address{
+.head-content .head-address{
 	position:relative;
 	margin:0 auto;
 	margin-top:10px;
@@ -389,15 +436,16 @@ section .nav-content{
     cursor: pointer;
 }
 
-.head-box .head-container:hover .head-edit-btn{
+.head-container .head-content:hover .head-edit-btn{
 	display:block;
 }
 
 /******************简历头部编辑*********************/
 .head-container .info-edit-container{
-	display:none;
 	position:relative;
+	margin-top:10px;
 	padding:20px;
+	padding-top:35px;
 	padding-right:268px;
 	width:100%;
 	background:#f8f8f8;

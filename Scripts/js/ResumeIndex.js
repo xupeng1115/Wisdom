@@ -1,13 +1,11 @@
-"use strict"
+"use strict";
 
 //Vue数据模型（交互逻辑和事件绑定）
 var app=new Vue({
 	el:'#app',
-	data:{
-		userHeadUrl:'../../Content/img/head.png',	//用户头像
-		userName:'Jessie Lai',						//用户姓名
-		tagBoxShow:false,							//标签列表 none:flase,block:true
-		totalTags:[									//标签总列表
+	data:{							
+		tagBoxShow:false,									
+		totalTags:[									
 			{ID:1,TitleName:"研发类"},
 			{ID:2,TitleName:"吃苦耐劳"},
 			{ID:3,TitleName:"奉献精神呵呵呵"},
@@ -18,11 +16,28 @@ var app=new Vue({
 			{ID:8,TitleName:"吃苦耐劳"},
 			{ID:9,TitleName:"奉献精神呵呵呵"}
 		],
-		userTags:[],								//用户自己的标签
-		selectedTags:[]								//用户选中的标签
+		userTags:[],											
+		selectedTags:[],						
+		userInfoShow:false,
 		userInfo:{
+			userUrl:'../../Content/img/head.png',
 			userName:'Jessie Lai',
-			""
+			userGender:'mars',							
+			userAddress:'上海市长宁区玛瑙路1438号国际古北财富中心二期',
+			userPhone:'15136677782',
+			userEmail:'987239822@qq.com'
+		}
+	},
+	computed:{
+		userEditInfo:function(){
+			return {
+				userUrl:this.userInfo.userUrl,
+				userName:this.userInfo.userName,
+				userGender:this.userInfo.userGender,							
+				userAddress:this.userInfo.userAddress,
+				userPhone:this.userInfo.userPhone,
+				userEmail:this .userInfo.userEmail
+			}
 		}
 	},
 	methods:{
@@ -54,6 +69,16 @@ var app=new Vue({
 		},
 		tagReset:function(){
 			this.tagBoxShow=false;
+		},
+		infoEdit:function(){
+			this.userInfoShow=false;
+		},
+		infoSave:function(){
+			this.userInfo=this.userEditInfo;
+			this.userInfoShow=true;
+		},
+		infoCancel:function(){
+			this.userInfoShow=true;
 		}
 	}
 })
@@ -417,7 +442,7 @@ $(function(){
 		    var scrollHeight = $(document).height();
 　　			var windowHeight = $(this).height();
 
-		    if(top>=530&&scrollHeight-top-800>=0){
+		    if(top>=530&&scrollHeight-top-700>=0){
 		    	$(".resume-nav-box").addClass("resume-nav-scroll");
 		    }else{
 		    	$(".resume-nav-box").removeClass("resume-nav-scroll");

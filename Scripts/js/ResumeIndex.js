@@ -20,6 +20,10 @@ var app=new Vue({
 		],
 		userTags:[],								//用户自己的标签
 		selectedTags:[]								//用户选中的标签
+		userInfo:{
+			userName:'Jessie Lai',
+			""
+		}
 	},
 	methods:{
 		addTags:function(){
@@ -413,7 +417,7 @@ $(function(){
 		    var scrollHeight = $(document).height();
 　　			var windowHeight = $(this).height();
 
-		    if(top>=530&&scrollHeight-top-windowHeight>=0){
+		    if(top>=530&&scrollHeight-top-800>=0){
 		    	$(".resume-nav-box").addClass("resume-nav-scroll");
 		    }else{
 		    	$(".resume-nav-box").removeClass("resume-nav-scroll");
@@ -444,5 +448,9 @@ $(function(){
 		})
 		
 	}());
-			
+	
 })
+
+
+
+

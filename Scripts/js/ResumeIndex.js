@@ -1,5 +1,20 @@
 "use strict";
 
+var oUserInfo={
+//	userUrl:"",
+//	userName:"",
+//	userGender:"",							
+//	userAddress:"",
+//	userPhone:"",
+//	userEmail:""
+	userUrl:'../../Content/img/head.png',
+	userName:'Jessie Lai',
+	userGender:'mars',							
+	userAddress:'上海市长宁区玛瑙路1438号国际古北财富中心二期',
+	userPhone:'15136677782',
+	userEmail:'987239822@qq.com'
+}
+
 //Vue数据模型（交互逻辑和事件绑定）
 var app=new Vue({
 	el:'#app',
@@ -16,31 +31,59 @@ var app=new Vue({
 			{ID:8,TitleName:"吃苦耐劳"},
 			{ID:9,TitleName:"奉献精神呵呵呵"}
 		],
-		userTags:[],											
+		userTags:[],
+		userInfoShow:oUserInfo.userName!==""&&oUserInfo.userPhone!==""&&oUserInfo.userAddress!==""&&oUserInfo.userEmail!=="",
 		selectedTags:[],						
-		userInfoShow:false,
 		userInfo:{
-			userUrl:'../../Content/img/head.png',
-			userName:'Jessie Lai',
-			userGender:'mars',							
-			userAddress:'上海市长宁区玛瑙路1438号国际古北财富中心二期',
-			userPhone:'15136677782',
-			userEmail:'987239822@qq.com'
-		}
+			userUrl:oUserInfo.userUrl,
+			userName:oUserInfo.userName,
+			userGender:oUserInfo.userGender,							
+			userAddress:oUserInfo.userAddress,
+			userPhone:oUserInfo.userPhone,
+			userEmail:oUserInfo.userEmail
+		},
+		userEditInfo:{
+			userUrl:oUserInfo.userUrl,
+			userName:oUserInfo.userName,
+			userGender:oUserInfo.userGender,							
+			userAddress:oUserInfo.userAddress,
+			userPhone:oUserInfo.userPhone,
+			userEmail:oUserInfo.userEmail
+		},
+		userPhoneShow:false,
+		userEmailShow:false,
+		clickEnable:true
 	},
 	computed:{
-		userEditInfo:function(){
-			return {
-				userUrl:this.userInfo.userUrl,
-				userName:this.userInfo.userName,
-				userGender:this.userInfo.userGender,							
-				userAddress:this.userInfo.userAddress,
-				userPhone:this.userInfo.userPhone,
-				userEmail:this .userInfo.userEmail
+		phoneFilter:function(){
+			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+			if(this.userEditInfo.userPhone===""){
+				this.userPhoneShow=true;
+				return "必填";
+			}else if(!myreg.test(this.userEditInfo.userPhone)){
+				this.userPhoneShow=true;
+				return "请输入有效的手机号";
+			}else{
+				this.userPhoneShow=false;
+			}
+		},
+		emailFilter:function(){
+			var myreg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+			if(this.userEditInfo.userEmail===""){
+				this.userEmailShow=true;
+				return "必填";
+			}else if(!myreg.test(this.userEditInfo.userEmail)){
+				this.userEmailShow=true;
+				return "请输入有效的邮箱地址";
+			}else{
+				this.userEmailShow=false;
 			}
 		}
 	},
 	methods:{
+		userInfoShow:function(){
+			return this.userInfo!=null;
+		},
 		addTags:function(){
 			this.tagBoxShow=true;
 		},
@@ -71,19 +114,73 @@ var app=new Vue({
 			this.tagBoxShow=false;
 		},
 		infoEdit:function(){
+			this.clickEnable=false;
 			this.userInfoShow=false;
 		},
 		infoSave:function(){
-			this.userInfo=this.userEditInfo;
+			if(this.userEditInfo.userName===""){
+				$(".info-name").focus();
+				return;
+			}
+			
+			if(this.userEditInfo.userGender===""){
+				return;
+			}
+			
+			if(this.userPhoneShow){
+				$(".info-phone").focus();
+				return;
+			}
+			
+			if(this.userEmailShow){
+				$(".info-email").focus();
+				return;
+			}
+			
+			if(this.userEditInfo.userAddress===""){
+				$(".info-address").focus();
+				return;
+			}
+			
+			
+			this.userInfo={
+				userUrl:this.userEditInfo.userUrl,
+				userName:this.userEditInfo.userName,
+				userGender:this.userEditInfo.userGender,							
+				userAddress:this.userEditInfo.userAddress,
+				userPhone:this.userEditInfo.userPhone,
+				userEmail:this.userEditInfo.userEmail
+			}
+			this.clickEnable=true;
 			this.userInfoShow=true;
 		},
 		infoCancel:function(){
+			this.userEditInfo={
+				userUrl:this.userInfo.userUrl,
+				userName:this.userInfo.userName,
+				userGender:this.userInfo.userGender,							
+				userAddress:this.userInfo.userAddress,
+				userPhone:this.userInfo.userPhone,
+				userEmail:this.userInfo.userEmail
+			}
+			this.clickEnable=true;
 			this.userInfoShow=true;
+		},
+		addModule:function(){
+			if(clickEnable){
+				
+			}
 		}
 	}
 })
 
 
+//图片没有成功加载出来时处理
+function nofind(){
+    var oImg=event.srcElement;
+    oImg.src="../../Content/img/head.png";
+    oImg.onerror=null;
+}
 
 $(function(){
 

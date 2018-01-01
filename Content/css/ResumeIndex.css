@@ -349,8 +349,85 @@ section .nav-content{
 	width:100%;
 }
 
+.head-container .info-filter{
+	float:left;
+	margin-top:-10px;
+	position:relative;
+	width:100%;
+	height:35px;
+	line-height:28px;
+	text-align:left;
+	color:#ff685e;
+}
+
+.head-container .gender-filter{
+	margin-top:10px;
+	width:100px;
+}
+
+.head-container .info-filter i{
+	display:inline-block;
+	padding:0 3px;
+	font-size:16px;
+}
+
+.head-container .contact-filter-box{
+	position:relative;
+}
+
+.head-container .msg-filter-box{
+	position:relative;
+}
+
+.msg-filter-box .name-filter{
+	float:left;
+	margin-top:0;
+	width:300px;
+}
+
+.msg-filter-box .gender-filter{
+	position:absolute;
+	top:0px;
+	left:315px;
+	margin-top:0;
+	width:300px;
+}
+
+.contact-filter-box .phone-filter{
+	float:left;
+	margin-top:0;
+	width:300px;
+}
+
+.contact-filter-box .email-filter{
+	position:absolute;
+	top:0px;
+	left:315px;
+	width:300px;
+}
+
+
+
 .head-container .head-content:hover{
 	background:#f8f8f8;
+}
+
+.head-content .head-edit{
+	display: none;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    z-index:10;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #0099e5;
+    cursor: pointer;
+}
+
+
+
+.head-container .head-content:hover .head-edit{
+	display:block;
 }
 
 .head-content .head-name{
@@ -425,20 +502,6 @@ section .nav-content{
 	color:#c3c3c3;
 }
 
-.head-name .head-edit-btn{
-	display: none;
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    padding: 0 10px;
-    font-size: 16px;
-    color: #0099e5;
-    cursor: pointer;
-}
-
-.head-container .head-content:hover .head-edit-btn{
-	display:block;
-}
 
 /******************简历头部编辑*********************/
 .head-container .info-edit-container{
@@ -694,6 +757,12 @@ input[type=radio]:checked:before {
 	z-index:20;
 }
 
+.resume-module .resume-module-top .add-module-disable-btn{
+	border-color:#c2c2c2;
+	color:#c2c2c2;
+	cursor:default;
+}
+
 .resume-module .resume-module-top .add-module-btn::before{
 	position:absolute;
 	top:14px;
@@ -704,6 +773,10 @@ input[type=radio]:checked:before {
 	background:#0099e5;
 }
 
+.resume-module .resume-module-top .add-module-disable-btn::before{
+	background:#c2c2c2;
+}
+
 .resume-module .resume-module-top .add-module-btn::after{
 	position:absolute;
 	top:10px;
@@ -712,6 +785,10 @@ input[type=radio]:checked:before {
 	width:2px;
 	height:10px;
 	background:#0099e5;
+}
+
+.resume-module .resume-module-top .add-module-disable-btn::after{
+	background:#c2c2c2;
 }
 
 .resume-module-active .resume-module-top .add-module-btn{

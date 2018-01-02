@@ -424,7 +424,10 @@ section .nav-content{
     cursor: pointer;
 }
 
-
+.head-content .head-edit-disable{
+	color: #c2c2c2;
+    cursor:default;
+}
 
 .head-container .head-content:hover .head-edit{
 	display:block;
@@ -453,6 +456,10 @@ section .nav-content{
 .head-name .name-icon i{
 	font-size: 20px;
   	color: #ee5c54;
+}
+
+.head-name .name-icon i.fa-mars{
+	color:#0099e5;
 }
 
 .head-content .head-contact{
@@ -612,6 +619,10 @@ section .nav-content{
 	background:#ffbf00;
 }
 
+.info-edit-container .info-save-disable-btn{
+	background:#c3c3c3;
+}
+
 .info-edit-container .info-cancel-btn{
 	background:#c3c3c3;
 }
@@ -665,10 +676,6 @@ input[type=radio]:checked:before {
     -moz-transition: all .3s;
     transition: all .3s;
 }
-
-
-
-
 
 
 
@@ -791,7 +798,7 @@ input[type=radio]:checked:before {
 	background:#c2c2c2;
 }
 
-.resume-module-active .resume-module-top .add-module-btn{
+/*.resume-module-active .resume-module-top .add-module-btn{
 	color: #0099e5;
 	cursor:default;
 	border-color:#0099e5;
@@ -803,12 +810,11 @@ input[type=radio]:checked:before {
 
 .resume-module-active .resume-module-top .add-module-btn::after{
 	background:#0099e5;
-}
+}*/
 
 
 /**************简历编辑区**************/
 .module-wrapper .module-edit-container{
-	display:none;
 	position:relative;
 	padding:20px;
 	padding-right:268px;
@@ -899,11 +905,10 @@ input[type=radio]:checked:before {
 	width:100%;
 	height:20px;
 	line-height:20px;
-	color:#c3c3c3;
+	color:#333;
 }
 
 .module-select .module-select-list{
-	display:none;
 	position:absolute;
 	top:48px;
 	left:-1px;
@@ -1017,7 +1022,6 @@ input[type=radio]:checked:before {
 }
 
 .education-date-box .education-date .date-predict-text{
-	display:none;
 	position:absolute;
 	top:-14px;
 	left:0;
@@ -1326,6 +1330,7 @@ input[type=radio]:checked:before {
   	font-size: 14px;
   	text-align: left;
   	color: #333333;
+  	/*white-space: pre-line;*/
 }
 
 .practice-container .practice-list .practice-item:hover{
@@ -1484,7 +1489,7 @@ input[type=radio]:checked:before {
 
 .skill-item .skill-bar-box{
 	position:relative;
-	margin-top:9px;
+	margin-bottom:9px;
 	margin-left:10px;
 	width:400px;
 	height:12px;

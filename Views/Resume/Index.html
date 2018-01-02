@@ -119,16 +119,16 @@
 									</div>
 									<input type="text" class="info-input info-address" placeholder="联系地址" v-model.trim="userEditInfo.userAddress"/>
 									<div class="info-filter address-filter" v-show="userEditInfo.userAddress.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必填</span></div>
-									<div class="info-btn info-save-btn" @click="infoSave">保存</div>
+									<div class="info-btn info-save-btn" @click="infoSave" v-bind:class="{'info-save-disable-btn':currentModule!==0}">保存</div>
 									<div class="info-btn info-cancel-btn" @click="infoCancel">取消</div>
 								</div>
 								<div class="head-content" v-show="userInfoShow" style="display:none;">
-									<div class="head-edit" @click="infoEdit">
+									<div class="head-edit" @click="infoEdit" v-bind:class="{'head-edit-disable':!clickEnable&&headEditEnable}">
 										<span class="head-edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
 									</div>
 									<div class="head-name">
 										<span class="name-text" v-show="userInfo.userName.length>0" style="display:none;" v-html="userInfo.userName"><!--Jessie Lai--></span>
-										<span class="name-icon" v-show="userInfo.userGender.length>0" style="display:none;"><i class="fa fa-venus" aria-hiden="true" v-show="userInfo.userGender==='venus'" style="display:none;"></i><i class="fa fa-mars" aria-hidden="true" v-show="userInfo.userGender===''" style="display:none;"></i></span>
+										<span class="name-icon" v-show="userInfo.userGender.length>0" style="display:none;"><i class="fa fa-venus" aria-hiden="true" v-show="userInfo.userGender==='venus'" style="display:none;"></i><i class="fa fa-mars" aria-hidden="true" v-show="userInfo.userGender==='mars'" style="display:none;"></i></span>
 									</div>
 									<div class="head-contact">
 										<span class="head-phone" v-show="userInfo.userPhone.length>0" style="display:none;"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num" v-html="userInfo.userPhone"><!--13801010101--></span></span>
@@ -147,85 +147,44 @@
 								<div class="resume-module-top">
 									<span class="top-icon"><i class="material-icons">&#xE80C;</i></span>
 									<span class="top-title">教育背景</span>
-									<span class="add-module-btn add-education-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable}">添加</span>
+									<span class="add-module-btn add-education-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable&&!ModuleShow_1}" v-html="ModuleShow_1?'取消':'添加'" @click="addModule(1)"></span>
 								</div>
 								<div class="module-wrapper education-wrapper clearbox">
 									<ul class="education-date-box">
-										<li class="education-date">
-											<span class="date-predict-text">(预计)</span>
-											<span class="date-year">2012</span>
-											<span class="date-mouth">6月8日</span>
-										</li>
-										<li class="education-date">
-											<span class="date-predict-text">(预计)</span>
-											<span class="date-year">2015</span>
-											<span class="date-mouth">6月8日</span>
-										</li>
-										<li class="education-date education-date-predict">
-											<span class="date-predict-text">(预计)</span>
-											<span class="date-year">2019</span>
+										<li class="education-date" v-for="(date,index) in educationDate" :key="index">
+											<span class="date-predict-text" v-show="date.year>=currrentDate" style="display:none;">(预计)</span>
+											<span class="date-year" v-html="date.year"></span>
 											<span class="date-mouth">6月8日</span>
 										</li>
 									</ul>
 									<div class="education-container">
-										<div class="module-edit-container education-edit-container clearbox">
-											<input type="text" class="module-input" placeholder="请输入学校名称"/>
+										<div class="module-edit-container education-edit-container clearbox" v-show="ModuleShow_1" style="display:none;">
+											<input type="text" class="module-input" placeholder="请输入学校名称" v-model="educationschool"/>
 											<div class="module-select background-select">
-												<div class="module-select-content background-content">学历</div>
+												<div class="module-select-content background-content" v-html="educationbackground?educationbackground:'学历'"><!--学历--></div>
 												<ul class="module-select-list background-select-list">
-													<li class="module-select-item background-item">大专</li>
-													<li class="module-select-item background-item">本科</li>
-													<li class="module-select-item background-item">硕士</li>
-													<li class="module-select-item background-item">博士</li>
-													<li class="module-select-item background-item">其他</li>
+													<li class="module-select-item background-item" v-for="(item,index) in educationEditBackgrounds" :key="index" v-html="item.background" @click="selectbackground(item.background)"><!--大专--></li>
 												</ul>
 											</div>
-											<input type="text" class="module-input" placeholder="请输入所学专业"/>
+											<input type="text" class="module-input" placeholder="请输入所学专业" v-model="educationmajor"/>
 											<div class="module-select graduate-select">
-												<div class="module-select-content graduate-content">毕业年份</div>
+												<div class="module-select-content graduate-content" v-html="educationgraduate?educationgraduate:'毕业年份'"><!--毕业年份--></div>
 												<ul class="module-select-list graduate-select-list">
-													<li class="module-select-item graduate-item">2019</li>
-													<li class="module-select-item graduate-item">2018</li>
-													<li class="module-select-item graduate-item">2017</li>
-													<li class="module-select-item graduate-item">2016</li>
-													<li class="module-select-item graduate-item">2015</li>
-													<li class="module-select-item graduate-item">2014</li>
-													<li class="module-select-item graduate-item">2013</li>
-													<li class="module-select-item graduate-item">2012</li>
-													<li class="module-select-item graduate-item">2011</li>
-													<li class="module-select-item graduate-item">2010</li>
+													<li class="module-select-item graduate-item" v-for="(item,index) in educationEditgraduates" :key="index" v-html="item.graduate" @click="selectgraduate(item.graduate)"><!--2019--></li>
 												</ul>
 											</div>
-											<div class="module-save-btn module-btn education-save-btn">保存</div>
-											<div class="module-cancel-btn module-btn education-cancel-btn">取消</div>
+											<div class="module-save-btn module-btn education-save-btn" @click="educationSave(1)">保存</div>
+											<div class="module-cancel-btn module-btn education-cancel-btn" @click="educationCancel(1)">取消</div>
 										</div>
 										<ul class="education-list">
-											<li class="education-item">
-												<span class="education-school">哈佛大学</span>
-												<span class="education-background">本科</span>
-												<span class="education-major">机械及自动化专业</span>
-												<span class="date-begin">2012年6月1日</span>
-												<span class="date-end">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="education-item">
-												<span class="education-school">耶鲁大学</span>
-												<span class="education-background">硕士</span>
-												<span class="education-major">金融学专业</span>
-												<span class="date-begin">2012年6月1日</span>
-												<span class="date-end">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="education-item">
-												<span class="education-school">斯坦福大学</span>
-												<span class="education-background">博士</span>
-												<span class="education-major">国际经济与贸易</span>
-												<span class="date-begin">2015年6月19日</span>
-												<span class="date-end">至今</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											<li class="education-item" v-for="(item,index) in educationLists" :key="index">
+												<span class="education-school" v-html="item.school"><!--哈佛大学--></span>
+												<span class="education-background" v-html="item.background"><!--本科--></span>
+												<span class="education-major" v-html="item.major"><!--机械及自动化专业--></span>
+												<span class="date-begin" v-html="item.begin"><!--2012年6月1日--></span>
+												<span class="date-end" v-html="item.end"><!--2015年6月19日--></span>
+												<span class="delete-btn" @click="educationDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
 										</ul>
 									</div>
@@ -235,55 +194,28 @@
 								<div class="resume-module-top">
 									<span class="top-icon"><i class="material-icons">&#xE86E;</i></span>
 									<span class="top-title">所获荣誉</span>
-									<span class="add-module-btn add-award-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable}">添加</span>
+									<span class="add-module-btn add-award-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable&&!ModuleShow_2}" v-html="ModuleShow_2?'取消':'添加'" @click="addModule(2)"></span>
 								</div>
 								<div class="module-wrapper award-wrapper">
 									<div class="award-container">
-										<div class="module-edit-container award-edit-container clearbox">
-											<input type="text" class="module-input" placeholder="荣誉名称"/>
+										<div class="module-edit-container award-edit-container clearbox" v-show="ModuleShow_2" style="display:none;">
+											<input type="text" class="module-input" placeholder="荣誉名称" v-model="awardname"/>
 											<div class="module-select award-select">
-												<div class="module-select-content award-content">学历</div>
+												<div class="module-select-content award-content" v-html="awardgraduate?awardgraduate:'年份'"><!--年份--></div>
 												<ul class="module-select-list award-select-list">
-													<li class="module-select-item award-year-item">2019</li>
-													<li class="module-select-item award-year-item">2018</li>
-													<li class="module-select-item award-year-item">2017</li>
-													<li class="module-select-item award-year-item">2016</li>
-													<li class="module-select-item award-year-item">2015</li>
-													<li class="module-select-item award-year-item">2014</li>
-													<li class="module-select-item award-year-item">2013</li>
-													<li class="module-select-item award-year-item">2012</li>
-													<li class="module-select-item award-year-item">2011</li>
-													<li class="module-select-item award-year-item">2010</li>
+													<li class="module-select-item award-year-item" v-for="(item,index) in awardgraduates" :key="index" @click="awardselect(item.year)" v-html="item.year"><!--2019--></li>
 												</ul>
 											</div>
-											<div class="module-save-btn module-btn award-save-btn">保存</div>
-											<div class="module-cancel-btn module-btn award-cancel-btn">取消</div>
+											<div class="module-save-btn module-btn award-save-btn" @click="awardSave(2)">保存</div>
+											<div class="module-cancel-btn module-btn award-cancel-btn" @click="awardCancel(2)">取消</div>
 										</div>
 										
 										<ul class="award-list">
-											<li class="award-item">
-												<span class="award-name">外语系第十三届英语戏剧比赛一等奖</span>
-												<span class="award-date">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="award-item">
-												<span class="award-name">外语系第十三届英语戏剧比赛一等奖一等奖</span>
-												<span class="award-date">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="award-item">
-												<span class="award-name">红点设计大奖</span>
-												<span class="award-date">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="award-item">
-												<span class="award-name">外语系第十三届英语戏剧奖一等奖</span>
-												<span class="award-date">2015年6月19日</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											<li class="award-item" v-for="(item,index) in awardLists" :key="index">
+												<span class="award-name" v-html="item.name"><!--外语系第十三届英语戏剧比赛一等奖--></span>
+												<span class="award-date" v-html="item.graduate"><!--2015年6月19日--></span>
+												<span class="delete-btn" @click="awardDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
 										</ul>
 									</div>
@@ -293,38 +225,38 @@
 								<div class="resume-module-top">
 									<span class="top-icon"><i class="material-icons">&#xE85D;</i></span>
 									<span class="top-title">实习经历</span>
-									<span class="add-module-btn add-practice-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable}">添加</span>
+									<span class="add-module-btn add-practice-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable&&!ModuleShow_3}" v-html="ModuleShow_3?'取消':'添加'" @click="addModule(3)"></span>
 								</div>
 								<div class="module-wrapper practice-wrapper">
 									<div class="practice-container">
-										<div class="module-edit-container practice-edit-container clearbox">
+										<div class="module-edit-container practice-edit-container clearbox" v-show="ModuleShow_3" style="display:none;">
 											<div class="uploader-box">
 												<span class="uploader-msg">上传公司logo</span>
 												<input type="file" class="uploader-input" placeholder="上传公司logo"/>
 											</div>
-											<input type="text" class="module-input" placeholder="请输入公司名称"/>
-											<input type="text" class="module-input practice-address" placeholder="公司地址"/>
-											<textarea class="practice-area" placeholder="工作职能"></textarea>
-											<div class="module-save-btn module-btn practice-save-btn">保存</div>
-											<div class="module-cancel-btn module-btn practice-cancel-btn">取消</div>
+											<input type="text" class="module-input" placeholder="请输入公司名称" v-model="practicecompanyname"/>
+											<input type="text" class="module-input practice-address" placeholder="公司地址" v-model="practicesite"/>
+											<textarea class="practice-area" placeholder="工作职能" v-model="practicecontent"></textarea>
+											<div class="module-save-btn module-btn practice-save-btn" @click="practiceSave(3)">保存</div>
+											<div class="module-cancel-btn module-btn practice-cancel-btn" @click="practiceCancel(3)">取消</div>
 										</div>
 										<ul class="practice-list">
-											<li class="practice-item">
+											<li class="practice-item" v-for="(item,index) in practiceLists" :key="index">
 												<div class="item-head">
-													<img src="../../Content/img/position_head.png" alt="logo" class="item-company-logo"/>
+													<img class="item-company-logo" :src="item.url"/>
 													<div class="head-msg">
 														<div class="msg-top">
-															<span class="msg-company-name">洋葱数学</span>
-															<span class="msg-position-name">HR助理</span>
+															<span class="msg-company-name" v-html="item.companyname"><!--洋葱数学--></span>
+															<span class="msg-position-name" v-html="item.positionname"><!--HR助理--></span>
 														</div>
 														<div class="msg-bottom">
-															<span class="msg-site">长沙-岳麓区</span>
-															<span class="msg-date">2016/08/11 - 2016/09/20</span>
+															<span class="msg-site" v-html="item.site"><!--长沙-岳麓区--></span>
+															<span class="msg-date" v-html="item.date"><!--2016/08/11 - 2016/09/20--></span>
 														</div>
 													</div>
 												</div>
-												<div class="item-content">
-													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
+												<div class="item-content" v-html="item.content">
+													<!--1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
 													<br>
 													2、建立、维护人事档案，办理和更新劳动合同；
 													<br>
@@ -338,128 +270,26 @@
 													<br>
 													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
 													<br>
-													8、其他临时任务。
+													8、其他临时任务。-->
 												</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="practice-item">
-												<div class="item-head">
-													<img src="../../Content/img/position_head.png" alt="logo" class="item-company-logo"/>
-													<div class="head-msg">
-														<div class="msg-top">
-															<span class="msg-company-name">洋葱数学</span>
-															<span class="msg-position-name">HR助理</span>
-														</div>
-														<div class="msg-bottom">
-															<span class="msg-site">长沙-岳麓区</span>
-															<span class="msg-date">2016/08/11 - 2016/09/20</span>
-														</div>
-													</div>
-												</div>
-												<div class="item-content">
-													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-													<br>
-													2、建立、维护人事档案，办理和更新劳动合同；
-													<br>
-													3、收集相关的劳动用工等人事政策及法规；
-													<br>
-													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-													<br>
-													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-													<br>
-													6、办理相应的社会保险、医保等外联工作；
-													<br>
-													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-													<br>
-													8、其他临时任务。
-												</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="practice-item">
-												<div class="item-head">
-													<img src="../../Content/img/position_head.png" alt="logo" class="item-company-logo"/>
-													<div class="head-msg">
-														<div class="msg-top">
-															<span class="msg-company-name">洋葱数学</span>
-															<span class="msg-position-name">HR助理</span>
-														</div>
-														<div class="msg-bottom">
-															<span class="msg-site">长沙-岳麓区</span>
-															<span class="msg-date">2016/08/11 - 2016/09/20</span>
-														</div>
-													</div>
-												</div>
-												<div class="item-content">
-													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-													<br>
-													2、建立、维护人事档案，办理和更新劳动合同；
-													<br>
-													3、收集相关的劳动用工等人事政策及法规；
-													<br>
-													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-													<br>
-													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-													<br>
-													6、办理相应的社会保险、医保等外联工作；
-													<br>
-													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-													<br>
-													8、其他临时任务。
-												</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="practice-item">
-												<div class="item-head">
-													<img src="../../Content/img/position_head.png" alt="logo" class="item-company-logo"/>
-													<div class="head-msg">
-														<div class="msg-top">
-															<span class="msg-company-name">洋葱数学</span>
-															<span class="msg-position-name">HR助理</span>
-														</div>
-														<div class="msg-bottom">
-															<span class="msg-site">长沙-岳麓区</span>
-															<span class="msg-date">2016/08/11 - 2016/09/20</span>
-														</div>
-													</div>
-												</div>
-												<div class="item-content">
-													1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设；
-													<br>
-													2、建立、维护人事档案，办理和更新劳动合同；
-													<br>
-													3、收集相关的劳动用工等人事政策及法规；
-													<br>
-													4、执行招聘工作流程，协调、办理员工招聘、入职、离职、调任、升职等手续；
-													<br>
-													5、协同开展新员工入职培训，执行培训计划，以及培训效果的跟踪、反馈；
-													<br>
-													6、办理相应的社会保险、医保等外联工作；
-													<br>
-													7、在技术服务部的主要职责：1、文件整理；2、绩效考核数据统计；3、服务计划与出差记录；
-													<br>
-													8、其他临时任务。
-												</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+												<span class="delete-btn" @click="practiceDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
 										</ul>
 									</div>
 								</div>
 							</div>
-							<div class="resume-module resume-module-active skill-box" id="skill">
+							<div class="resume-module skill-box" id="skill">
 								<div class="resume-module-top">
 									<span class="top-icon"><i class="material-icons">&#xE8A3;</i></span>
 									<span class="top-title">语言/技术技能</span>
-									<span class="add-module-btn add-skill-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable}">添加</span>
+									<span class="add-module-btn add-skill-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable&&!ModuleShow_4}" v-html="ModuleShow_4?'取消':'添加'" @click="addModule(4)"></span>
 								</div>
 								<div class="module-wrapper skill-wrapper">
 									<div class="skill-container">
-										<div class="module-edit-container skill-edit-container clearbox">
-											<input type="text" class="module-input" placeholder="语音/技能名称"/>
-											<input type="text" class="module-input skill-dec" placeholder="熟练度描述"/>
+										<div class="module-edit-container skill-edit-container clearbox" v-show="ModuleShow_4" style="display:none;">
+											<input type="text" class="module-input" placeholder="语音/技能名称" v-model="skillname"/>
+											<input type="text" class="module-input skill-dec" placeholder="熟练度描述" v-model="skilldec"/>
 											<div class="skill-edit-progress">
 									            <div class="skill-edit-progress_bg">
 									                <div class="skill-edit-progress_bar">
@@ -468,37 +298,16 @@
 									            </div>
 									            <div class="skill-edit-progress_btn"></div>
 									        </div>
-											<div class="module-save-btn module-btn skill-save-btn">保存</div>
-											<div class="module-cancel-btn module-btn skill-cancel-btn">取消</div>
+											<div class="module-save-btn module-btn skill-save-btn" @click="skillSave(4)">保存</div>
+											<div class="module-cancel-btn module-btn skill-cancel-btn" @click="skillCancel(4)">取消</div>
 										</div>
 										<ul class="skill-list">
-											<li class="skill-item">
-												<span class="skill-name">英语CET-6</span>
-												<span class="skill-bar-box"><span class="skill-bar"></span></span>
-												<span class="skill-dec">熟练使用英语交流</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="skill-item">
-												<span class="skill-name">日语N3</span>
-												<span class="skill-bar-box"><span class="skill-bar"></span></span>
-												<span class="skill-dec">无障碍日常沟通</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="skill-item">
-												<span class="skill-name">国家计算机二级</span>
-												<span class="skill-bar-box"><span class="skill-bar"></span></span>
-												<span class="skill-dec">最多七个字</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="skill-item">
-												<span class="skill-name">英语CET-6</span>
-												<span class="skill-bar-box"><span class="skill-bar"></span></span>
-												<span class="skill-dec">假文字十二字</span>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+											<li class="skill-item" v-for="(item,index) in skillLists" :key="index">
+												<span class="skill-name overflow-text" v-html="item.name"><!--英语CET-6--></span>
+												<span class="skill-bar-box"><span class="skill-bar" :style="{width:item.bar+'px'}"></span></span>
+												<span class="skill-dec overflow-text" v-html="item.dec"><!--熟练使用英语交流--></span>
+												<span class="delete-btn" @click="skillDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
 										</ul>
 									</div>
@@ -508,80 +317,35 @@
 								<div class="resume-module-top">
 									<span class="top-icon"><i class="material-icons">&#xE566;</i></span>
 									<span class="top-title">课外活动</span>
-									<span class="add-module-btn add-activity-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable}">添加</span>
+									<span class="add-module-btn add-activity-btn resume-operation-btn" v-bind:class="{'add-module-disable-btn':!clickEnable&&!ModuleShow_5}" v-html="ModuleShow_5?'取消':'添加'" @click="addModule(5)"></span>
 								</div>
 								<div class="module-wrapper activity-wrapper">
 									<div class="activity-container">
-										<div class="module-edit-container activity-edit-container clearbox">
-											<input type="text" class="module-input activity-input-name" placeholder="活动名称"/>
+										<div class="module-edit-container activity-edit-container clearbox" v-show="ModuleShow_5" style="display:none;">
+											<input type="text" class="module-input activity-input-name" placeholder="活动名称" v-model="activityname"/>
 											<div class="module-select activity-select">
-												<div class="module-select-content activity-content">活动时间</div>
+												<div class="module-select-content activity-content" v-html="activitydate?activitydate:'活动时间'"><!--活动时间--></div>
 												<ul class="module-select-list activity-select-list">
-													<li class="module-select-item activity-year-item">2019</li>
-													<li class="module-select-item activity-year-item">2018</li>
-													<li class="module-select-item activity-year-item">2017</li>
-													<li class="module-select-item activity-year-item">2016</li>
-													<li class="module-select-item activity-year-item">2015</li>
-													<li class="module-select-item activity-year-item">2014</li>
-													<li class="module-select-item activity-year-item">2013</li>
-													<li class="module-select-item activity-year-item">2012</li>
-													<li class="module-select-item activity-year-item">2011</li>
-													<li class="module-select-item activity-year-item">2010</li>
+													<li class="module-select-item activity-year-item" v-for="(item,index) in activityYears" :key="index" v-html="item.year" @click="activityselect(item.year)"><!--2019--></li>
 												</ul>
 											</div>
-											<input type="text" class="module-input activity-input-address" placeholder="活动地点"/>
-											<textarea class="activity-area" placeholder="活动描述"></textarea>
-											<div class="module-save-btn module-btn activity-save-btn">保存</div>
-											<div class="module-cancel-btn module-btn activity-cancel-btn">取消</div>
+											<input type="text" class="module-input activity-input-address" placeholder="活动地点" v-model="activitysite"/>
+											<textarea class="activity-area" placeholder="活动描述" v-model="activitydec"></textarea>
+											<div class="module-save-btn module-btn activity-save-btn" @click="activitySave(5)">保存</div>
+											<div class="module-cancel-btn module-btn activity-cancel-btn" @click="activityCancel(5)">取消</div>
 										</div>
 										<ul class="activity-list">
-											<li class="activity-item">
+											<li class="activity-item" v-for="(item,index) in activityLists" :key="index">
 												<div class="activity-name">
-													<span class="name-text">学术学术辩论</span>
+													<span class="name-text" v-html="item.name"><!--学术学术辩论--></span>
 												</div>
 												<div class="activity-msg">
-													<span class="msg-date">2017年1月20日</span>
-													<span class="msg-site">苏州</span>
+													<span class="msg-date" v-html="item.date"><!--2017年1月20日--></span>
+													<span class="msg-site" v-html="item.site"><!--苏州--></span>
 												</div>
-												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="activity-item">
-												<div class="activity-name">
-													<span class="name-text">学术学术辩论</span>
-												</div>
-												<div class="activity-msg">
-													<span class="msg-date">2017年1月20日</span>
-													<span class="msg-site">苏州</span>
-												</div>
-												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="activity-item">
-												<div class="activity-name">
-													<span class="name-text">学术学术辩论</span>
-												</div>
-												<div class="activity-msg">
-													<span class="msg-date">2017年1月20日</span>
-													<span class="msg-site">苏州</span>
-												</div>
-												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-											</li>
-											<li class="activity-item">
-												<div class="activity-name">
-													<span class="name-text">学术学术辩论</span>
-												</div>
-												<div class="activity-msg">
-													<span class="msg-date">2017年1月20日</span>
-													<span class="msg-site">苏州</span>
-												</div>
-												<div class="activity-dec">《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。</div>
-												<span class="delete-btn"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-												<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+												<div class="activity-dec" v-html="item.dec"><!--《学术辩论》课程由英锐联合哈佛大学辩论委员会（Harvard Debate Council）、全美演讲与辩论联盟（National Speech and Debate Association，简称NSDA）共同开发，课程参照美国高中辩论课程的内容和模式，结合中国学生的英语水平和思维习惯设计而成。--></div>
+												<span class="delete-btn" @click="activityDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
 										</ul>
 									</div>

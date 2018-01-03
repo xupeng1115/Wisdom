@@ -64,6 +64,56 @@ var app=new Vue({
 		ModuleShow_5:false,
 		currentModule:0,
 		
+		monthLists:[
+			{
+				text:"1月",
+				month:"01"
+			},
+			{
+				text:"2月",
+				month:"02"
+			},
+			{
+				text:"3月",
+				month:"03"
+			},
+			{
+				text:"4月",
+				month:"04"
+			},
+			{
+				text:"5月",
+				month:"05"
+			},
+			{
+				text:"6月",
+				month:"06"
+			},
+			{
+				text:"7月",
+				month:"07"
+			},
+			{
+				text:"8月",
+				month:"08"
+			},
+			{
+				text:"9月",
+				month:"09"
+			},
+			{
+				text:"10月",
+				month:"10"
+			},
+			{
+				text:"11月",
+				month:"11"
+			},
+			{
+				text:"12月",
+				month:"12"
+			}
+		],
 		currrentDate:new Date().getFullYear(),
 		educationDate:[
 			{
@@ -149,6 +199,7 @@ var app=new Vue({
 		educationschool:"",
 		educationbackground:"",
 		educationgraduate:"",
+		educationmonth:"",
 		
 		awardgraduates:[
 			{
@@ -443,7 +494,6 @@ var app=new Vue({
 				$(".info-address").focus();
 				return;
 			}
-			
 			
 			this.userInfo={
 				userUrl:this.userEditInfo.userUrl,
@@ -845,12 +895,10 @@ $(function(){
         });
 	}(jQuery));
 	
-	
 	//页面初始化
 	(function(){
 		
 	}(jQuery));
-	
 	
 	//事件注册
 	(function(){
@@ -882,11 +930,11 @@ $(function(){
 		$("body").on("click",".graduate-select",function(event){
 			if(!oGraduate){
 				$(this).css("borderColor","#ffbf00");
-				$(".graduate-select-list").show();
+				$(".module-date-wrapper").show();
 				oGraduate=true;
 			}else{
 				$(this).css("borderColor","#e3e3e3");
-				$(".graduate-select-list").hide();
+				$(".module-date-wrapper").hide();
 				oGraduate=false;
 			}
 		})
@@ -1061,7 +1109,5 @@ $(function(){
 	}());
 	
 })
-
-
 
 

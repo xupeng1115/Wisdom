@@ -168,10 +168,18 @@
 											</div>
 											<input type="text" class="module-input" placeholder="请输入所学专业" v-model="educationmajor"/>
 											<div class="module-select graduate-select">
-												<div class="module-select-content graduate-content" v-html="educationgraduate?educationgraduate:'毕业年份'"><!--毕业年份--></div>
-												<ul class="module-select-list graduate-select-list">
-													<li class="module-select-item graduate-item" v-for="(item,index) in educationEditgraduates" :key="index" v-html="item.graduate" @click="selectgraduate(item.graduate)"><!--2019--></li>
-												</ul>
+												<div class="module-select-content graduate-content">
+													<span v-html="educationgraduate?educationgraduate+'年':'毕业年份'"><!--2012年--></span>
+													<span v-html="educationmonth?educationmonth:''"><!----></span>
+												</div>
+												<div class="module-date-wrapper clearbox">
+													<ul class="module-select-list graduate-select-list">
+														<li class="module-select-item graduate-item" v-for="(item,index) in educationEditgraduates" :key="index" v-html="item.graduate" @click="selectgraduate(item.graduate)"><!--2019--></li>
+													</ul>
+													<ul class="month-list">
+														<li class="month-item" v-for="(item,index) in monthLists" :key="index" v-html="item.text" @click="educationselectmonth(item.month)"><!--2019--></li>
+													</ul>
+												</div>
 											</div>
 											<div class="module-save-btn module-btn education-save-btn" @click="educationSave(1)">保存</div>
 											<div class="module-cancel-btn module-btn education-cancel-btn" @click="educationCancel(1)">取消</div>

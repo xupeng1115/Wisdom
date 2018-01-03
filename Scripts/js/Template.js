@@ -20,6 +20,17 @@
     }
 }());
 
+
+var oTop=new Vue({
+	el:"#top",
+	data:{
+		entranceKey:false,
+	}
+})
+
+
+
+
 $(function () {
 
     //自定义变量

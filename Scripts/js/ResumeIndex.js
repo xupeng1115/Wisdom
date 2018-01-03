@@ -1,18 +1,20 @@
 "use strict";
 
 var oUserInfo={
-	userUrl:"",
-	userName:"",
-	userGender:"",							
-	userAddress:"",
-	userPhone:"",
-	userEmail:""
-//	userUrl:'../../Content/img/head.png',
-//	userName:'Jessie Lai',
-//	userGender:'mars',							
-//	userAddress:'上海市长宁区玛瑙路1438号国际古北财富中心二期',
-//	userPhone:'15136677782',
-//	userEmail:'987239822@qq.com'
+	ID:0,
+	PicturePath:"",
+	Name:"",
+	Gender:"",							
+	AddressInfo:"",
+	Tel:"",
+	Email:""
+//	ID:1,
+//	PicturePath:'../../Content/img/head.png',
+//	Name:'Jessie Lai',
+//	Gender:'1',							
+//	AddressInfo:'上海市长宁区玛瑙路1438号国际古北财富中心二期',
+//	Tel:'15136677782',
+//	Email:'987239822@qq.com'
 }
 
 //Vue数据模型（交互逻辑和事件绑定）
@@ -34,23 +36,25 @@ var app=new Vue({
 		userTags:[],
 		selectedTags:[],
 		
-		userInfoShow:oUserInfo.userName!==""&&oUserInfo.userGender!==""&&oUserInfo.userPhone!==""&&oUserInfo.userAddress!==""&&oUserInfo.userEmail!=="",
-		editOnce:!(oUserInfo.userName!==""&&oUserInfo.userGender!==""&&oUserInfo.userPhone!==""&&oUserInfo.userAddress!==""&&oUserInfo.userEmail!==""),
+		userInfoShow:oUserInfo.Name!==""&&oUserInfo.Gender!==""&&oUserInfo.Tel!==""&&oUserInfo.AddressInfo!==""&&oUserInfo.Email!=="",
+		editOnce:!(oUserInfo.Name!==""&&oUserInfo.Gender!==""&&oUserInfo.Tel!==""&&oUserInfo.AddressInfo!==""&&oUserInfo.Email!==""),
 		userInfo:{
-			userUrl:oUserInfo.userUrl,
-			userName:oUserInfo.userName,
-			userGender:oUserInfo.userGender,							
-			userAddress:oUserInfo.userAddress,
-			userPhone:oUserInfo.userPhone,
-			userEmail:oUserInfo.userEmail
+			ID:oUserInfo.ID,
+			PicturePath:oUserInfo.PicturePath,
+			Name:oUserInfo.Name,
+			Gender:oUserInfo.Gender,							
+			AddressInfo:oUserInfo.AddressInfo,
+			Tel:oUserInfo.Tel,
+			Email:oUserInfo.Email
 		},
 		userEditInfo:{
-			userUrl:oUserInfo.userUrl,
-			userName:oUserInfo.userName,
-			userGender:oUserInfo.userGender,							
-			userAddress:oUserInfo.userAddress,
-			userPhone:oUserInfo.userPhone,
-			userEmail:oUserInfo.userEmail
+			ID:oUserInfo.ID,
+			PicturePath:oUserInfo.PicturePath,
+			Name:oUserInfo.Name,
+			Gender:oUserInfo.Gender,							
+			AddressInfo:oUserInfo.AddressInfo,
+			Tel:oUserInfo.Tel,
+			Email:oUserInfo.Email
 		},
 		userPhoneShow:false,
 		userEmailShow:false,
@@ -64,105 +68,63 @@ var app=new Vue({
 		ModuleShow_5:false,
 		currentModule:0,
 		
-		monthLists:[
-			{
-				text:"1月",
-				month:"01"
-			},
-			{
-				text:"2月",
-				month:"02"
-			},
-			{
-				text:"3月",
-				month:"03"
-			},
-			{
-				text:"4月",
-				month:"04"
-			},
-			{
-				text:"5月",
-				month:"05"
-			},
-			{
-				text:"6月",
-				month:"06"
-			},
-			{
-				text:"7月",
-				month:"07"
-			},
-			{
-				text:"8月",
-				month:"08"
-			},
-			{
-				text:"9月",
-				month:"09"
-			},
-			{
-				text:"10月",
-				month:"10"
-			},
-			{
-				text:"11月",
-				month:"11"
-			},
-			{
-				text:"12月",
-				month:"12"
-			}
-		],
 		currrentDate:new Date().getFullYear(),
 		educationDate:[
 			{
-				year:2012
+				year:2012,
+				month:"7月"
 			},
 			{
-				year:2015
+				year:2015,
+				month:"7月"
 			},
 			{
-				year:2019
+				year:2019,
+				month:"7月"
 			}
 		],
 		educationLists:[
 			{
-				school:"哈佛大学",
-				background:"本科",
-				major:"机械及自动化专业",
-				begin:"2012年6月1日",
-				end:"2015年6月19日"
+				SchoolName:"斯坦福大学",
+				Education:6,
+				BeginDate:"2015-05-06",
+				EndDate:"2018-06-06",
+				Major:"计算机"
 			},
 			{
-				school:"耶鲁大学",
-				background:"硕士",
-				major:"金融学专业",
-				begin:"2012年6月1日",
-				end:"2015年6月19日"
+				SchoolName:"耶鲁大学",
+				Education:7,
+				BeginDate:"2015-05-06",
+				EndDate:"2018-06-06",
+				Major:"计算机"
 			},
 			{
-				school:"斯坦福大学",
-				background:"博士",
-				major:"国际经济与贸易",
-				begin:"2015年6月19日",
-				end:"至今"
+				SchoolName:"剑桥大学",
+				Education:8,
+				BeginDate:"2015-05-06",
+				EndDate:"2018-06-06",
+				Major:"计算机"
 			}
 		],
 		educationEditBackgrounds:[
 			{
+				id:5,
 				background:"大专",
 			},
 			{
+				id:6,
 				background:"本科",
 			},
 			{
+				id:7,
 				background:"硕士",
 			},
 			{
+				id:8,
 				background:"博士",
 			},
 			{
+				id:9,
 				background:"其他",
 			}
 		],
@@ -197,6 +159,7 @@ var app=new Vue({
 		],
 		educationmajor:"",
 		educationschool:"",
+		educationBackgroundid:"",
 		educationbackground:"",
 		educationgraduate:"",
 		educationmonth:"",
@@ -232,28 +195,61 @@ var app=new Vue({
 		],
 		awardLists:[
 			{
-				name:"外语系第十三届英语戏剧比赛一等奖",
-				graduate:"2015年6月19日"
+				HonorName:"外语系第十三届英语戏剧比赛一等奖一等奖",
+				GetTime:"2015-05-06"
 			},
 			{
-				name:"外语系第十三届英语戏剧比赛一等奖一等奖",
-				graduate:"2015年6月19日"
+				HonorName:"外语系第十三届英语戏剧比赛一等奖一等奖",
+				GetTime:"2015-05-06"
 			},
 			{
-				name:"红点设计大奖",
-				graduate:"2015年6月19日"
+				HonorName:"外语系第十三届英语戏剧比赛一等奖一等奖",
+				GetTime:"2015-05-06"
 			}
 		],
 		awardname:"",
 		awardgraduate:"",
 		
+		practiceYears:[
+			{
+				year:2019
+			},
+			{
+				year:2018
+			},
+			{
+				year:2017
+			},
+			{
+				year:2016
+			},
+			{
+				year:2015
+			},
+			{
+				year:2014
+			},
+			{
+				year:2013
+			},
+			{
+				year:2012
+			},
+			{
+				year:2011	
+			},
+			{
+				year:2010
+			}
+		],
 		practiceLists:[
 			{
 				url:"../../Content/img/position_head.png",
 				companyname:"洋葱数学",
 				positionname:"HR助理",
 				site:"长沙-岳麓区",
-				date:"2016/08/11 - 2016/09/20",
+				begin:"2016/08/11",
+				end:"2016/09/20",
 				content:"1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设;"
 						+"<br>"+
 						"2、建立、维护人事档案，办理和更新劳动合同；"
@@ -275,7 +271,8 @@ var app=new Vue({
 				companyname:"洋葱数学",
 				positionname:"HR助理",
 				site:"长沙-岳麓区",
-				date:"2016/08/11 - 2016/09/20",
+				begin:"2016/08/11",
+				end:"2016/09/20",
 				content:"1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设;"
 						+"<br>"+
 						"2、建立、维护人事档案，办理和更新劳动合同；"
@@ -297,7 +294,8 @@ var app=new Vue({
 				companyname:"洋葱数学",
 				positionname:"HR助理",
 				site:"长沙-岳麓区",
-				date:"2016/08/11 - 2016/09/20",
+				begin:"2016/08/11",
+				end:"2016/09/20",
 				content:"1、协助上级建立健全公司招聘、培训、保险、绩效考核等人力资源制度建设;"
 						+"<br>"+
 						"2、建立、维护人事档案，办理和更新劳动合同；"
@@ -318,26 +316,25 @@ var app=new Vue({
 		practicecompanyname:"",
 		practicepositionname:"",
 		practicesite:"",
-		practicedate:"",
+		practicebegin:"",
+		practiceend:"",
 		practicecontent:"",
 		
 		skillLists:[
 			{
 				name:'英语CET-6',
 				bar:"200",
-				dec:"熟练使用英语交流",
+				dec:"熟练使用英语交流"
 			},
 			{
 				name:'英语CET-6',
 				bar:"100",
-				dec:"熟练使用英语交流",
-				
+				dec:"熟练使用英语交流"
 			},
 			{
 				name:'英语CET-6',
 				bar:"300",
-				dec:"熟练使用英语交流",
-				
+				dec:"熟练使用英语交流"
 			}
 		],
 		skillname:"",
@@ -406,10 +403,10 @@ var app=new Vue({
 	computed:{
 		phoneFilter:function(){
 			var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
-			if(this.userEditInfo.userPhone===""){
+			if(this.userEditInfo.Tel===""){
 				this.userPhoneShow=true;
 				return "必填";
-			}else if(!myreg.test(this.userEditInfo.userPhone)){
+			}else if(!myreg.test(this.userEditInfo.Tel)){
 				this.userPhoneShow=true;
 				return "请输入有效的手机号";
 			}else{
@@ -418,10 +415,10 @@ var app=new Vue({
 		},
 		emailFilter:function(){
 			var myreg=/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-			if(this.userEditInfo.userEmail===""){
+			if(this.userEditInfo.Email===""){
 				this.userEmailShow=true;
 				return "必填";
-			}else if(!myreg.test(this.userEditInfo.userEmail)){
+			}else if(!myreg.test(this.userEditInfo.Email)){
 				this.userEmailShow=true;
 				return "请输入有效的邮箱地址";
 			}else{
@@ -471,12 +468,12 @@ var app=new Vue({
 				return;
 			}
 			
-			if(this.userEditInfo.userName===""){
+			if(this.userEditInfo.Name===""){
 				$(".info-name").focus();
 				return;
 			}
 			
-			if(this.userEditInfo.userGender===""){
+			if(this.userEditInfo.Gender===""){
 				return;
 			}
 			
@@ -490,38 +487,36 @@ var app=new Vue({
 				return;
 			}
 			
-			if(this.userEditInfo.userAddress===""){
+			if(this.userEditInfo.AddressInfo===""){
 				$(".info-address").focus();
 				return;
 			}
-			
 			this.userInfo={
-				userUrl:this.userEditInfo.userUrl,
-				userName:this.userEditInfo.userName,
-				userGender:this.userEditInfo.userGender,							
-				userAddress:this.userEditInfo.userAddress,
-				userPhone:this.userEditInfo.userPhone,
-				userEmail:this.userEditInfo.userEmail
+				ID:this.userEditInfo.ID,
+				PicturePath:this.userEditInfo.PicturePath,
+				Name:this.userEditInfo.Name,
+				Gender:this.userEditInfo.Gender,							
+				AddressInfo:this.userEditInfo.AddressInfo,
+				Tel:this.userEditInfo.Tel,
+				Email:this.userEditInfo.Email
 			}
 			this.editOnce=false;
 			this.clickEnable=true;
 			this.userInfoShow=true;
 		},
 		infoCancel:function(){
-			if(this.currentModule===0){
-				return;
-			}
 			
 			if(this.editOnce){
 				return;
 			}else{
 				this.userEditInfo={
-					userUrl:this.userInfo.userUrl,
-					userName:this.userInfo.userName,
-					userGender:this.userInfo.userGender,							
-					userAddress:this.userInfo.userAddress,
-					userPhone:this.userInfo.userPhone,
-					userEmail:this.userInfo.use,rEmail
+					ID:this.userInfo.ID,
+					PicturePath:this.userInfo.PicturePath,
+					Name:this.userInfo.Name,
+					Gender:this.userInfo.Gender,							
+					AddressInfo:this.userInfo.AddressInfo,
+					Tel:this.userInfo.Tel,
+					Email:this.userInfo.Email
 				}
 				this.clickEnable=true;
 				this.userInfoShow=true;
@@ -531,6 +526,9 @@ var app=new Vue({
 			if(this.clickEnable){
 				if(this.currentModule===0){
 					this.moduleActiveShow(type);
+					if(type===1){
+						this.educationUnshift();
+					}
 					this.currentModule=type;
 					this.clickEnable=false;
 					this.headEditEnable=true;
@@ -538,6 +536,9 @@ var app=new Vue({
 			}else{
 				if(type===this.currentModule){
 					this.moduleActiveHide(type);
+					if(type===1){
+						this.educationShift();
+					}
 					this.currentModule=0;
 					this.clickEnable=true;
 					this.headEditEnable=false;
@@ -548,7 +549,6 @@ var app=new Vue({
 			switch(type){
 				case 1:
 					this.ModuleShow_1=true;
-					this.educationUnshift();
 				break;
 				case 2:
 					this.ModuleShow_2=true;
@@ -568,7 +568,6 @@ var app=new Vue({
 			switch(type){
 				case 1:
 					this.ModuleShow_1=false;
-					this.educationShift();
 				break;
 				case 2:
 					this.ModuleShow_2=false;
@@ -587,11 +586,12 @@ var app=new Vue({
 		selectgraduate:function(graduate){
 			this.educationgraduate=graduate;
 		},
-		selectbackground:function(background){
+		selectbackground:function(background,id){
 			this.educationbackground=background;
+			this.educationbackgroundid=id;
 		},
 		educationUnshift:function(){
-			this.educationDate.unshift({year:2008});
+			this.educationDate.unshift({year:"",month:""});
 		},
 		educationShift:function(){
 			this.educationDate.shift();
@@ -599,7 +599,6 @@ var app=new Vue({
 		educationCancel:function(type){
 			this.educationmajor="";
 			this.educationschool="";
-			this.educationgraduate="";
 			this.educationgraduate="";
 			this.educationShift();
 			this.moduleActiveHide(type);
@@ -622,15 +621,15 @@ var app=new Vue({
 			}
 
 			var Obj={
-				major:"金融学专业",
-				background:this.educationmajor,
-				school:this.educationschool,
-				begin:Number(this.educationgraduate)-4,
-				end:Number(this.educationgraduate)
+				Major:this.educationmajor,
+				Education:this.educationbackgroundid,
+				SchoolName:this.educationschool,
+				BeginDate:Number(this.educationgraduate)-4,
+				EndDate:Number(this.educationgraduate)
 			}
 			
 			this.educationLists.unshift(Obj);
-			this.educationUnshift();
+			this.educationDate.splice(0,1,{year:this.educationgraduate,month:"7月"});
 			
 			this.moduleActiveHide(type);
 			this.currentModule=0;
@@ -641,6 +640,7 @@ var app=new Vue({
 			this.educationschool="";
 			this.educationbackground="";
 			this.educationgraduate="";
+			this.educationbackgroundid="";
 		},
 		educationDelete:function(index){
 			this.educationLists.splice(index,1);
@@ -658,8 +658,8 @@ var app=new Vue({
 			}
 			
 			var Obj={
-				name:this.awardname,
-				graduate:this.awardgraduate
+				HonorName:this.awardname,
+				GetTime:this.awardgraduate
 			}
 			
 			this.awardLists.unshift(Obj);
@@ -686,25 +686,29 @@ var app=new Vue({
 			if($.trim(this.practicecompanyname)===""){
 				return;
 			}
-			if($.trim(this.practicepositionname)!==""){
+			if($.trim(this.practicepositionname)===""){
 				return;
 			}
 			if($.trim(this.practicesite)===""){
 				return;
 			}
-			if($.trim(this.practicedate)!==""){
+			if($.trim(this.practicebegin)===""){
+				return;
+			}
+			if($.trim(this.practiceend)===""){
 				return;
 			}
 			if($.trim(this.practicecontent)===""){
 				return;
 			}
-			console.log(132);
+			
 			var Obj={
 				url:"../../Content/img/position_head.png",
 				companyname:this.practicecompanyname,
-				positionname:"HR助理",
-				site:"长沙-岳麓区",
-				date:"2016/08/11 - 2016/09/20",
+				positionname:this.practicepositionname,
+				site:this.practicesite,
+				begin:this.practicebegin,
+				end:this.practiceend,
 				content:this.practicecontent
 			}
 
@@ -717,15 +721,18 @@ var app=new Vue({
 			this.practicecompanyname="";
 			this.practicepositionname="";
 			this.practicesite="";
-			this.practicedate="";
+			this.practicebegin="";
+			this.practiceend="";
 			this.practicecontent="";
 		},
 		practiceCancel:function(type){
 			this.practicecompanyname="";
 			this.practicepositionname="";
 			this.practicesite="";
-			this.practicedate="";
+			this.practicebegin="";
+			this.practiceend="";
 			this.practicecontent="";
+			
 			this.moduleActiveHide(type);
 			this.currentModule=0;
 			this.clickEnable=true;
@@ -733,6 +740,12 @@ var app=new Vue({
 		},
 		practiceDelete:function(index){
 			this.practiceLists.splice(index,1);
+		},
+		practiceselectbegin:function(year){
+			this.practicebegin=year;
+		},
+		practiceselectend:function(year){
+			this.practiceend=year;
 		},
 		skillSave:function(type){
 			if($.trim(this.skillname)===""){
@@ -748,7 +761,6 @@ var app=new Vue({
 				bar:this.skillbar
 			}
 			
-			
 			this.skillLists.unshift(Obj);
 			this.moduleActiveHide(type);
 			this.currentModule=0;
@@ -757,12 +769,11 @@ var app=new Vue({
 			
 			this.skillname="";
 			this.skilldec="";
-			this.skillbar="100";
 		},
 		skillCancel:function(type){
 			this.skillname="";
 			this.skilldec="";
-			this.skillbar="100";
+			
 			this.moduleActiveHide(type);
 			this.currentModule=0;
 			this.clickEnable=true;
@@ -885,7 +896,6 @@ $(function(){
                 if(left>=350){
                 	$(".skill-edit-degree").html("优秀");
                 }
-                
                 $('.skill-edit-progress_btn').css('left', left);
                 $('.skill-edit-progress_bar').width(left);
                 
@@ -930,11 +940,11 @@ $(function(){
 		$("body").on("click",".graduate-select",function(event){
 			if(!oGraduate){
 				$(this).css("borderColor","#ffbf00");
-				$(".module-date-wrapper").show();
+				$(".graduate-select-list").show();
 				oGraduate=true;
 			}else{
 				$(this).css("borderColor","#e3e3e3");
-				$(".module-date-wrapper").hide();
+				$(".graduate-select-list").hide();
 				oGraduate=false;
 			}
 		})
@@ -962,6 +972,44 @@ $(function(){
 			$(".award-select").css("border","1px solid #e3e3e3");
 			$(".award-select-list").hide();
 			oAward=false;
+		})
+		
+		var oPracticeBegin=false;
+		$("body").on("click",".practice-select-begin",function(event){
+			if(!oPracticeBegin){
+				$(this).css("borderColor","#ffbf00");
+				$(".practice-date-list-begin").show();
+				oPracticeBegin=true;
+			}else{
+				$(this).css("borderColor","#e3e3e3");
+				$(".practice-date-list-begin").hide();
+				oPracticeBegin=false;
+			}
+		})
+		
+		$("body").on("click",".practice-year-begin",function(event){
+			$(".practice-select-begin").css("border","1px solid #e3e3e3");
+			$(".practice-date-list-begin").hide();
+			oPracticeBegin=false;
+		})
+		
+		var oPracticeEnd=false;
+		$("body").on("click",".practice-select-end",function(event){
+			if(!oPracticeEnd){
+				$(this).css("borderColor","#ffbf00");
+				$(".practice-date-list-end").show();
+				oPracticeEnd=true;
+			}else{
+				$(this).css("borderColor","#e3e3e3");
+				$(".practice-date-list-end").hide();
+				oPracticeEnd=false;
+			}
+		})
+		
+		$("body").on("click",".practice-year-end",function(event){
+			$(".practice-select-end").css("border","1px solid #e3e3e3");
+			$(".practice-date-list-end").hide();
+			oPracticeEnd=false;
 		})
 		
 		var oActivity=false;
@@ -992,6 +1040,10 @@ $(function(){
 			var a2=$(e.target).hasClass("award-content");
 			var c1=$(e.target).hasClass("activity-select");
 			var c2=$(e.target).hasClass("activity-content");
+			var d1=$(e.target).hasClass("practice-select-begin");
+			var d2=$(e.target).hasClass("practice-content-begin");
+			var e1=$(e.target).hasClass("practice-select-end");
+			var e2=$(e.target).hasClass("practice-content-end");
 			
 			if(!(b1||b2)){
 				$(".background-select").css("border","1px solid #e3e3e3");
@@ -1015,6 +1067,18 @@ $(function(){
 				$(".activity-select").css("border","1px solid #e3e3e3");
 				$(".activity-select-list").hide();
 				oActivity=false;
+			}
+			
+			if(!(d1||d2)){
+				$(".practice-select-begin").css("border","1px solid #e3e3e3");
+				$(".practice-date-list-begin").hide();
+				oPracticeBegin=false;
+			}
+			
+			if(!(e1||e2)){
+				$(".practice-select-end").css("border","1px solid #e3e3e3");
+				$(".practice-date-list-end").hide();
+				oPracticeEnd=false;
 			}
 		})
 		

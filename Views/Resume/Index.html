@@ -46,9 +46,9 @@
 		<!-- Banner-->
 		<div class="row top-banner">
 			<div class="banner-head-box">
-				<img class="banner-head" :src="userInfo.userUrl" onerror="nofind();"/>
+				<img class="banner-head" :src="userInfo.PicturePath" onerror="nofind();"/>
 			</div>
-			<div class="banner-name" v-show="userInfo.userName.length>0" style="display:none;" v-html="userInfo.userName"></div>
+			<div class="banner-name" v-show="userInfo.Name.length>0" style="display:none;" v-html="userInfo.Name"></div>
 			<div class="banner-tag-box clearbox">
 				<div class="banner-tag-content clearbox">
 					<ul class="banner-tag clearbox">
@@ -94,31 +94,31 @@
 						<!-- 简历头部个人信息 -->
 						<div class="head-box">
 							<div class="head-img-box">
-								<img class="head-img" :src="userInfo.userUrl" onerror="nofind();"/>
+								<img class="head-img" :src="userInfo.PicturePath" onerror="nofind();"/>
 								<input type="file" class="upload-head"/>
 								<span class="upload-head-icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
 							</div>
 							<div class="head-container">
 								<div class="info-edit-container clearbox" v-show="!userInfoShow" style="display:none;">
-									<input type="text" class="info-input info-name" placeholder="你的姓名" v-model.trim="userEditInfo.userName"/>
-									<input type="radio" name="radio" class="info-input info-sex" id="mars" value="mars"  v-model="userEditInfo.userGender"/>
+									<input type="text" class="info-input info-name" placeholder="你的姓名" v-model.trim="userEditInfo.Name"/>
+									<input type="radio" name="radio" class="info-input info-sex" id="mars" value="1"  v-model="userEditInfo.Gender"/>
 									<label for="mars">男</label>
 									<span class="name-icon"><i class="fa fa-mars" aria-hidden="true"></i></span>
-									<input type="radio" name="radio" class="info-input info-sex" id="venus" value="venus" v-model="userEditInfo.userGender"/>
+									<input type="radio" name="radio" class="info-input info-sex" id="venus" value="2" v-model="userEditInfo.Gender"/>
 									<label for="venus">女</label>
 									<span class="name-icon"><i class="fa fa-venus" aria-hiden="true"></i></span>
-									<div class="info-filter msg-filter-box" v-show="userEditInfo.userGender.length===0||userEditInfo.userName.length===0" style="display:none;">
-										<span class="name-filter" v-show="userEditInfo.userName.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必填</span></span>
-										<span class="gender-filter" v-show="userEditInfo.userGender.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必选性别</span></span>
+									<div class="info-filter msg-filter-box" v-show="userEditInfo.Gender.length===0||userEditInfo.Name.length===0" style="display:none;">
+										<span class="name-filter" v-show="userEditInfo.Name.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必填</span></span>
+										<span class="gender-filter" v-show="userEditInfo.Gender.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必选性别</span></span>
 									</div>
-									<input type="text" class="info-input info-phone" placeholder="联系电话" v-model.trim="userEditInfo.userPhone"/>
-									<input type="text" class="info-input info-email" placeholder="联系邮箱" v-model.trim="userEditInfo.userEmail"/>
+									<input type="text" class="info-input info-phone" placeholder="联系电话" v-model.trim="userEditInfo.Tel"/>
+									<input type="text" class="info-input info-email" placeholder="联系邮箱" v-model.trim="userEditInfo.Email"/>
 									<div class="info-filter contact-filter-box"  v-show="userPhoneShow||userEmailShow" style="display:none;">
 										<span class="phone-filter" v-show="userPhoneShow" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span v-html="phoneFilter"></span></span>
 										<span class="email-filter" v-show="userEmailShow" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span v-html="emailFilter"></span></span>
 									</div>
-									<input type="text" class="info-input info-address" placeholder="联系地址" v-model.trim="userEditInfo.userAddress"/>
-									<div class="info-filter address-filter" v-show="userEditInfo.userAddress.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必填</span></div>
+									<input type="text" class="info-input info-address" placeholder="联系地址" v-model.trim="userEditInfo.AddressInfo"/>
+									<div class="info-filter address-filter" v-show="userEditInfo.AddressInfo.length===0" style="display:none;"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><span>必填</span></div>
 									<div class="info-btn info-save-btn" @click="infoSave" v-bind:class="{'info-save-disable-btn':currentModule!==0}">保存</div>
 									<div class="info-btn info-cancel-btn" @click="infoCancel">取消</div>
 								</div>
@@ -127,16 +127,16 @@
 										<span class="head-edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
 									</div>
 									<div class="head-name">
-										<span class="name-text" v-show="userInfo.userName.length>0" style="display:none;" v-html="userInfo.userName"><!--Jessie Lai--></span>
-										<span class="name-icon" v-show="userInfo.userGender.length>0" style="display:none;"><i class="fa fa-venus" aria-hiden="true" v-show="userInfo.userGender==='venus'" style="display:none;"></i><i class="fa fa-mars" aria-hidden="true" v-show="userInfo.userGender==='mars'" style="display:none;"></i></span>
+										<span class="name-text" v-show="userInfo.Name.length>0" style="display:none;" v-html="userInfo.Name"><!--Jessie Lai--></span>
+										<span class="name-icon" v-show="userInfo.Gender.length>0" style="display:none;"><i class="fa fa-venus" aria-hiden="true" v-show="userInfo.Gender==='2'" style="display:none;"></i><i class="fa fa-mars" aria-hidden="true" v-show="userInfo.Gender==='1'" style="display:none;"></i></span>
 									</div>
 									<div class="head-contact">
-										<span class="head-phone" v-show="userInfo.userPhone.length>0" style="display:none;"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num" v-html="userInfo.userPhone"><!--13801010101--></span></span>
-										<span class="head-email" v-show="userInfo.userEmail.length>0" style="display:none;"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num" v-html="userInfo.userEmail"><!--9993332738@163.com--></span></span>
+										<span class="head-phone" v-show="userInfo.Tel.length>0" style="display:none;"><span class="phone-icon"><i class="fa fa-phone" aria-hidden="true"></i></span><span class="phone-num" v-html="userInfo.Tel"><!--13801010101--></span></span>
+										<span class="head-email" v-show="userInfo.Email.length>0" style="display:none;"><span class="email-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span><span class="email-num" v-html="userInfo.Email"><!--9993332738@163.com--></span></span>
 									</div>
-									<div class="head-address" v-show="userInfo.userAddress.length>0" style="display:none;">
+									<div class="head-address" v-show="userInfo.AddressInfo.length>0" style="display:none;">
 										<span class="address-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-										<span class="address-text" v-html="userInfo.userAddress"><!--上海市长宁区玛瑙路1438号国际古北财富中心二期--></span>
+										<span class="address-text" v-html="userInfo.AddressInfo"><!--上海市长宁区玛瑙路1438号国际古北财富中心二期--></span>
 									</div>
 								</div>
 							</div>
@@ -151,10 +151,10 @@
 								</div>
 								<div class="module-wrapper education-wrapper clearbox">
 									<ul class="education-date-box">
-										<li class="education-date" v-for="(date,index) in educationDate" :key="index">
+										<li class="education-date" v-for="(date,index) in educationDate" :key="index" :class="{nullyear:date.year===''}">
 											<span class="date-predict-text" v-show="date.year>=currrentDate" style="display:none;">(预计)</span>
-											<span class="date-year" v-html="date.year"></span>
-											<span class="date-mouth">6月8日</span>
+											<span class="date-year" v-html="date.year"><!--2012--></span>
+											<span class="date-mouth" v-html="date.month"><!--7月--></span>
 										</li>
 									</ul>
 									<div class="education-container">
@@ -163,34 +163,28 @@
 											<div class="module-select background-select">
 												<div class="module-select-content background-content" v-html="educationbackground?educationbackground:'学历'"><!--学历--></div>
 												<ul class="module-select-list background-select-list">
-													<li class="module-select-item background-item" v-for="(item,index) in educationEditBackgrounds" :key="index" v-html="item.background" @click="selectbackground(item.background)"><!--大专--></li>
+													<li class="module-select-item background-item" v-for="(item,index) in educationEditBackgrounds" :key="index" v-html="item.background" @click="selectbackground(item.background,item.id)"><!--大专--></li>
 												</ul>
 											</div>
 											<input type="text" class="module-input" placeholder="请输入所学专业" v-model="educationmajor"/>
 											<div class="module-select graduate-select">
 												<div class="module-select-content graduate-content">
 													<span v-html="educationgraduate?educationgraduate+'年':'毕业年份'"><!--2012年--></span>
-													<span v-html="educationmonth?educationmonth:''"><!----></span>
 												</div>
-												<div class="module-date-wrapper clearbox">
-													<ul class="module-select-list graduate-select-list">
-														<li class="module-select-item graduate-item" v-for="(item,index) in educationEditgraduates" :key="index" v-html="item.graduate" @click="selectgraduate(item.graduate)"><!--2019--></li>
-													</ul>
-													<ul class="month-list">
-														<li class="month-item" v-for="(item,index) in monthLists" :key="index" v-html="item.text" @click="educationselectmonth(item.month)"><!--2019--></li>
-													</ul>
-												</div>
+												<ul class="module-select-list graduate-select-list">
+													<li class="module-select-item graduate-item" v-for="(item,index) in educationEditgraduates" :key="index" v-html="item.graduate" @click="selectgraduate(item.graduate)"><!--2019--></li>
+												</ul>
 											</div>
 											<div class="module-save-btn module-btn education-save-btn" @click="educationSave(1)">保存</div>
 											<div class="module-cancel-btn module-btn education-cancel-btn" @click="educationCancel(1)">取消</div>
 										</div>
 										<ul class="education-list">
 											<li class="education-item" v-for="(item,index) in educationLists" :key="index">
-												<span class="education-school" v-html="item.school"><!--哈佛大学--></span>
-												<span class="education-background" v-html="item.background"><!--本科--></span>
-												<span class="education-major" v-html="item.major"><!--机械及自动化专业--></span>
-												<span class="date-begin" v-html="item.begin"><!--2012年6月1日--></span>
-												<span class="date-end" v-html="item.end"><!--2015年6月19日--></span>
+												<span class="education-school" v-html="item.SchoolName"><!--哈佛大学--></span>
+												<span class="education-background" v-html="item.Education>=9?'其他':(item.Education>=8?'博士':(item.Education>=7?'硕士':(item.Education>=6?'本科':(item.Education>=5?'大专':''))))"><!--本科--></span>
+												<span class="education-major" v-html="item.Major"><!--机械及自动化专业--></span>
+												<span class="date-begin" v-html="item.BeginDate"><!--2012年6月1日--></span>
+												<span class="date-end" v-html="item.EndDate"><!--2015年6月19日--></span>
 												<span class="delete-btn" @click="educationDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
 												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
@@ -220,8 +214,8 @@
 										
 										<ul class="award-list">
 											<li class="award-item" v-for="(item,index) in awardLists" :key="index">
-												<span class="award-name" v-html="item.name"><!--外语系第十三届英语戏剧比赛一等奖--></span>
-												<span class="award-date" v-html="item.graduate"><!--2015年6月19日--></span>
+												<span class="award-name" v-html="item.HonorName"><!--外语系第十三届英语戏剧比赛一等奖--></span>
+												<span class="award-date" v-html="item.GetTime"><!--2015年6月19日--></span>
 												<span class="delete-btn" @click="awardDelete(index)"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
 												<!--<span class="edit-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>-->
 											</li>
@@ -244,6 +238,19 @@
 											</div>
 											<input type="text" class="module-input" placeholder="请输入公司名称" v-model="practicecompanyname"/>
 											<input type="text" class="module-input practice-address" placeholder="公司地址" v-model="practicesite"/>
+											<input type="text" class="module-input practice-positionname" placeholder="实习职位名称" v-model="practicepositionname"/>
+											<div class="module-select practice-select practice-select-begin">
+												<div class="module-select-content practice-content practice-content-begin" v-html="practicebegin?practicebegin:'开始时间'"><!--开始时间--></div>
+												<ul class="module-select-list practice-select-list practice-date-list-begin">
+													<li class="module-select-item practice-year-item practice-year-begin" v-for="(item,index) in practiceYears" :key="index" v-html="item.year" @click="practiceselectbegin(item.year)"><!--2019--></li>
+												</ul>
+											</div>
+											<div class="module-select practice-select practice-select-end">
+												<div class="module-select-content practice-content practice-content-end" v-html="practiceend?practiceend:'结束时间'"><!--结束时间--></div>
+												<ul class="module-select-list practice-select-list practice-date-list-end">
+													<li class="module-select-item practice-year-item practice-year-end" v-for="(item,index) in practiceYears" :key="index" v-html="item.year" @click="practiceselectend(item.year)"><!--2019--></li>
+												</ul>
+											</div>
 											<textarea class="practice-area" placeholder="工作职能" v-model="practicecontent"></textarea>
 											<div class="module-save-btn module-btn practice-save-btn" @click="practiceSave(3)">保存</div>
 											<div class="module-cancel-btn module-btn practice-cancel-btn" @click="practiceCancel(3)">取消</div>
@@ -259,7 +266,7 @@
 														</div>
 														<div class="msg-bottom">
 															<span class="msg-site" v-html="item.site"><!--长沙-岳麓区--></span>
-															<span class="msg-date" v-html="item.date"><!--2016/08/11 - 2016/09/20--></span>
+															<span class="msg-date"><span class="date-begin" v-html="item.begin"></span><span> - </span><span class="date-end" v-html="item.end"></span></span>
 														</div>
 													</div>
 												</div>

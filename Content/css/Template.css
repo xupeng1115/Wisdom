@@ -131,6 +131,7 @@ header{
 }
 
 header .top-box{
+	position:relative;
 	margin:0 auto;
 	width:1200px;
 	height:65px;
@@ -723,6 +724,111 @@ footer .about-right .right-box{
 	margin-bottom:0;
 }
 
+/***********************login后hover我的后台接口****************************/
+.top-box .backstage-entrance-container{
+	position:absolute;
+	top:64px;
+	right:0;
+	z-index:100;
+	width:310px;
+	border-top:1px solid transparent;	
+}
 
+.backstage-entrance-container .backstage-entrance{
+	width:100%;
+  	border-radius: 4px;
+  	background-color:rgba(0,0,0,0.62);
+}
+
+.backstage-entrance .entrance-wrapper{
+	position:relative;
+	padding:20px;
+	padding-bottom:38px;
+	width:100%;
+}
+
+.entrance-wrapper .entrance-back-btn{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:38px;
+  	border-top: solid 1px #858585;
+  	font-size:12px;
+  	color:#fff;
+  	line-height:37px;
+  	text-align:center;
+  	cursor:pointer;
+}
+
+.entrance-wrapper .entrance-top{
+	width:100%;
+}
+
+.entrance-top .entrance-img{
+	display:block;
+	float:left;
+	width:50px;
+	height:50px;
+	border-radius:100%;
+}
+
+.entrance-top .entrance-name{
+	padding-left:10px;
+	float:left;
+	width:200px;
+	height:25px;
+	line-height:25px;
+	text-align:left;
+	font-size: 16px;
+  	font-weight: 500;
+  	color:#fff;
+}
+
+.entrance-top .entrance-tag{
+	float:left;
+	width:200px;
+	padding-left:10px;
+	height:24px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	font-size:12px;
+	color:#ffbf00;
+}
+
+.entrance-wrapper .entrance-href-box{
+	margin-top:15px;
+	padding-top:10px;
+	padding-bottom:20px;
+	width:100%;
+	border-top:1px dashed #949494;
+}
+
+.entrance-href-box .entrance-href-item{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+	width:130px;
+	height:30px;
+	line-height:30px;
+	background:#656565;
+	border-radius:2px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.entrance-href-box .entrance-href-item:nth-child(2n+0){
+	margin-right:0;
+}
+
+.entrance-href-item a{
+	font-size:14px;
+	color:#fff;
+}
+
+.entrance-href-item:hover{
+	background:#bfbfbf;
+}
 
 

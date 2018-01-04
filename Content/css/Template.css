@@ -725,13 +725,24 @@ footer .about-right .right-box{
 }
 
 /***********************login后hover我的后台接口****************************/
-.top-box .backstage-entrance-container{
+.lr-success:hover .backstage-entrance-container{
+	display:block;
+}
+
+.lr-success .backstage-entrance-container{
+	display:none;
 	position:absolute;
 	top:64px;
 	right:0;
 	z-index:100;
 	width:310px;
 	border-top:1px solid transparent;	
+	color:#fff;
+	cursor:default;
+}
+
+.lr-success .backstage-entrance-container:hover{
+	display:block;
 }
 
 .backstage-entrance-container .backstage-entrance{
@@ -762,6 +773,7 @@ footer .about-right .right-box{
 }
 
 .entrance-wrapper .entrance-top{
+	position:relative;
 	width:100%;
 }
 
@@ -785,11 +797,12 @@ footer .about-right .right-box{
   	color:#fff;
 }
 
-.entrance-top .entrance-tag{
+.backstage-entrance-container .backstage-entrance .entrance-wrapper .entrance-top .entrance-tag{
 	float:left;
 	width:200px;
 	padding-left:10px;
-	height:24px;
+	height:25px;
+	line-height:25px;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap;
@@ -822,7 +835,7 @@ footer .about-right .right-box{
 	margin-right:0;
 }
 
-.entrance-href-item a{
+.top-box .top-nav .top-nav-item .backstage-entrance-container .backstage-entrance .entrance-wrapper .entrance-href-box .entrance-href-item a{
 	font-size:14px;
 	color:#fff;
 }

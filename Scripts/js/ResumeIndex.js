@@ -428,32 +428,68 @@ var app=new Vue({
 	},
 	methods:{
 		addTags:function(){
+			$.each(this.userTags,function(index,item){
+				this.selectedTags.push(item);
+			})
 			this.tagBoxShow=true;
 		},
 		tagConfirm:function(){
+			$.each(this.selectedTags,function(index,item){
+				var oIndex=index,oItem=item;
+				$.each(this.userTags,function(index,item){
+					if(item.ID!==oItem.ID){
+						this.userTags.push(oItem);
+					}
+				})
+			})
+			this.userTags=this.selectedTags;
 			this.tagBoxShow=false;
 		},
 		tagClick:function(tag,event){
+			var oNum=this.selectedTags.length;
+			console.log(oNum);
 			var oSelected=$(event.target).hasClass("selected");
 			var oIndex;
-			if(oSelected){
-				$(event.target).removeClass("selected");
-				$.each(this.selectedTags, function (index, item){
-					if(item.ID===tag.ID){
-						oIndex=index;
-						return;
+			if(oNum<=5){
+				if(oNum===5){
+					if(oSelected){
+						$(event.target).removeClass("selected");
+						this.tagSplice(tag);
 					}
-				})
-				this.selectedTags.splice(oIndex,0);
+				}else{
+					if(oSelected){
+						$(event.target).removeClass("selected");
+						this.tagSplice(tag);
+					}else{
+						$(event.target).addClass("selected");
+						this.selectedTags.push(tag);
+					}
+				}
 			}else{
-				$(event.target).addClass("selected");
-				this.selectedTags.push(tag);
+				alert("最多选择5个标签");
 			}
+		},
+		tagSplice:function(tag){
+			var oIndex;
+			$.each(this.selectedTags, function (index, item){
+				if(item.ID===tag.ID){
+					oIndex=index;
+					return;
+				}
+			})
+			this.selectedTags.splice(oIndex,1);
 		},
 		tagCancel:function(){
 			this.tagBoxShow=false;
 		},
 		tagReset:function(){
+			var oSelects=$(".select-item");
+			$.each(oSelects,function(index,item){
+				if($(item).hasClass("selected")){
+					$(item).removeClass("selected");
+				}
+			})
+			this.selectedTags.splice(0);
 			this.tagBoxShow=false;
 		},
 		infoEdit:function(){

@@ -1818,10 +1818,8 @@ input[type=radio]:checked:before {
 }
 
 
-
 /*********************************标签选项表弹窗**************************************/
 .flo-box{
-	/*display:none;*/
 	position:fixed;
 	top:0;
 	left:0;
@@ -1836,7 +1834,6 @@ input[type=radio]:checked:before {
 	margin:0 auto;
 	margin-top:150px;
 	width:530px;
-	height:500px;
 	background:#fff;
 }
 
@@ -1919,9 +1916,8 @@ input[type=radio]:checked:before {
 
 .tag-select-box .select-list{
 	padding:0 26px;
-	padding-bottom:65px;
+	padding-bottom:100px;
 	width:100%;
-	height:390px;
 	overflow-x:hidden;
 	overflow-y:auto;
 }
@@ -1948,16 +1944,13 @@ input[type=radio]:checked:before {
 	color:#fff;
 }
 
-/*.select-item-list .select-item:nth-of-type(4n+0){
-	margin-right:0;
-}*/
-
 .tag-select-box .select-btn-box{
 	width:100%;
 	height: 45px;
   	background-color: #ffffff;
   	box-shadow: 0 -1px 0 0 #eaeaea;
 }
+
 .select-btn-box .select-btn{
 	position:relative;
 	float:left;
@@ -1985,4 +1978,6 @@ input[type=radio]:checked:before {
 .select-btn-box .select-reset-btn{
 	color: #ee5c54;
 }
+
+
 

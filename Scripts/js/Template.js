@@ -21,16 +21,6 @@
 }());
 
 
-var oTop=new Vue({
-	el:"#top",
-	data:{
-		entranceKey:false,
-	}
-})
-
-
-
-
 $(function () {
 
     //自定义变量
@@ -46,6 +36,10 @@ $(function () {
 
     //事件注册
     (function () {
+
+		$("body").on("click",".back-top-btn",function(event){
+			$('body,html').animate({scrollTop:0},300);
+		})
 
         $("body").on("click", ".login-phone", function () {
             $(".login-phone-tips").text("手机号不能为空");
@@ -308,6 +302,16 @@ $(function () {
             $(".login-box").hide();
             $(".register-box").show();
         })
+        
+        $(window).scroll(function() {
+			//获取文档滚动高度
+		    var top = $(document).scrollTop();
+		    if(top>=200){
+		    	$("aside").show();
+		    }else{
+		    	$("aside").hide();
+		    }
+		})
 
     } ());
 

@@ -1,3 +1,22 @@
+"use strict";
+
+//注册生成视频实例;
+var player = new ump.Player();
+
+//视频信息
+var oVideo={
+	cover:"../../Content/img/banner_1.png",
+	Video:"http://material.knx.com.cn/weike/shenduiyouxiulianmiji/tuanduiyishi_720p.mp4"
+}
+
+//Vue数据模型（交互逻辑和事件绑定）
+var app=new Vue({
+	el:"#app",
+	data:{
+		
+	}
+})
+
 $(function(){
 	
 	//轮播滚动
@@ -32,6 +51,7 @@ $(function(){
 	
 	//事件注册
 	(function(){
+		
 		$("body").on("click",".flow-btn",function(event){
 			$(this).css("background","#fff");
 			$(".flow-content").show();
@@ -99,14 +119,34 @@ $(function(){
 			window.location.href="../Assessment/Index.html";
 		})
 		
-		$(window).scroll(function() {
-			//获取文档滚动高度
-		    var top = $(document).scrollTop();
-		    if(top>=1000){
-		    	$("aside").show();
-		    }else{
-		    	$("aside").hide();
-		    }
+		//打开视频
+		$("body").on("click",".video-btn",function(){
+			
+            player.create({		
+                modId:"player",
+                params:{autostart:false, file: oVideo.Video }
+
+            });
+            
+            player.onInited = function(){};
+            
+            player.onError= function(info){
+	            if(!info){
+		            return;
+	            }
+	            if(info.desc){
+		            ump.log("播放器错误提示："+info.desc);
+	            }
+            }
+            $("video").attr("poster",oVideo.Cover);
+
+            $(".video-container").show();
+		})
+		
+		//关闭视频
+		$("body").on("click",".video-cancel-btn",function(){
+			$(".video-container").hide();
+			player.stop();
 		})
 		
 	}());

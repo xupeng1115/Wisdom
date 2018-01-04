@@ -52,7 +52,7 @@
 			<div class="banner-tag-box clearbox">
 				<div class="banner-tag-content clearbox">
 					<ul class="banner-tag clearbox">
-						<li class="tag-item" v-for="(item,index) in userTags" :key="item.Id" :tagId="item.Id" :index="index" v-show="userTags.length>0" style="display:none;" v-html="item.TitleName"><!--研发类--></li>
+						<li class="tag-item" v-for="(item,index) in userTags" v-bind:key="item.Id" v-bind:tagId="item.Id" v-bind:index="index" v-show="userTags.length>0" style="display:none;" v-html="item.TitleName"><!--研发类--></li>
 					</ul>
 					<div class="add-tag-btn" v-on:click="addTags"></div>
 				</div>
@@ -979,33 +979,21 @@
 		<!-- Tag Dialog -->
 		<div class="flo-box" v-show="tagBoxShow" style="display:none;">
 			<div class="tag-select-box">
-				<div class="tag-cancel-btn" @click="tagCancel"></div>
+				<div class="tag-cancel-btn" v-on:click="tagCancel"></div>
 				<div class="select-title">
 					<span class="title-text">标签选择</span>
 					<span class="title-dec">最多选择5个标签</span>
 					<span class="tag-num-box">共213个标签</span>
 				</div>
-				<ul class="select-list">
-					<li class="select-item" v-for="(item,index) in totalTags" :key="item.ID" :index="index" @click="tagClick(item,$event)" v-html="item.TitleName"></li>
-					<!--<li class="select-item">数据分析</li>
-					<li class="select-item">标签123</li>
-					<li class="select-item">学习能力</li>
-					<li class="select-item">标签3</li>
-					<li class="select-item">标签2</li>
-					<li class="select-item">标签454</li>
-					<li class="select-item">标签5445</li>
-					<li class="select-item">标签67</li>
-					<li class="select-item">标签7</li>
-					<li class="select-item">标签3</li>
-					<li class="select-item">标签363</li>
-					<li class="select-item">标签3223</li>-->
+				<ul class="select-list clearbox">
+					<li class="select-item" v-for="(item,index) in totalTags" :key="item.ID" :index="index" v-on:click="tagClick(item,$event)" v-html="item.TitleName"></li>
 				</ul>
 				<div class="select-btn-box clearbox">
-					<div class="select-btn select-confirm-btn" @click="tagConfirm">
+					<div class="select-btn select-confirm-btn" v-on:click="tagConfirm">
 						<span class="select-icon"><i class="material-icons">&#xE5CA;</i></span>
 						<span class="btn-text">确定</span>
 					</div>
-					<div class="select-btn select-reset-btn" @click="tagReset">
+					<div class="select-btn select-reset-btn" v-on:click="tagReset">
 						<span class="select-icon"><i class="material-icons">&#xE5D5;</i></span>
 						<span class="btn-text">重置</span>
 					</div>

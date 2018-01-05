@@ -119,6 +119,8 @@ $(function(){
 			window.location.href="../Assessment/Index.html";
 		})
 		
+		
+		
 		//打开视频
 		$("body").on("click",".video-btn",function(){
 			

@@ -19,67 +19,18 @@
 }
 
 .top-banner .banner-msg{
+	font-family:"NotoSansCJKsc-Light";
 	font-size:16px;
 	text-align:center;
 	color:#fff;
 }
 
-/***************************Content***********************/
+/***************************中间内容区content***********************/
 section{
 	position:relative;
-	background:#fff;
 }
 
-section .nav-wrapper{
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:10;
-	width:100%;
-	height:45px;
-	background:#fff;
-	box-shadow: 0 2px 5px 0 rgba(227, 227, 227, 0.5);
-}
-
-.nav-wrapper .nav-container{
-	margin:0 auto;
-	padding-top:8px;
-	width:495px;
-	height:38px;
-}
-
-.nav-container .nav-item{
-	float:left;
-	margin-right:100px;
-	width:98px;
-	height:30px;
-	line-height:30px;
-	background:#fff;
-	letter-spacing: 0.5px;
-	font-size:14px;
-	text-align:center;
-	color:#6d6d6d;
-	border-radius: 15px;
-	cursor:pointer;
-}
-
-.nav-container .nav-item:first-child{
-	color:#fff;
-	background:#ffbf00;
-}
-
-.nav-container .nav-item:last-child{
-	margin-right:0;
-}
-
-section .advantage-wrapper{
-	width:100%;
-	height:550px;
-	background:url(../img/serve_01.png)no-repeat center center;
-	background:cover;
-}
-
-.advantage-wrapper .advantage-title{
+section .module-title{
 	position:relative;
 	margin:0 auto;
 	width:200px;
@@ -90,7 +41,7 @@ section .advantage-wrapper{
 	color:#333;
 }
 
-.advantage-wrapper .advantage-title::before{
+section .module-title::before{
 	position:absolute;
 	top:100px;
 	left:60px;
@@ -102,5 +53,244 @@ section .advantage-wrapper{
 }
 
 
+/****************************导航************************/
+section .nav-wrapper{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10;
+	width:100%;
+	height:45px;
+	background:#fff;
+	box-shadow: 0 2px 5px 0 rgba(227, 227, 227, 0.5);
+}
+
+section .nav-scroll {
+    position: fixed;
+}
+
+.nav-wrapper .nav-container{
+	margin:0 auto;
+	padding-top:8px;
+	width:580px;
+	height:38px;
+}
+
+.nav-container .nav-item{
+	float:left;
+	padding:0 15px;
+	margin-right:100px;
+	height:30px;
+	line-height:30px;
+	background:#fff;
+	letter-spacing: 0.5px;
+	font-size:14px;
+	text-align:center;
+	color:#6d6d6d;
+	border-radius: 15px;
+	cursor:pointer;
+}
+
+.nav-container .nav-item a{
+	display:block;
+	padding:0 15px;
+	width:100%;
+	height:100%;
+	border-radius: 15px;
+}
+.nav-container .nav-item a{
+	color:#6d6d6d;
+}
+
+.nav-container .active-nav-item a{
+	color:#fff;
+	background:#ffbf00;
+}
+
+.nav-container .nav-item:last-child{
+	margin-right:0;
+}
 
 
+/********************服务优势********************/
+section .advantage-wrapper{
+	position:relative;
+	margin-bottom:50px;
+	width:100%;
+	height:550px;
+	background:url(../img/serve_01.png)no-repeat center center;
+	background:cover;
+}
+
+.advantage-wrapper .advantage-content{
+	position:absolute;
+	top:230px;
+	left:50%;
+	margin-left:60px;
+	width:520px;
+	height:330px;
+	background:url(../img/serve_advantage_content.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+/********************服务优势********************/
+section .content-wrapper{
+	margin-top:-200px;
+	width:100%;
+	height:900px;
+	background:url(../img/serve_content_bg.png)no-repeat center center;
+	background:cover;
+}
+
+/*******************服务优势*******************/
+section .flow-wrapper{
+	padding-top:30px;
+	padding-bottom:100px;
+	width:100%;
+}
+
+.flow-wrapper .flow-title{
+	padding-top:40px;
+	padding-bottom:60px;
+}
+
+.flow-wrapper .flow-title::before{
+	position: absolute;
+    top: 20px;
+    left: 60px;
+    content: "";
+    width: 63px;
+    height: 78px;
+    background: url(../img/advantage_icon.png)no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.flow-wrapper .flow-content{
+	margin:0 auto;
+	width:1000px;
+	height:580px;
+	background:url(../img/serve_flow_bg.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+/********************aside*************************/
+aside{
+	display:none;
+	position:fixed;
+	top:300px;
+	right:0;
+	width:100px;
+	z-index:100;
+}
+
+aside .aside-container{
+	position:relative;
+	width:100%;
+	padding:10px 20px;	
+}
+
+.aside-container .aside-btn{
+	display:block;
+	position:relative;
+	height:60px;
+	width:60px;
+	margin-bottom:10px;
+	border-radius:100%;
+	background-color: #ffbf00;
+  	box-shadow: 0 2px 4px 2px rgba(175, 175, 175, 0.26);
+	cursor:pointer;
+}
+
+.back-top-btn::before{
+	position:absolute;
+	top: 17px;
+    left: 27px;
+    content: "";
+    width: 11px;
+    height: 11px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+	
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg); 	/* IE 9 */
+	-moz-transform:rotate(-45deg); 	/* Firefox */
+	-webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-45deg); 	/* Opera */
+}
+
+.back-top-btn::after{
+	position:absolute;
+	bottom: 11px;
+    left: 17px;
+    content: "Top";
+    font-size: 14px;
+  	letter-spacing: 0.8px;
+  	text-align: center;
+  	color: #fff;
+}
+
+.aside-container .consult-btn::before{
+	position:absolute;
+	top:17px;
+	left:16px;
+	z-index:10;
+	content:"";
+	width:30px;
+	height:30px;
+	background:url(../img/consult.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+.consult-btn .consult-msg{
+	position:absolute;
+	bottom:-30px;
+	left:50%;
+	margin-left:-42px;
+	width:84px;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+	text-align:center;
+	color:#6d6d6d;
+}
+
+.consult-btn .consult-type{
+	display:none;
+	position:absolute;
+	top:22px;
+	left:-180px;
+	z-index:100;
+	width:150px;
+	height:186px;
+	padding:15px 10px 5px 10px;
+	background:#fff;
+	box-shadow: 0 2px 4px 0 rgba(226, 226, 226, 0.5);
+	border-radius:4px;
+	line-height:18px;
+	text-align:center;
+	font-size:12px;
+	color:#8d8d8d;
+}
+
+.consult-btn .consult-type::before{
+	position:absolute;
+	top: 3px;
+    right: -14px;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: -1px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #fff;
+    border-bottom: 20px solid transparent;
+}
+
+.consult-type .consult-img{
+	display:block;
+	width:130px;
+	height:130px;
+}
+
+.aside-container .consult-btn:hover .consult-type{
+	display:block;
+}

@@ -76,10 +76,18 @@
 			<!-- nav -->
 			<div class="nav-wrapper">
 				<ul class="nav-container">
-					<li class="nav-item">我们的使命</li>
-					<li class="nav-item">我们的优势</li>
-					<li class="nav-item">我们的团队</li>
-					<li class="nav-item">成功案例</li>
+					<li class="nav-item active-nav-item">
+						<a href="#my-task" class="nav-href">我们的使命</a>
+					</li>
+					<li class="nav-item">
+						<a href="#my-advantage" class="nav-href">我们的优势</a>
+					</li>
+					<li class="nav-item">
+						<a href="#my-team" class="nav-href">我们的团队</a>
+					</li>
+					<li class="nav-item">
+						<a href="#my-case" class="nav-href">成功案例</a>
+					</li>
 				</ul>
 			</div>
 			
@@ -94,7 +102,7 @@
 			</div>			
 			
 			<!-- 使命 -->
-			<div class="row task">
+			<div class="row task" id="my-task">
 				<div class="task-title">我们的使命</div>
 				<div class="task-content">
 					<div class="task-item">我们始终致力于</div>
@@ -104,7 +112,7 @@
 			</div>
 			
 			<!-- 优势 -->
-			<div class="row advantage">
+			<div class="row advantage" id="my-advantage">
 				<div class="advantage-title">我们的优势</div>
 				<ul class="advantage-list clearbox">
 					<li class="advantage-item">
@@ -127,32 +135,20 @@
 			
 			
 			<!--专家团队-->
-			<div class="row team">
+			<div class="row team"  id="my-team">
 				<div class="team-box">
 					<div class="team-title">我们的专家团队</div>
-					<ul class="team-dec-box clearbox">
-						<li class="team-dec-item">
-							<img src="../../Content/img/team_icon01.png" alt="描述一" />
-							<div class="item-content">
-								<div class="item-title">最全面的行业名企覆盖</div>
-								<div class="item-dec">投行/银行/互联网公司/....你耳熟能详的名企，行业专家为你提供一对一辅导</div>
-							</div>
-						</li>
-						<li class="team-dec-item">
-							<img src="../../Content/img/team_icon02.png" alt="描述一" />
-							<div class="item-content">
-								<div class="item-title">最实用的求职技能辅导</div>
-								<div class="item-dec">模拟面试、行业技能、内部推荐、案例分析...，杜绝一切假大空，专家只讲行业FAQ</div>
-							</div>
-						</li>
-						<li class="team-dec-item">
-							<img src="../../Content/img/team_icon03.png" alt="描述一" />
-							<div class="item-content">
-								<div class="item-title">最深度的岗位知识分享</div>
-								<div class="item-dec">无论你希望从事什么岗位工作，我们的专家都将给你深度解析岗位的工作日常与前景</div>
-							</div>
-						</li>
+					<ul class="team-msg-list">
+						<li class="team-msg-item">精通简历、面试、企业招聘流程各环节</li>
+						<li class="team-msg-item">行业最实战的求职顾问，企业最一线的HR导师</li>
+						<li class="team-msg-item">熟悉企业人才选育用留各咨询模块</li>
+						<li class="team-msg-item">金融/咨询/IT互联/科技/汽车/医疗医药化工/快消全覆盖</li>
+						<li class="team-msg-item">24 小时不间断精准自助求职服务</li>
+						<li class="team-msg-item">5-10年+职位经验，10-20年+行业经验</li>
+						<li class="team-msg-item">全中国海归留学实习就业平台领导者</li>
+						<li class="team-msg-item">100%企业HR面试官、100%经理及以上级别</li>
 					</ul>
+					
 					<div class="member-box swiper-container1">
 						<ul class="member-list swiper-wrapper">
 							<li class="member-item swiper-slide">
@@ -187,7 +183,7 @@
 							</li>
 							<li class="member-item swiper-slide">
 								<div class="item-left">
-									<img src="../../Content/img/head01.png" alt="团队" />
+									<img src="../../Content/img/head03.png" alt="团队" />
 									<div class="view-all-btn">查看所有专家</div>
 								</div>
 								<div class="item-right">
@@ -202,7 +198,7 @@
 							</li>
 							<li class="member-item swiper-slide">
 								<div class="item-left">
-									<img src="../../Content/img/head02.png" alt="团队" />
+									<img src="../../Content/img/head04.png" alt="团队" />
 									<div class="view-all-btn">查看所有专家</div>
 								</div>
 								<div class="item-right">
@@ -225,7 +221,7 @@
 			</div>
 			
 			<!-- 成功案例 -->
-			<div class="row case">
+			<div class="row case"  id="my-case">
 				<div class="case-title module-title">我们的成功案例</div>
 				<div class="case-msg module-msg">把职业交给我们，把机会留给自己；把职位交给我们，把优才留给自己。</div>
 				<div class="case-list-box">
@@ -238,26 +234,26 @@
 										<div class="item-top">
 											<img src="../../Content/img/case01.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Lin Li</div>
+												<div class="msg-address">密歇根大学</div>
+												<div class="msg-position blue">百度 | 产品经理</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+											14年毕业回国入百度LBS做产品经理。我很喜欢我现在的工作，数据分析、用户需求发掘、产品快速迭代，与运营RD们讨论用户。虽然很辛苦但和乐在其中。感谢老师，让我从一个求职小白从零开始准备，帮助我分析规划，一步步协助准备资料，不厌其烦的Mock Interview，最终获得了Baidu的Offer。
 										</div>
 									</li>
 									<li>
 										<div class="item-top">
 											<img src="../../Content/img/case02.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Mike Wu</div>
+												<div class="msg-address">Boston Univ</div>
+												<div class="msg-position blue">Boston Univ | 商务拓展</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											悉尼大学Accounting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基本处于懵逼状态。特别感谢CareerSuccess导师帮助我走过这段痛并快乐的求职过程。他们不厌其烦的帮我分析测评能力模型、测评报告解读、线上微课程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+											在美国这几年，一直关心着国内的互联网发展。根据我的情况，咨询师精选了几家优秀的创业公司做重点申请突破。针对每家公司，咨询师帮助我分析理解公司业务，了解职位的工作和要求，根据自己的不足制定学习计划，并从网申开始贴身辅导。经过多轮的严格面试，我最终入职今日头条.
 										</div>
 									</li>
 								</ul>
@@ -266,28 +262,28 @@
 								<ul>
 									<li>
 										<div class="item-top">
-											<img src="../../Content/img/case01.png" alt="案例" />
+											<img src="../../Content/img/case03.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Steven Lee</div>
+												<div class="msg-address">明尼苏达大学</div>
+												<div class="msg-position blue">德勤 | 审计师</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											伦敦大学市场营销毕业，作沟通表达的细销毕业，作沟通表达的细销毕业，作沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+											明大Accounting专业，出国四年感觉还是有点脱节，对回国能做什么基本处于懵逼状态。特别感谢导师帮助我走过这段艰苦又快乐的求职过程。他们不厌其烦的帮我分析能力模型、修改简历、Mock Interview，每次笔试面试复盘提出学习计划。我顺利的拿到了德勤深圳所审计方向的offer，希望可以发展顺利吧，加油！
 										</div>
 									</li>
 									<li>
 										<div class="item-top">
-											<img src="../../Content/img/case02.png" alt="案例" />
+											<img src="../../Content/img/case04.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Sabrina Chan</div>
+												<div class="msg-address">英国曼彻斯特大学</div>
+												<div class="msg-position blue">中信银行 | 电子银行部</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											悉尼大学Accounting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢nting专业，当接到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+											英国硕士毕业和国内校招有时间差，专家建议我直接申请股份制商业银行的职位，很多职位虽然是社招但也对毕业生开放。整个申请过程的细节不在赘述，简历递交上去很快就获得面试机会。正式面试前，求职顾跟我通了两个小时的视频面试，把整个面试过程模拟了一遍，重点提醒了很多细节，真的是非常的专业！
 										</div>
 									</li>
 								</ul>
@@ -296,28 +292,28 @@
 								<ul>
 									<li>
 										<div class="item-top">
-											<img src="../../Content/img/case01.png" alt="案例" />
+											<img src="../../Content/img/case05.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Patrick Hu</div>
+												<div class="msg-address">UT Austin</div>
+												<div class="msg-position blue">埃森哲 | 咨询顾问</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											伦敦大学市场营销毕业，作为一个在英国攻读的商科本科生，并不十分清楚国内哪些企业能有很好的发展，整个求职就业过程是CareerSuccess的专家耐心的辅导。他们给我安排的导师是直接在3M工作的HR经理。在进入公司面试前的mock interview十分重要，HRM引导和解答我每一个可能的问题，注意每一个沟通表达的细节，挖掘我的职业优势，受益匪浅也很感谢他们！！
+											在学校读书时候，不太了解IT咨询，老师帮我详细梳理了IT Consulting的工作和职业发展。我个人逻辑能力和沟通能力蛮强，咨询师建议我重点考虑IT咨询。在IBM GBS导师Tina的帮助下，我成功的拿下了Accenture ERP部门的Offer。入职已经半年了，感觉这份工作非常挑战，也很能提升个人能力，真棒！
 										</div>
 									</li>
 									<li>
 										<div class="item-top">
-											<img src="../../Content/img/case02.png" alt="案例" />
+											<img src="../../Content/img/case06.png" alt="案例" />
 											<div class="item-top-msg">
-												<div class="msg-name">Lee Li</div>
-												<div class="msg-address">University of London</div>
-												<div class="msg-position blue">3M | 销售经理助理</div>
+												<div class="msg-name">Marina Cong</div>
+												<div class="msg-address">北卡Microsoft</div>
+												<div class="msg-position blue">MACH | 管培生</div>
 											</div>
 										</div>
 										<div class="item-dec">
-											悉尼大学A慢意识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还识出国留到CareerSuccess职业发展顾问的电话时，我才慢慢意识到出国留学四年感觉还是与国内的就业行情脱节，对回国能做什么基本处于懵逼状态。特别感谢CareerSuccess导师帮助我走过这段痛并快乐的求职过程。他们不厌其烦的帮我分析测评能力模型、测评报告解读、线上微课程学习、修改简历、模拟面试提出学习改进行动计划。我顺利的拿到了普华永道时候所审计方向的offer，希望继续可以发展顺利吧，加油！
+											我拿到的是微软MACH管培生机会的Offer，现在rotate在总部从事销售管理。我的专业是商业管理，原本没想到加入微软，咨询师建议我试试MACH Program。因为微软中国在执行Go Big扩张计划，会有很多商科学生的机会。申请过程很艰难也很tough，多亏BCG的专家，帮我攻克了最难的Case Study。
 										</div>
 									</li>
 								</ul>

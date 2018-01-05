@@ -50,10 +50,14 @@ section .nav-wrapper{
 	box-shadow: 0 2px 5px 0 rgba(227, 227, 227, 0.5);
 }
 
+section .nav-scroll {
+    position: fixed;
+}
+
 .nav-wrapper .nav-container{
 	margin:0 auto;
 	padding-top:8px;
-	width:696px;
+	width:817px;
 	height:38px;
 }
 
@@ -72,7 +76,18 @@ section .nav-wrapper{
 	cursor:pointer;
 }
 
-.nav-container .nav-item:first-child{
+.nav-container .nav-item a{
+	display:block;
+	padding:0 15px;
+	width:100%;
+	height:100%;
+	border-radius: 15px;
+}
+.nav-container .nav-item a{
+	color:#6d6d6d;
+}
+
+.nav-container .active-nav-item a{
 	color:#fff;
 	background:#ffbf00;
 }
@@ -211,7 +226,22 @@ section .advantage{
 	margin-bottom:20px;
 	width:48px;
 	height:60px;
-	background:url(../img/head.png)no-repeat center center;
+}
+
+.advantage-list .advantage-item:nth-child(1) .advantage-bg{
+	background:url(../img/about_advantage_icon01.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+.advantage-list .advantage-item:nth-child(2) .advantage-bg{
+	width:60px;
+	background:url(../img/about_advantage_icon02.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+.advantage-list .advantage-item:nth-child(3) .advantage-bg{
+	width:60px;
+	background:url(../img/about_advantage_icon03.png)no-repeat center center;
 	background-size:100% 100%;
 }
 
@@ -225,6 +255,7 @@ section .advantage{
 .advantage-list .advantage-item .advantage-text{
 	font-size:12px;
 	color:#6d6d6d;
+	letter-spacing: 1px;
 	text-align:center;
 }
 
@@ -247,48 +278,67 @@ section .team .team-box{
 }
 
 .team-box .team-title{
-	padding:80px 0 50px 0;
-  	font-size: 34px;
+	padding-top:50px;
+  	font-size: 24px;
   	text-align: center;
-  	color: #666666;
+  	color: #fff;
 }
 
-.team-box .team-dec-box{
-	margin:0 auto;
-	width:1020px;
-}
-
-.team-box .team-dec-box .team-dec-item{
+.team-box .team-msg-list{
 	position:relative;
-	float:left;
-	padding:0 20px 20px 35px;
-	width:340px;
+	margin:35px auto;
+	width:208px;
+	height:115px;
+	white-space :nowrap;
+	background:url(../img/about_team_icon.png)no-repeat center center;
+	background-size:100% 100%;
 }
 
-.team-box .team-dec-box .team-dec-item img{
+.team-msg-list .team-msg-item{
 	display:inline-block;
-	float:left;
+	position:absolute;
+	font-size:12px;
+	color:#fff;
 }
 
-.team-box .team-dec-box .team-dec-item .item-content{
-	float:left;
-	padding-left:20px;
-	width:220px;
+.team-msg-list .team-msg-item:nth-child(1){
+	top:-7px;
+	left:-160px;
 }
 
-.team-box .team-dec-box .team-dec-item .item-content .item-title{
-	line-height:28px;
-  	font-size: 20px;
-  	text-align: left;
-  	color: #333;
+.team-msg-list .team-msg-item:nth-child(2){
+	top:-7px;
+	left:165px;
 }
 
-.team-box .team-dec-box .team-dec-item .item-content .item-dec{
-	margin-top:8px;
-	line-height:20px;
-  	font-size: 14px;
-  	text-align: left;
-  	color: #6d6d6d;
+.team-msg-list .team-msg-item:nth-child(3){
+	top:30px;
+	left:-185px;
+}
+
+.team-msg-list .team-msg-item:nth-child(4){
+	top:30px;
+	left:190px;
+}
+
+.team-msg-list .team-msg-item:nth-child(5){
+	top:68px;
+	left:-180px;
+}
+
+.team-msg-list .team-msg-item:nth-child(6){
+	top:68px;
+	left:212px;
+}
+
+.team-msg-list .team-msg-item:nth-child(7){
+	top: 105px;
+    left: -148px;
+}
+
+.team-msg-list .team-msg-item:nth-child(8){
+	top: 105px;
+    left: 165px;
 }
 
 .team-box .member-box{
@@ -628,7 +678,7 @@ section .cooperation{
 .swiper-button-prev {
 	width:20px;
 	height:30px;
-	background-image:url(../img/left.png);
+	background-image:url(../img/about_team_left.png);
 	background-size:100%;
 	top: 75%;
     left: 40px;
@@ -637,7 +687,7 @@ section .cooperation{
 .swiper-button-next {
 	width:20px;
 	height:30px;
-	background-image:url(../img/right.png);
+	background-image:url(../img/about_team_right.png);
 	background-size:100%;
 	top: 75%;
     right: 40px;

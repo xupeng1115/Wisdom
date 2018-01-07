@@ -72,7 +72,7 @@ section .nav-scroll {
 .nav-wrapper .nav-container{
 	margin:0 auto;
 	padding-top:8px;
-	width:580px;
+	width:600px;
 	height:38px;
 }
 
@@ -93,7 +93,7 @@ section .nav-scroll {
 
 .nav-container .nav-item a{
 	display:block;
-	padding:0 15px;
+	padding:0 20px;
 	width:100%;
 	height:100%;
 	border-radius: 15px;
@@ -204,7 +204,7 @@ section .content-wrapper{
 	width:100%;
 	height:640px;
 	background:url(../img/serve_content_bg.png)no-repeat center center;
-	background:cover;
+	background-size:cover;
 }
 
 .content-wrapper .content-title{
@@ -261,8 +261,8 @@ section .content-wrapper{
 
 /*******************服务课程*******************/
 section .flow-wrapper{
-	padding-top:30px;
-	padding-bottom:100px;
+	padding-top:40px;
+	padding-bottom:80px;
 	width:100%;
 }
 
@@ -272,23 +272,141 @@ section .flow-wrapper{
 }
 
 .flow-wrapper .flow-title::before{
-	position: absolute;
     top: 20px;
     left: 60px;
-    content: "";
-    width: 63px;
-    height: 78px;
-    background: url(../img/advantage_icon.png)no-repeat center center;
-    background-size: 100% 100%;
 }
 
-.flow-wrapper .flow-content{
+.flow-wrapper .flow-list{
 	margin:0 auto;
-	width:1000px;
-	height:580px;
-	background:url(../img/serve_flow_bg.png)no-repeat center center;
+	padding-top:10px;
+	width:975px;
+}
+
+.flow-list .flow-item{
+	position:relative;
+	float:left;
+	margin-right:45px;
+	margin-bottom:20px;
+	width:210px;
+}
+
+.flow-list .flow-item:nth-child(4n+0){
+	margin-right:0;
+}
+
+.flow-item .flow-img-box{
+	position:relative;
+	width:100%;
+	height:110px;
+	overflow:hidden;
+	border-radius:4px;
+}
+
+.flow-img-box .flow-img{
+	display:block;
+	width:100%;
+}
+
+.flow-img-box .flow-flo{
+	position:absolute;
+	bottom:2px;
+	left:5px;
+	z-index:10;
+	width:200px;
+	height:0;
+	background:rgba(0,0,0,0.5);
+	text-align:center;
+	border-radius:4px;
+	overflow:hidden;
+	
+	transition:all 0.5s;
+	-webkit-transition:all 0.5s; /* Safari */
+	-moz-transition-duration:all 0.5s;
+	-o-transition-duration:all 0.5s;
+}
+
+.flow-img-box:hover .flow-flo{
+	height:105px;
+}
+
+.flow-flo .flow-btn{
+	display:inline-block;
+	position:relative;
+	width:30px;
+	height:30px;
+	margin:33px 20px 0 20px;
+	cursor:pointer;
+}
+
+.flow-flo .flow-btn-online{
+	background:url(../img/serve_course_icon01.png)no-repeat center center;
 	background-size:100% 100%;
 }
+
+.flow-flo .flow-btn-offline{
+	background:url(../img/serve_course_icon02.png)no-repeat center center;
+	background-size:100% 100%;
+}
+
+.flow-flo .flow-btn:before{
+	position:absolute;
+	top:40px;
+	left:-10px;
+	width:50px;
+	font-size:12px;
+	letter-spacing: 0.4px;
+	color:#fff;
+}
+
+.flow-flo .flow-btn-online:before{
+	content:"线上学习";
+}
+
+.flow-flo .flow-btn-offline:before{
+	content:"线下培训";
+}
+
+.flow-item .flow-item-title{
+	margin-top:10px;
+	line-height:20px;
+	font-size:14px;
+	letter-spacing:0.4px;
+	color:#333;
+	text-align:left;
+}
+
+.flow-item .flow-item-title span{
+	display:inline-block;
+}
+
+.flow-item .flow-item-title .flow-title-dec{
+	margin-left:10px;
+	color:#aeaeae;
+}
+
+.flow-item .flow-star-box{
+	margin-top:10px;
+	font-size:12px;
+	letter-spacing:0.4px;
+	color:#6d6d6d;
+	text-align:left;
+}
+
+.flow-item .flow-star-box span{
+	display:inline-block;
+}
+
+.flow-item .flow-star-box .flow-star{
+	font-size:10px;
+	color:#efa03c;
+}
+
+.flow-item .flow-star-box .flow-star-number{
+	margin-left:10px;
+}
+
+
+
 
 /********************aside*************************/
 aside{

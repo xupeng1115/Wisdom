@@ -25,8 +25,8 @@ $(function(){
 		$("body").on("click",".nav-href",function(event){
 			var oActive=$(this).parent(".nav-item").hasClass("active-nav-item");
 			var oNum=$(this).attr("num");
-			console.log(oNum);
 			var oList=$(".nav-item");
+			var TOP=0;
 			if(!oActive){
 				$.each(oList,function(index,item){
 					if($(item).hasClass("active-nav-item")){
@@ -36,24 +36,18 @@ $(function(){
 				})
 				$(this).parent(".nav-item").addClass("active-nav-item");
 			}
-			
-			if(oNum==="2"){
-				console.log(234243);
-				$("html, body").animate({
-			      	scrollTop: ($($(this).attr("href")).offset().top +220)+ "px"
-			    }, {
-			      	duration: 500,
-			      	easing: "swing"
-			    });
+			if(oNum==="1"){
+				TOP=0;
 			}else{
-				$("html, body").animate({
-			      	scrollTop: ($($(this).attr("href")).offset().top -45)+ "px"
-			    }, {
-			      	duration: 500,
-			      	easing: "swing"
-			    });
+				TOP=45;
 			}
 			
+			$("html, body").animate({
+		      	scrollTop: ($($(this).attr("href")).offset().top -TOP)+ "px"
+		    }, {
+		      	duration: 500,
+		      	easing: "swing"
+		    });
 		    return false;
 		})
 	}());

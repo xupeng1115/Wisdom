@@ -87,7 +87,7 @@
 .search-wrapper .search-hot-wrapper{
 	position:relative;
 	margin:0 auto;
-	padding-left:70px;
+	padding-left:75px;
 	width:820px;
 	height:40px;
 }
@@ -110,7 +110,7 @@
 	top:10px;
 	left:0;
 	content:"热门搜索：";
-	width:70px;
+	width:75px;
 	font-size: 14px;
 	color: #ffbf00;
 }

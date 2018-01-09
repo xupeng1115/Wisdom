@@ -9,6 +9,11 @@ $(function(){
 	//事件注册
 	(function(){
 		
+		$("body").on("click",".flow-btn-online",function(){
+			window.location.href="../Course/List.html"
+		})
+		
+		
 		//侧边导航
 		$(window).scroll(function() {
 			//获取文档滚动高度

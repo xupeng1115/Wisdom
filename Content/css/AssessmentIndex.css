@@ -16,6 +16,7 @@
 }
 
 .banner-content .assessment-name{
+	font-family:"NotoSansCJKsc-Light";
 	padding-top:100px;
 	line-height:50px;
   	font-size: 34px;
@@ -25,6 +26,7 @@
 }
 
 .banner-content .assessment-msg{
+	font-family:"NotoSansCJKsc-Light";
 	padding-top:20px;
 	width:618px;
 	line-height:24px;

@@ -205,7 +205,7 @@ section .content-box .position-box::after{
   	font-size: 20px;
   	line-height: 1.35;
   	text-align: center;
-  	color: #666666;
+  	color: #666;
 }
 
 .position-right .evaluation-btn{
